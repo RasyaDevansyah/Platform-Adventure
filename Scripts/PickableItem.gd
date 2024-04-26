@@ -10,7 +10,7 @@ func _ready():
 	animated_sprite_2d.play("default")
 
 func _on_area_2d_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("Player"):
 		animated_sprite_2d.play("pickedUp")
 		area_2d.set_deferred("monitoring", false)
 	

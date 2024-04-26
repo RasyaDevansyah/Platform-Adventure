@@ -1,5 +1,6 @@
-Area2D
+AnimationTree
 AnimationPlayer
+Area2D
 PathFollow2D
 Path2D
 AnimatedSprite2D
@@ -12,4 +13,3 @@ RigidBody2D
 ColorRect
 DampedSpringJoint2D
 StaticBody2D
-AnimationTree
