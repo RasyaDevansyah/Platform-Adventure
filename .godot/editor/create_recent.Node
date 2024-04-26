@@ -1,3 +1,5 @@
+AnimationPlayer
+AnimationTree
 Node
 ItemList
 CollisionShape2D
@@ -5,8 +7,6 @@ Area2D
 AnimatedSprite2D
 Node2D
 GPUParticles2D
-AnimationPlayer
-AnimationTree
 ShapeCast2D
 RayCast2D
 StaticBody2D

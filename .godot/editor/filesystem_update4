@@ -1,2 +1,5 @@
 res://Scenes/Main.tscn
 res://Scripts/PickableItem.gd
+res://Prefab/PuluPuluGuy.tscn
+res://Prefab/apple.tscn
+res://Scenes/Test.tscn
