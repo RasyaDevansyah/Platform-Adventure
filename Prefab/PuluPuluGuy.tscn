@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://h4yvcfcedb78"]
+[gd_scene load_steps=81 format=3 uid="uid://h4yvcfcedb78"]
 
 [ext_resource type="Script" path="res://Scripts/PuluPuluGuy.gd" id="1_13fao"]
 [ext_resource type="Texture2D" uid="uid://cab13mphur2nn" path="res://Assets/Main Characters/Mask Dude/Jump (32x32).png" id="1_y012q"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c17h4q1ww4lj5" path="res://Assets/Main Characters/Mask Dude/Run (32x32).png" id="4_vosb0"]
 [ext_resource type="Texture2D" uid="uid://2wuwfynkt0d0" path="res://Assets/Main Characters/Mask Dude/Hit (32x32).png" id="5_37r68"]
 [ext_resource type="Texture2D" uid="uid://capbvctpyps1m" path="res://Assets/Main Characters/Mask Dude/Wall Jump (32x32).png" id="5_a0del"]
+[ext_resource type="Texture2D" uid="uid://b3q7eauogxd5y" path="res://Assets/Main Characters/Desappearing (96x96).png" id="6_t85qp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tnsbe"]
 atlas = ExtResource("2_p4mv4")
@@ -68,6 +69,34 @@ region = Rect2(160, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cpkpc"]
 atlas = ExtResource("5_37r68")
 region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8key"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yxce"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t1dt"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klseg"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4poy"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ybu1"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w8v4"]
+atlas = ExtResource("6_t85qp")
+region = Rect2(576, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_esy4j"]
 atlas = ExtResource("2_0q70s")
@@ -238,6 +267,30 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cpkpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8key")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yxce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t1dt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klseg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4poy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ybu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w8v4")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": false,
 "name": &"Hit",
@@ -407,7 +460,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_bklkk"]
-length = 0.35
+length = 0.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -415,10 +468,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -563,9 +616,6 @@ animation = &"DoubleJump"
 animation = &"Hit"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_skt8m"]
-fadeout_time = 0.5
-
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_pm2ws"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s4dhm"]
 animation = &"Idle"
@@ -598,20 +648,28 @@ max_space = 2.0
 snap = 0.07
 blend_mode = 1
 
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_4lrqc"]
+input_0/name = "Alive"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "Dead"
+input_1/auto_advance = false
+input_1/reset = true
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_deup5"]
-graph_offset = Vector2(-196.295, 545.869)
+graph_offset = Vector2(-224.262, 461.126)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_rc1j1")
-nodes/Animation/position = Vector2(-300, 720)
+nodes/Animation/position = Vector2(-40, 880)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_tkqkv")
-"nodes/Animation 2/position" = Vector2(0, 760)
+"nodes/Animation 2/position" = Vector2(-220, 740)
 nodes/DoubleJump/node = SubResource("AnimationNodeOneShot_skt8m")
-nodes/DoubleJump/position = Vector2(160, 540)
-nodes/Hit/node = SubResource("AnimationNodeOneShot_pm2ws")
-nodes/Hit/position = Vector2(-40, 520)
+nodes/DoubleJump/position = Vector2(-60, 540)
 nodes/MovementState/node = SubResource("AnimationNodeBlendSpace1D_yydn6")
 nodes/MovementState/position = Vector2(-320, 480)
-nodes/output/position = Vector2(400, 600)
-node_connections = [&"DoubleJump", 0, &"Hit", &"DoubleJump", 1, &"Animation 2", &"Hit", 0, &"MovementState", &"Hit", 1, &"Animation", &"output", 0, &"DoubleJump"]
+nodes/Transition/node = SubResource("AnimationNodeTransition_4lrqc")
+nodes/Transition/position = Vector2(180, 620)
+nodes/output/position = Vector2(500, 640)
+node_connections = [&"DoubleJump", 0, &"MovementState", &"DoubleJump", 1, &"Animation 2", &"Transition", 0, &"DoubleJump", &"Transition", 1, &"Animation", &"output", 0, &"Transition"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mb8o0"]
 radius = 8.33333
@@ -619,19 +677,25 @@ height = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(3, 3)
+disable_mode = 1
 collision_mask = 3
 script = ExtResource("1_13fao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
+process_mode = 3
 sprite_frames = SubResource("SpriteFrames_klpxg")
-animation = &"WallSlide"
+animation = &"Idle"
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_rkn0k")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+process_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_rkn0k")
 }
@@ -640,10 +704,10 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/DoubleJump/active = false
 parameters/DoubleJump/internal_active = false
 parameters/DoubleJump/request = 0
-parameters/Hit/active = false
-parameters/Hit/internal_active = false
-parameters/Hit/request = 0
-parameters/MovementState/blend_position = 0
+parameters/MovementState/blend_position = 1.0
+parameters/Transition/current_state = "Alive"
+parameters/Transition/transition_request = ""
+parameters/Transition/current_index = 0
 
 [node name="PlatformCollidingChecker" type="ShapeCast2D" parent="."]
 visible = false

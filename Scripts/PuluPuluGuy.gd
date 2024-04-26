@@ -83,5 +83,7 @@ func _physics_process(delta):
 func Hit(knockBack : Vector2 = global_transform.origin * Vector2.RIGHT):
 	velocity = knockBack * 800
 	animationTree.set("parameters/DoubleJump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
-	animationTree.set("parameters/Hit/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
-	animationTree.set("parameters/Hit/request",  AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	animationTree.set("parameters/Transition/transition_request", "Dead")
+	await get_tree().create_timer(0.3).timeout
+	process_mode = Node.PROCESS_MODE_DISABLED
+	
