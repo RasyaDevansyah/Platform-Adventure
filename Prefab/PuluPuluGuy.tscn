@@ -362,8 +362,10 @@ script = ExtResource("1_13fao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_klpxg")
-animation = &"Idle"
+animation = &"Hit"
 autoplay = "Idle"
+frame = 6
+frame_progress = 1.0
 
 [node name="PlatformCollidingChecker" type="ShapeCast2D" parent="."]
 visible = false
