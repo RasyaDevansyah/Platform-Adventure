@@ -1,8 +1,5 @@
 res://Prefab/PuluPuluGuy.tscn
 res://Scenes/Main.tscn
-res://Prefab/line_2d.tscn
-res://Prefab/Saw.tscn
-res://Scripts/Saw.gd
+res://Prefab/Trophy.tscn
+res://Prefab/melon.tscn
 res://Scripts/PuluPuluGuy.gd
-res://Prefab/banana.tscn
-res://Scripts/PickableItem.gd

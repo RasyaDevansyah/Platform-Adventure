@@ -13,7 +13,11 @@ config_version=5
 config/name="CrashCourse2DPlatformer"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Other/Transition.png"
+
+[display]
+
+window/size/resizable=false
 
 [editor_plugins]
 

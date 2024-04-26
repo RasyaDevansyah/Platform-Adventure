@@ -16,6 +16,8 @@ var wallSlideGravity : float = 100
 
 var isWallSliding : bool = false
 var canDoubleJump : bool = true
+
+
 func _physics_process(delta):
 	var direction : float = Input.get_axis("left", "right")
 	if direction:

@@ -657,7 +657,6 @@ input_1/auto_advance = false
 input_1/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_deup5"]
-graph_offset = Vector2(-224.262, 461.126)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_rc1j1")
 nodes/Animation/position = Vector2(-40, 880)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_tkqkv")
@@ -682,20 +681,20 @@ collision_mask = 3
 script = ExtResource("1_13fao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
-process_mode = 3
+process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
 animation = &"Idle"
-frame = 2
+frame = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-process_mode = 3
+process_mode = 1
 active = false
 libraries = {
 "": SubResource("AnimationLibrary_rkn0k")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-process_mode = 3
+process_mode = 1
 libraries = {
 "": SubResource("AnimationLibrary_rkn0k")
 }
