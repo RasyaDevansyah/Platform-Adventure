@@ -3,3 +3,6 @@ res://Scenes/Main.tscn
 res://Prefab/Trophy.tscn
 res://Prefab/melon.tscn
 res://Scripts/PuluPuluGuy.gd
+res://Prefab/Transition.gd
+res://Prefab/Transition.tscn
+res://Scripts/Transition.gd

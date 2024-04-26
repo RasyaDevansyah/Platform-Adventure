@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5ggj2ylj0qbf"]
+[gd_scene load_steps=24 format=3 uid="uid://c5ggj2ylj0qbf"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_ml0hq"]
 [ext_resource type="Texture2D" uid="uid://cfprh0nisjrvf" path="res://Assets/Terrain/Terrain (16x16).png" id="2_rgjou"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5m2dm0c1t4b2" path="res://Prefab/line_2d.tscn" id="8_1c8w7"]
 [ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="9_j2vj5"]
 [ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="10_0768o"]
+[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="11_pg2ra"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jswcl"]
 texture = ExtResource("2_rgjou")
@@ -915,8 +916,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 35842.0
-offset_bottom = 20235.0
+offset_right = 38146.0
+offset_bottom = 21531.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
@@ -1030,3 +1031,5 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource("11_pg2ra")]
