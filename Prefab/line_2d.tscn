@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5m2dm0c1t4b2"]
+
+[ext_resource type="Texture2D" uid="uid://brk0lbgiswhj7" path="res://Assets/Traps/Saw/Chain.png" id="1_iedhl"]
+
+[node name="Line2D" type="Line2D"]
+z_index = -1
+position = Vector2(-127, -83)
+scale = Vector2(2.5, 2.5)
+points = PackedVector2Array(46, 17, 172, 27)
+texture = ExtResource("1_iedhl")
+texture_mode = 1

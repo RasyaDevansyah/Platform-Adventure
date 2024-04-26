@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714116781
+::res://::1714121893
 icon.svg::CompressedTexture2D::7607345986427975944::1713881251::1713881256::1::::<><>::
+README.md::TextFile::-1::1714117054::0::1::::<><>::
 ::res://Assets/::1713883553
 20 Enemies.png::CompressedTexture2D::5286164026701276372::1713881404::1713883553::1::::<><>::
 Hello.png::CompressedTexture2D::7176243472467228921::1713881404::1713883553::1::::<><>::
@@ -193,8 +194,8 @@ Ice Particle.png::CompressedTexture2D::8366144084687042207::1713881405::17138835
 Mud Particle.png::CompressedTexture2D::1998619376739050942::1713881405::1713883553::1::::<><>::
 Sand Mud Ice (16x6).png::CompressedTexture2D::6030976459208587331::1713881405::1713883553::1::::<><>::
 Sand Particle.png::CompressedTexture2D::4627673626699002855::1713881405::1713883553::1::::<><>::
-::res://Assets/Traps/Saw/::1713883553
-Chain.png::CompressedTexture2D::3601812433812951998::1713881405::1713883553::1::::<><>::
+::res://Assets/Traps/Saw/::1714122373
+Chain.png::CompressedTexture2D::3601812433812951998::1713881405::1714122551::1::::<><>::
 Off.png::CompressedTexture2D::4591183272519077964::1713881405::1713883553::1::::<><>::
 On (38x38).png::CompressedTexture2D::7038145816628048456::1713881405::1713883553::1::::<><>::
 ::res://Assets/Traps/Spike Head/::1713883553
@@ -212,15 +213,17 @@ Idle.png::CompressedTexture2D::7577818152314523088::1713881405::1713883553::1:::
 ::res://Assets/Traps/Trampoline/::1713883553
 Idle.png::CompressedTexture2D::6646026227303329717::1713881405::1713883553::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::1938426670564010406::1713881405::1713883553::1::::<><>::
-::res://Prefab/::1714116523
-apple.tscn::PackedScene::7090049325181636516::1714116523::0::1::::<><>::res://Scripts/PickableItem.gd<>uid://ef1ui6wo302s::::res://Assets/Items/Fruits/Apple.png<>uid://clrrljjyruiun::::res://Assets/Items/Fruits/Collected.png
+::res://Prefab/::1714122506
+apple.tscn::PackedScene::7090049325181636516::1714121696::0::1::::<><>::res://Scripts/PickableItem.gd<>uid://ef1ui6wo302s::::res://Assets/Items/Fruits/Apple.png<>uid://clrrljjyruiun::::res://Assets/Items/Fruits/Collected.png
 banana.tscn::PackedScene::7347349703927037302::1713937622::0::1::::<><>::res://Scripts/PickableItem.gd<>uid://dp5ke5xg07cyf::::res://Assets/Items/Fruits/Bananas.png<>uid://clrrljjyruiun::::res://Assets/Items/Fruits/Collected.png
 melon.tscn::PackedScene::4177182567285659500::1713937621::0::1::::<><>::res://Scripts/PickableItem.gd<>uid://c78h663ny1n6k::::res://Assets/Items/Fruits/Melon.png<>uid://clrrljjyruiun::::res://Assets/Items/Fruits/Collected.png
 orange.tscn::PackedScene::2523237803210049971::1713937620::0::1::::<><>::res://Scripts/PickableItem.gd<>uid://dxltcnyhk5ns3::::res://Assets/Items/Fruits/Orange.png<>uid://clrrljjyruiun::::res://Assets/Items/Fruits/Collected.png
-PuluPuluGuy.tscn::PackedScene::552683682699416893::1714116523::0::1::::<><>::res://Scripts/PuluPuluGuy.gd<>uid://cab13mphur2nn::::res://Assets/Main Characters/Mask Dude/Jump (32x32).png<>uid://cfqwfwo1e37vt::::res://Assets/Main Characters/Mask Dude/Idle (32x32).png<>uid://cdyj42m1yjnwd::::res://Assets/Main Characters/Mask Dude/Double Jump (32x32).png<>uid://dgpvlkslabpw5::::res://Assets/Main Characters/Mask Dude/Fall (32x32).png<>uid://c17h4q1ww4lj5::::res://Assets/Main Characters/Mask Dude/Run (32x32).png<>uid://2wuwfynkt0d0::::res://Assets/Main Characters/Mask Dude/Hit (32x32).png<>uid://capbvctpyps1m::::res://Assets/Main Characters/Mask Dude/Wall Jump (32x32).png
-::res://Scenes/::1714116708
-Main.tscn::PackedScene::6891274772871852831::1714116708::0::1::::<><>::uid://lknp2vbl7it8::::res://Assets/Background/Purple.png<>uid://cfprh0nisjrvf::::res://Assets/Terrain/Terrain (16x16).png<>uid://h4yvcfcedb78::::res://Prefab/PuluPuluGuy.tscn<>uid://c8aqcupn34e5q::::res://Prefab/apple.tscn<>uid://dcxd1nij3dw6i::::res://Prefab/banana.tscn<>uid://b0rpt7dkijwvc::::res://Prefab/melon.tscn<>uid://bb7jmf2ve7020::::res://Prefab/orange.tscn
-Test.tscn::PackedScene::804794868984003279::1713918421::0::1::::<><>::
-::res://Scripts/::1713937644
-PickableItem.gd::GDScript::-1::1713937644::0::1::::<>Node2D<>::
+PuluPuluGuy.tscn::PackedScene::552683682699416893::1714121696::0::1::::<><>::res://Scripts/PuluPuluGuy.gd<>uid://cab13mphur2nn::::res://Assets/Main Characters/Mask Dude/Jump (32x32).png<>uid://cfqwfwo1e37vt::::res://Assets/Main Characters/Mask Dude/Idle (32x32).png<>uid://cdyj42m1yjnwd::::res://Assets/Main Characters/Mask Dude/Double Jump (32x32).png<>uid://dgpvlkslabpw5::::res://Assets/Main Characters/Mask Dude/Fall (32x32).png<>uid://c17h4q1ww4lj5::::res://Assets/Main Characters/Mask Dude/Run (32x32).png<>uid://2wuwfynkt0d0::::res://Assets/Main Characters/Mask Dude/Hit (32x32).png<>uid://capbvctpyps1m::::res://Assets/Main Characters/Mask Dude/Wall Jump (32x32).png
+line_2d.tscn::PackedScene::4518503911095907177::1714122506::0::1::::<><>::uid://brk0lbgiswhj7::::res://Assets/Traps/Saw/Chain.png
+Sprike.tscn::PackedScene::3948589375923486446::1714121703::0::1::::<><>::uid://bfve15fw07p52::::res://Assets/Traps/Spiked Ball/Spiked Ball.png<>uid://cfprh0nisjrvf::::res://Assets/Terrain/Terrain (16x16).png
+::res://Scenes/::1714121802
+Main.tscn::PackedScene::6891274772871852831::1714121802::0::1::::<><>::uid://lknp2vbl7it8::::res://Assets/Background/Purple.png<>uid://cfprh0nisjrvf::::res://Assets/Terrain/Terrain (16x16).png<>uid://h4yvcfcedb78::::res://Prefab/PuluPuluGuy.tscn<>uid://c8aqcupn34e5q::::res://Prefab/apple.tscn<>uid://dcxd1nij3dw6i::::res://Prefab/banana.tscn<>uid://b0rpt7dkijwvc::::res://Prefab/melon.tscn<>uid://bb7jmf2ve7020::::res://Prefab/orange.tscn
+Test.tscn::PackedScene::804794868984003279::1714121697::0::1::::<><>::
+::res://Scripts/::1714117084
+PickableItem.gd::GDScript::-1::1714117084::0::1::::<>Node2D<>::
 PuluPuluGuy.gd::GDScript::-1::1713936094::0::1::::<>CharacterBody2D<>::

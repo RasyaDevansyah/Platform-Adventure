@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://dng0q4ac0k33r"]
+
+[ext_resource type="Texture2D" uid="uid://c7jlh6yf0tmcm" path="res://Assets/Traps/Saw/On (38x38).png" id="1_6fswe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ud7gd"]
+radius = 20.025
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aii4"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj45k"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn5vj"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opk2t"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htutf"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7n74"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnc4a"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axt4f"]
+atlas = ExtResource("1_6fswe")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rujdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7aii4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uj45k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn5vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opk2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htutf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7n74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnc4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axt4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Saw" type="Area2D"]
+z_index = -1
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ud7gd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rujdr")
+autoplay = "default"
+frame_progress = 0.788177
