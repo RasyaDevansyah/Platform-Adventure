@@ -1,11 +1,6 @@
-res://Prefab/Transition.tscn
-res://Other/new_theme.tres
-res://Prefab/UI.tscn
 res://Scenes/Main.tscn
-res://Prefab/melon.tscn
-res://Scripts/Transition.gd
+res://Other/new_theme.tres
 res://Scenes/MainMenu.tscn
-res://Scripts/MainMenu.gd
-res://Prefab/level_select.tscn
 res://Scenes/level_select.tscn
-res://Scripts/level_select.gd
+res://Prefab/Transition.tscn
+res://Scripts/PuluPuluGuy.gd

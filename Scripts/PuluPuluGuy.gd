@@ -31,6 +31,9 @@ func _physics_process(delta):
 			set_collision_mask_value(2, true)
 	elif is_on_floor():
 		if Input.is_action_just_pressed("down"):
+			if is_on_wall() and is_on_floor():
+				position.x += get_wall_normal().x
+				
 			set_collision_mask_value(2, false)
 		
 	if is_on_floor() or is_on_wall():
