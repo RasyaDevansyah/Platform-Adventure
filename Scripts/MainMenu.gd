@@ -25,6 +25,6 @@ func _on_play_button_up():
 
 func _on_canvas_layer__transition_finished():
 	if state == pressed.PLAY:
-		get_tree().change_scene_to_file("res://Scenes/Main.tscn")
+		get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 	elif state == pressed.EXIT:
 		get_tree().quit()

@@ -1,39 +1,40 @@
-[gd_scene load_steps=40 format=3 uid="uid://p27b3attllql"]
+[gd_scene load_steps=41 format=3 uid="uid://p27b3attllql"]
 
-[ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_y4rjq"]
-[ext_resource type="Texture2D" uid="uid://dyhkqjspuiqrw" path="res://Assets/Background/Blue.png" id="2_3bxdi"]
-[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_62u44"]
-[ext_resource type="Texture2D" uid="uid://bod8m3jhob3ce" path="res://Assets/Menu/Buttons/Back.png" id="4_1ar8t"]
-[ext_resource type="Texture2D" uid="uid://ddrsr2oe05eg1" path="res://Assets/Menu/Levels/01.png" id="4_h3ayd"]
-[ext_resource type="Texture2D" uid="uid://nmalpwj8bcw6" path="res://Assets/Menu/Levels/02.png" id="5_cr5co"]
-[ext_resource type="Texture2D" uid="uid://df4h64bgruqmu" path="res://Assets/Menu/Levels/03.png" id="6_r7g4b"]
-[ext_resource type="Texture2D" uid="uid://cuothbix3ub55" path="res://Assets/Menu/Levels/04.png" id="7_3xxoh"]
-[ext_resource type="Texture2D" uid="uid://tdrncq8ng2ag" path="res://Assets/Menu/Levels/05.png" id="8_ta8k0"]
-[ext_resource type="Texture2D" uid="uid://wylu305g4xgh" path="res://Assets/Menu/Levels/06.png" id="9_8nbyg"]
-[ext_resource type="Texture2D" uid="uid://436aa4vs28og" path="res://Assets/Menu/Levels/07.png" id="10_xo587"]
-[ext_resource type="Texture2D" uid="uid://bcjajlgsd6txf" path="res://Assets/Menu/Levels/08.png" id="11_hq63p"]
-[ext_resource type="Texture2D" uid="uid://bhgk7hdp35wu0" path="res://Assets/Menu/Levels/09.png" id="12_fbg4s"]
-[ext_resource type="Texture2D" uid="uid://bc612mgtd0vwp" path="res://Assets/Menu/Levels/10.png" id="13_0yy6s"]
-[ext_resource type="Texture2D" uid="uid://c1mmnr0h3kpwg" path="res://Assets/Menu/Levels/11.png" id="14_8sgay"]
-[ext_resource type="Texture2D" uid="uid://c8gpream2eshb" path="res://Assets/Menu/Levels/12.png" id="15_be6ri"]
-[ext_resource type="Texture2D" uid="uid://djx3a0hxpk7q7" path="res://Assets/Menu/Levels/13.png" id="16_brjx0"]
-[ext_resource type="Texture2D" uid="uid://dm1pnw3qixccf" path="res://Assets/Menu/Levels/14.png" id="17_opn4s"]
-[ext_resource type="Texture2D" uid="uid://rsa4wfnglqgv" path="res://Assets/Menu/Levels/15.png" id="18_2xgqg"]
-[ext_resource type="Texture2D" uid="uid://3csepiosslc0" path="res://Assets/Menu/Levels/16.png" id="19_qxv40"]
-[ext_resource type="Texture2D" uid="uid://cgwoa484wr7hx" path="res://Assets/Menu/Levels/17.png" id="20_ob54c"]
-[ext_resource type="Texture2D" uid="uid://dt5cki4776gfg" path="res://Assets/Menu/Levels/18.png" id="21_fek57"]
-[ext_resource type="Texture2D" uid="uid://bi6i006fjw5b5" path="res://Assets/Menu/Levels/19.png" id="22_i8qr4"]
-[ext_resource type="Texture2D" uid="uid://sl4xl18d2crf" path="res://Assets/Menu/Levels/20.png" id="23_nhbpt"]
-[ext_resource type="Texture2D" uid="uid://cunwjccvxlwtq" path="res://Assets/Menu/Levels/21.png" id="24_l3rhw"]
-[ext_resource type="Texture2D" uid="uid://c2cg0l0p4krle" path="res://Assets/Menu/Levels/22.png" id="25_c5gdw"]
-[ext_resource type="Texture2D" uid="uid://d3nubjdi4e1au" path="res://Assets/Menu/Levels/23.png" id="26_0bi2h"]
-[ext_resource type="Texture2D" uid="uid://58k8njxkyp56" path="res://Assets/Menu/Levels/24.png" id="27_pcudp"]
-[ext_resource type="Texture2D" uid="uid://ckva6vj1esee8" path="res://Assets/Menu/Levels/25.png" id="28_ty2ud"]
-[ext_resource type="Texture2D" uid="uid://dwt4v6abgc8ux" path="res://Assets/Menu/Levels/26.png" id="29_4qfc0"]
-[ext_resource type="Texture2D" uid="uid://cab6c2m14c20w" path="res://Assets/Menu/Levels/27.png" id="30_5iuc7"]
-[ext_resource type="Texture2D" uid="uid://dvvq137iw4drh" path="res://Assets/Menu/Levels/28.png" id="31_rxr3h"]
-[ext_resource type="Texture2D" uid="uid://c4j5cu5qcgw5b" path="res://Assets/Menu/Levels/29.png" id="32_6h3ci"]
-[ext_resource type="Texture2D" uid="uid://m85syppe3ut0" path="res://Assets/Menu/Levels/50.png" id="33_1xe1e"]
+[ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_i1jpa"]
+[ext_resource type="Script" path="res://Scripts/level_select.gd" id="2_6l0xw"]
+[ext_resource type="Texture2D" uid="uid://dyhkqjspuiqrw" path="res://Assets/Background/Blue.png" id="2_rtvud"]
+[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_e3qt4"]
+[ext_resource type="Texture2D" uid="uid://bod8m3jhob3ce" path="res://Assets/Menu/Buttons/Back.png" id="4_efpkw"]
+[ext_resource type="Texture2D" uid="uid://ddrsr2oe05eg1" path="res://Assets/Menu/Levels/01.png" id="5_vkyck"]
+[ext_resource type="Texture2D" uid="uid://nmalpwj8bcw6" path="res://Assets/Menu/Levels/02.png" id="6_njjkh"]
+[ext_resource type="Texture2D" uid="uid://df4h64bgruqmu" path="res://Assets/Menu/Levels/03.png" id="7_ynqex"]
+[ext_resource type="Texture2D" uid="uid://cuothbix3ub55" path="res://Assets/Menu/Levels/04.png" id="8_pys5i"]
+[ext_resource type="Texture2D" uid="uid://tdrncq8ng2ag" path="res://Assets/Menu/Levels/05.png" id="9_lf0xc"]
+[ext_resource type="Texture2D" uid="uid://wylu305g4xgh" path="res://Assets/Menu/Levels/06.png" id="10_w57xo"]
+[ext_resource type="Texture2D" uid="uid://436aa4vs28og" path="res://Assets/Menu/Levels/07.png" id="11_i1pq3"]
+[ext_resource type="Texture2D" uid="uid://bcjajlgsd6txf" path="res://Assets/Menu/Levels/08.png" id="12_k0ou3"]
+[ext_resource type="Texture2D" uid="uid://bhgk7hdp35wu0" path="res://Assets/Menu/Levels/09.png" id="13_jfbmb"]
+[ext_resource type="Texture2D" uid="uid://bc612mgtd0vwp" path="res://Assets/Menu/Levels/10.png" id="14_qbte2"]
+[ext_resource type="Texture2D" uid="uid://c1mmnr0h3kpwg" path="res://Assets/Menu/Levels/11.png" id="15_26a7l"]
+[ext_resource type="Texture2D" uid="uid://c8gpream2eshb" path="res://Assets/Menu/Levels/12.png" id="16_jyffp"]
+[ext_resource type="Texture2D" uid="uid://djx3a0hxpk7q7" path="res://Assets/Menu/Levels/13.png" id="17_pwfj5"]
+[ext_resource type="Texture2D" uid="uid://dm1pnw3qixccf" path="res://Assets/Menu/Levels/14.png" id="18_55l8y"]
+[ext_resource type="Texture2D" uid="uid://rsa4wfnglqgv" path="res://Assets/Menu/Levels/15.png" id="19_vt7d1"]
+[ext_resource type="Texture2D" uid="uid://3csepiosslc0" path="res://Assets/Menu/Levels/16.png" id="20_5lfyb"]
+[ext_resource type="Texture2D" uid="uid://cgwoa484wr7hx" path="res://Assets/Menu/Levels/17.png" id="21_lwvy0"]
+[ext_resource type="Texture2D" uid="uid://dt5cki4776gfg" path="res://Assets/Menu/Levels/18.png" id="22_5o8tq"]
+[ext_resource type="Texture2D" uid="uid://bi6i006fjw5b5" path="res://Assets/Menu/Levels/19.png" id="23_gg3uv"]
+[ext_resource type="Texture2D" uid="uid://sl4xl18d2crf" path="res://Assets/Menu/Levels/20.png" id="24_ryg6f"]
+[ext_resource type="Texture2D" uid="uid://cunwjccvxlwtq" path="res://Assets/Menu/Levels/21.png" id="25_ylq23"]
+[ext_resource type="Texture2D" uid="uid://c2cg0l0p4krle" path="res://Assets/Menu/Levels/22.png" id="26_46tlp"]
+[ext_resource type="Texture2D" uid="uid://d3nubjdi4e1au" path="res://Assets/Menu/Levels/23.png" id="27_8t80b"]
+[ext_resource type="Texture2D" uid="uid://58k8njxkyp56" path="res://Assets/Menu/Levels/24.png" id="28_xrjmy"]
+[ext_resource type="Texture2D" uid="uid://ckva6vj1esee8" path="res://Assets/Menu/Levels/25.png" id="29_8s182"]
+[ext_resource type="Texture2D" uid="uid://dwt4v6abgc8ux" path="res://Assets/Menu/Levels/26.png" id="30_t30kg"]
+[ext_resource type="Texture2D" uid="uid://cab6c2m14c20w" path="res://Assets/Menu/Levels/27.png" id="31_4wps8"]
+[ext_resource type="Texture2D" uid="uid://dvvq137iw4drh" path="res://Assets/Menu/Levels/28.png" id="32_x5wav"]
+[ext_resource type="Texture2D" uid="uid://c4j5cu5qcgw5b" path="res://Assets/Menu/Levels/29.png" id="33_v8wry"]
+[ext_resource type="Texture2D" uid="uid://m85syppe3ut0" path="res://Assets/Menu/Levels/50.png" id="34_gxhky"]
 
 [sub_resource type="Animation" id="Animation_ktebe"]
 length = 0.001
@@ -83,7 +84,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_y4rjq")
+theme = ExtResource("1_i1jpa")
+script = ExtResource("2_6l0xw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -98,7 +100,7 @@ offset_right = 659.0
 offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_3bxdi")
+texture = ExtResource("2_rtvud")
 stretch_mode = 1
 
 [node name="Label" type="Label" parent="."]
@@ -128,7 +130,7 @@ libraries = {
 }
 autoplay = "TitleBackground"
 
-[node name="CanvasLayer" parent="." instance=ExtResource("3_62u44")]
+[node name="CanvasLayer" parent="." instance=ExtResource("3_e3qt4")]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -153,7 +155,7 @@ offset_right = 956.0
 offset_bottom = 450.0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("4_1ar8t")
+icon = ExtResource("4_efpkw")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -178,7 +180,7 @@ custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("4_h3ayd")
+icon = ExtResource("5_vkyck")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -189,7 +191,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("5_cr5co")
+icon = ExtResource("6_njjkh")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -200,7 +202,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("6_r7g4b")
+icon = ExtResource("7_ynqex")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -211,7 +213,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("7_3xxoh")
+icon = ExtResource("8_pys5i")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -222,7 +224,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("8_ta8k0")
+icon = ExtResource("9_lf0xc")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -233,7 +235,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("9_8nbyg")
+icon = ExtResource("10_w57xo")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -244,7 +246,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("10_xo587")
+icon = ExtResource("11_i1pq3")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -255,7 +257,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("11_hq63p")
+icon = ExtResource("12_k0ou3")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -266,7 +268,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("12_fbg4s")
+icon = ExtResource("13_jfbmb")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -277,7 +279,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("13_0yy6s")
+icon = ExtResource("14_qbte2")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -288,7 +290,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("14_8sgay")
+icon = ExtResource("15_26a7l")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -299,7 +301,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("15_be6ri")
+icon = ExtResource("16_jyffp")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -310,7 +312,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("16_brjx0")
+icon = ExtResource("17_pwfj5")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -321,7 +323,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("17_opn4s")
+icon = ExtResource("18_55l8y")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -332,7 +334,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("18_2xgqg")
+icon = ExtResource("19_vt7d1")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -343,7 +345,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("19_qxv40")
+icon = ExtResource("20_5lfyb")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -354,7 +356,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("20_ob54c")
+icon = ExtResource("21_lwvy0")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -365,7 +367,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("21_fek57")
+icon = ExtResource("22_5o8tq")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -376,7 +378,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("22_i8qr4")
+icon = ExtResource("23_gg3uv")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -387,7 +389,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("23_nhbpt")
+icon = ExtResource("24_ryg6f")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -398,7 +400,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("24_l3rhw")
+icon = ExtResource("25_ylq23")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -409,7 +411,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("25_c5gdw")
+icon = ExtResource("26_46tlp")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -420,7 +422,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("26_0bi2h")
+icon = ExtResource("27_8t80b")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -431,7 +433,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("27_pcudp")
+icon = ExtResource("28_xrjmy")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -442,7 +444,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("28_ty2ud")
+icon = ExtResource("29_8s182")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -453,7 +455,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("29_4qfc0")
+icon = ExtResource("30_t30kg")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -464,7 +466,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("30_5iuc7")
+icon = ExtResource("31_4wps8")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -475,7 +477,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("31_rxr3h")
+icon = ExtResource("32_x5wav")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -486,7 +488,7 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("32_6h3ci")
+icon = ExtResource("33_v8wry")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -497,9 +499,11 @@ layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
-icon = ExtResource("33_1xe1e")
+icon = ExtResource("34_gxhky")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
 [connection signal="_TransitionFinished" from="CanvasLayer" to="." method="_on_canvas_layer__transition_finished"]
+[connection signal="button_down" from="Panel/Back" to="." method="_on_back_button_down"]
+[connection signal="button_up" from="Panel/GridContainer/Button1" to="." method="_on_button_1_button_up"]

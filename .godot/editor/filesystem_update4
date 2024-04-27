@@ -7,3 +7,5 @@ res://Scripts/Transition.gd
 res://Scenes/MainMenu.tscn
 res://Scripts/MainMenu.gd
 res://Prefab/level_select.tscn
+res://Scenes/level_select.tscn
+res://Scripts/level_select.gd
