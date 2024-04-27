@@ -9,6 +9,8 @@ func _ready():
 	if autoEnter:
 		await get_tree().create_timer(DELAY).timeout
 		Enter()
+	else:
+		visible = true
 	
 func Enter():
 	animation_player.play("Transition")

@@ -6,3 +6,4 @@ res://Prefab/melon.tscn
 res://Scripts/Transition.gd
 res://Scenes/MainMenu.tscn
 res://Scripts/MainMenu.gd
+res://Prefab/level_select.tscn
