@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://h4yvcfcedb78"]
+[gd_scene load_steps=85 format=3 uid="uid://h4yvcfcedb78"]
 
 [ext_resource type="Script" path="res://Scripts/PuluPuluGuy.gd" id="1_13fao"]
 [ext_resource type="Texture2D" uid="uid://cab13mphur2nn" path="res://Assets/Main Characters/Mask Dude/Jump (32x32).png" id="1_y012q"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://2wuwfynkt0d0" path="res://Assets/Main Characters/Mask Dude/Hit (32x32).png" id="5_37r68"]
 [ext_resource type="Texture2D" uid="uid://capbvctpyps1m" path="res://Assets/Main Characters/Mask Dude/Wall Jump (32x32).png" id="5_a0del"]
 [ext_resource type="Texture2D" uid="uid://b3q7eauogxd5y" path="res://Assets/Main Characters/Desappearing (96x96).png" id="6_t85qp"]
+[ext_resource type="Texture2D" uid="uid://beawvav7a46ce" path="res://Assets/Items/Fruits/Cherries.png" id="10_34a3h"]
+[ext_resource type="Texture2D" uid="uid://dp5ke5xg07cyf" path="res://Assets/Items/Fruits/Bananas.png" id="11_hn8ye"]
+[ext_resource type="Texture2D" uid="uid://ef1ui6wo302s" path="res://Assets/Items/Fruits/Apple.png" id="12_r74nj"]
+[ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="13_ygmyw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tnsbe"]
 atlas = ExtResource("2_p4mv4")
@@ -684,7 +688,7 @@ script = ExtResource("1_13fao")
 process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
 animation = &"Idle"
-frame = 10
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 1
@@ -721,5 +725,46 @@ visible = false
 position = Vector2(0.333333, 3.66667)
 shape = SubResource("CapsuleShape2D_mb8o0")
 debug_color = Color(0.894118, 0.278431, 0.411765, 0.419608)
+
+[node name="PlayerUI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI"]
+offset_left = 36.0
+offset_top = 20.0
+offset_right = 144.0
+offset_bottom = 61.0
+scale = Vector2(1.35, 1.35)
+metadata/_edit_group_ = true
+
+[node name="Fruits" type="Panel" parent="PlayerUI/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="PlayerUI/HBoxContainer/Fruits"]
+position = Vector2(29.9673, 17.0326)
+rotation = -0.357792
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("10_34a3h")
+hframes = 17
+
+[node name="Sprite2D2" type="Sprite2D" parent="PlayerUI/HBoxContainer/Fruits"]
+position = Vector2(8.96732, 21.0326)
+rotation = 0.497419
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("11_hn8ye")
+hframes = 17
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerUI/HBoxContainer/Fruits"]
+position = Vector2(18.9673, 25.0326)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("12_r74nj")
+hframes = 17
+
+[node name="Label" type="Label" parent="PlayerUI/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("13_ygmyw")
+theme_override_font_sizes/font_size = 40
+text = " : 0"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

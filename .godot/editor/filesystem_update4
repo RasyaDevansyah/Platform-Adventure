@@ -3,4 +3,6 @@ res://Other/new_theme.tres
 res://Scenes/MainMenu.tscn
 res://Scenes/level_select.tscn
 res://Prefab/Transition.tscn
-res://Scripts/PuluPuluGuy.gd
+res://Scripts/Transition.gd
+res://Scripts/PickableItem.gd
+res://Prefab/PuluPuluGuy.tscn

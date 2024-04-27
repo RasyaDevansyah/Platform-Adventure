@@ -18,5 +18,5 @@ func Enter():
 func Exit():
 	animation_player.play_backwards("Transition")
 
-func _on_animation_player_animation_finished(anim_name):
+func _on_animation_player_animation_finished(_anim_name):
 	emit_signal("_TransitionFinished")
