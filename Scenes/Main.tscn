@@ -916,8 +916,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 38146.0
-offset_bottom = 21531.0
+offset_right = 46210.0
+offset_bottom = 26067.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
@@ -1025,11 +1025,5 @@ position = Vector2(4.00493, 1.99004)
 [node name="Trophy" parent="." instance=ExtResource("10_0768o")]
 position = Vector2(107, 500)
 scale = Vector2(0.76, 0.76)
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="CanvasLayer" parent="." instance=ExtResource("11_pg2ra")]

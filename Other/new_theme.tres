@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cxav2eygb1aru"]
+
+[ext_resource type="FontFile" uid="uid://b5di6vmo5uot8" path="res://Assets/Menu/Text/Micro5-Regular.ttf" id="1_i4g77"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tcyg"]
+bg_color = Color(0.129412, 0.121569, 0.188235, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[resource]
+default_base_scale = 0.95
+default_font = ExtResource("1_i4g77")
+default_font_size = 25
+Button/constants/h_separation = 8
+Button/styles/normal = SubResource("StyleBoxFlat_8tcyg")

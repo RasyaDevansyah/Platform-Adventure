@@ -1,9 +1,20 @@
 extends CanvasLayer
 
 @onready var animation_player :  AnimationPlayer = $AnimationPlayer
-
+@export var autoEnter : bool = true
+const DELAY = 0.4
+signal _TransitionFinished
 
 func _ready():
+	if autoEnter:
+		await get_tree().create_timer(DELAY).timeout
+		Enter()
+	
+func Enter():
 	animation_player.play("Transition")
 	
-	
+func Exit():
+	animation_player.play_backwards("Transition")
+
+func _on_animation_player_animation_finished(anim_name):
+	emit_signal("_TransitionFinished")
