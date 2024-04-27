@@ -6,3 +6,4 @@ res://Prefab/Transition.tscn
 res://Scripts/Transition.gd
 res://Scripts/PickableItem.gd
 res://Prefab/PuluPuluGuy.tscn
+res://Scripts/PlayerUI.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://h4yvcfcedb78"]
+[gd_scene load_steps=86 format=3 uid="uid://h4yvcfcedb78"]
 
 [ext_resource type="Script" path="res://Scripts/PuluPuluGuy.gd" id="1_13fao"]
 [ext_resource type="Texture2D" uid="uid://cab13mphur2nn" path="res://Assets/Main Characters/Mask Dude/Jump (32x32).png" id="1_y012q"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://capbvctpyps1m" path="res://Assets/Main Characters/Mask Dude/Wall Jump (32x32).png" id="5_a0del"]
 [ext_resource type="Texture2D" uid="uid://b3q7eauogxd5y" path="res://Assets/Main Characters/Desappearing (96x96).png" id="6_t85qp"]
 [ext_resource type="Texture2D" uid="uid://beawvav7a46ce" path="res://Assets/Items/Fruits/Cherries.png" id="10_34a3h"]
+[ext_resource type="Script" path="res://Scripts/PlayerUI.gd" id="10_e1tuy"]
 [ext_resource type="Texture2D" uid="uid://dp5ke5xg07cyf" path="res://Assets/Items/Fruits/Bananas.png" id="11_hn8ye"]
 [ext_resource type="Texture2D" uid="uid://ef1ui6wo302s" path="res://Assets/Items/Fruits/Apple.png" id="12_r74nj"]
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="13_ygmyw"]
@@ -688,7 +689,6 @@ script = ExtResource("1_13fao")
 process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
 animation = &"Idle"
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 1
@@ -727,6 +727,7 @@ shape = SubResource("CapsuleShape2D_mb8o0")
 debug_color = Color(0.894118, 0.278431, 0.411765, 0.419608)
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
+script = ExtResource("10_e1tuy")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI"]
 offset_left = 36.0
