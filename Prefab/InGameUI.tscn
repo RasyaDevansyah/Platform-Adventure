@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://wnepht75yxvj"]
+
+[ext_resource type="Texture2D" uid="uid://cv1lgxyqvttrc" path="res://Assets/Menu/Buttons/Restart.png" id="1_y3wex"]
+[ext_resource type="Texture2D" uid="uid://oatdhyg0amf0" path="res://Assets/Menu/Buttons/Previous.png" id="2_jnbiy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hajr6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_koadg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pousn"]
+
+[node name="InGameUI" type="CanvasLayer"]
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 998.0
+offset_top = 9.0
+offset_right = 1068.0
+offset_bottom = 79.0
+focus_mode = 0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hajr6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_koadg")
+icon = ExtResource("1_y3wex")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Restart2" type="Button" parent="."]
+offset_left = 1061.0
+offset_top = 9.0
+offset_right = 1131.0
+offset_bottom = 79.0
+focus_mode = 0
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hajr6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pousn")
+icon = ExtResource("2_jnbiy")
+flat = true
+icon_alignment = 1
+expand_icon = true

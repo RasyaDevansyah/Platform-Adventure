@@ -89,13 +89,13 @@ script = ExtResource("1_dqyct")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1
 z_as_relative = false
-scale = Vector2(2.5, 2.5)
+scale = Vector2(0.66, 0.66)
 sprite_frames = SubResource("SpriteFrames_yukvf")
 animation = &"pickedUp"
 autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(0.66, 0.66)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.5, 9)

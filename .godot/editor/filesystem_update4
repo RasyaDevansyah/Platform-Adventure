@@ -2,8 +2,11 @@ res://Scenes/Main.tscn
 res://Other/new_theme.tres
 res://Scenes/MainMenu.tscn
 res://Scenes/level_select.tscn
-res://Prefab/Transition.tscn
-res://Scripts/Transition.gd
-res://Scripts/PickableItem.gd
 res://Prefab/PuluPuluGuy.tscn
+res://Scenes/level_1.tscn
+res://Prefab/Trophy.tscn
+res://Other/TileSet.tres
+res://Prefab/InGameUI.tscn
 res://Scripts/PlayerUI.gd
+res://Scripts/PuluPuluGuy.gd
+res://Scripts/PickableItem.gd

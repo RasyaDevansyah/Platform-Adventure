@@ -94,10 +94,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -659.0
-offset_top = -368.0
-offset_right = 659.0
-offset_bottom = 368.0
+offset_left = -83.0
+offset_top = -44.0
+offset_right = 1235.0
+offset_bottom = 692.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_rtvud")
@@ -153,6 +153,7 @@ offset_left = 876.0
 offset_top = 370.0
 offset_right = 956.0
 offset_bottom = 450.0
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 icon = ExtResource("4_efpkw")
@@ -178,6 +179,7 @@ metadata/_edit_lock_ = true
 [node name="Button1" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 icon = ExtResource("5_vkyck")
@@ -188,6 +190,7 @@ expand_icon = true
 [node name="Button2" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -199,6 +202,7 @@ expand_icon = true
 [node name="Button3" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -210,6 +214,7 @@ expand_icon = true
 [node name="Button4" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -221,6 +226,7 @@ expand_icon = true
 [node name="Button5" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -232,6 +238,7 @@ expand_icon = true
 [node name="Button6" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -243,6 +250,7 @@ expand_icon = true
 [node name="Button7" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -254,6 +262,7 @@ expand_icon = true
 [node name="Button8" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -265,6 +274,7 @@ expand_icon = true
 [node name="Button9" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -276,6 +286,7 @@ expand_icon = true
 [node name="Button10" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -287,6 +298,7 @@ expand_icon = true
 [node name="Button11" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -298,6 +310,7 @@ expand_icon = true
 [node name="Button12" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -309,6 +322,7 @@ expand_icon = true
 [node name="Button13" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -320,6 +334,7 @@ expand_icon = true
 [node name="Button14" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -331,6 +346,7 @@ expand_icon = true
 [node name="Button15" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -342,6 +358,7 @@ expand_icon = true
 [node name="Button16" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -353,6 +370,7 @@ expand_icon = true
 [node name="Button17" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -364,6 +382,7 @@ expand_icon = true
 [node name="Button18" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -375,6 +394,7 @@ expand_icon = true
 [node name="Button19" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -386,6 +406,7 @@ expand_icon = true
 [node name="Button20" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -397,6 +418,7 @@ expand_icon = true
 [node name="Button21" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -408,6 +430,7 @@ expand_icon = true
 [node name="Button22" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -419,6 +442,7 @@ expand_icon = true
 [node name="Button23" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -430,6 +454,7 @@ expand_icon = true
 [node name="Button24" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -441,6 +466,7 @@ expand_icon = true
 [node name="Button25" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -452,6 +478,7 @@ expand_icon = true
 [node name="Button26" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -463,6 +490,7 @@ expand_icon = true
 [node name="Button27" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -474,6 +502,7 @@ expand_icon = true
 [node name="Button28" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -485,6 +514,7 @@ expand_icon = true
 [node name="Button29" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true
@@ -496,6 +526,7 @@ expand_icon = true
 [node name="Button30" type="Button" parent="Panel/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_68bqj")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 disabled = true

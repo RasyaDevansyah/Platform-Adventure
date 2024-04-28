@@ -11,12 +11,14 @@ const FRICTION = 40
 @onready var animatedSprite2D : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animationTree : AnimationTree = $AnimationTree
 @onready var platformCollidingChecker : ShapeCast2D = $PlatformCollidingChecker
+@onready var playerUI = $PlayerUI as PlayerUI
+
+
 var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var wallSlideGravity : float = 100
 
 var isWallSliding : bool = false
 var canDoubleJump : bool = true
-
 
 func _physics_process(delta):
 	var direction : float = Input.get_axis("left", "right")
@@ -32,11 +34,11 @@ func _physics_process(delta):
 	elif is_on_floor():
 		if Input.is_action_just_pressed("down"):
 			if is_on_wall() and is_on_floor():
-				position.x += get_wall_normal().x
+				position.x += get_wall_normal().x * 3
 				
 			set_collision_mask_value(2, false)
 		
-	if is_on_floor() or is_on_wall():
+	if is_on_floor() or isWallSliding: 
 		canDoubleJump = true
 	
 	
@@ -51,14 +53,12 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY * 80/100
 			animationTree.set("parameters/DoubleJump/request" ,  AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
-	if is_on_wall() and !is_on_floor():
-		if direction:
-			isWallSliding = true
-		else:
-			isWallSliding = false
+	if is_on_wall() and not is_on_floor():
+		isWallSliding = direction
 	else:
 		isWallSliding = false
-		
+			
+			
 	if isWallSliding:
 		velocity.y = min(velocity.y , wallSlideGravity)
 		
@@ -87,6 +87,7 @@ func _physics_process(delta):
 
 func Hit(knockBack : Vector2 = global_transform.origin * Vector2.RIGHT):
 	velocity = knockBack * 800
+	
 	animationTree.set("parameters/DoubleJump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	animationTree.set("parameters/Transition/transition_request", "Dead")
 	await get_tree().create_timer(0.3).timeout
