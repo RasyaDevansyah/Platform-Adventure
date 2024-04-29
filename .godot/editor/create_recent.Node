@@ -1,3 +1,4 @@
+GPUParticles2D
 Control
 Sprite2D
 Container
@@ -12,4 +13,3 @@ Panel
 Node2D
 CanvasGroup
 HBoxContainer
-HFlowContainer
