@@ -13,7 +13,6 @@ const FRICTION = 40
 @onready var platformCollidingChecker : ShapeCast2D = $PlatformCollidingChecker
 @onready var playerUI = $PlayerUI as PlayerUI
 
-
 var gravity : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var wallSlideGravity : float = 100
 
@@ -91,5 +90,8 @@ func Hit(knockBack : Vector2 = global_transform.origin * Vector2.RIGHT):
 	animationTree.set("parameters/DoubleJump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	animationTree.set("parameters/Transition/transition_request", "Dead")
 	await get_tree().create_timer(0.3).timeout
+	process_mode = Node.PROCESS_MODE_DISABLED
+	
+func DisablePlayer():
 	process_mode = Node.PROCESS_MODE_DISABLED
 	

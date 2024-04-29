@@ -125,8 +125,8 @@ libraries = {
 }
 autoplay = "TitleBackground"
 
-[node name="CanvasLayer" parent="." instance=ExtResource("3_xfbr2")]
+[node name="Transition" parent="." instance=ExtResource("3_xfbr2")]
 
 [connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
-[connection signal="_TransitionFinished" from="CanvasLayer" to="." method="_on_canvas_layer__transition_finished"]
+[connection signal="_TransitionFinished" from="Transition" to="." method="_on_canvas_layer__transition_finished"]

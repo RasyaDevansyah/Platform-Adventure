@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c87xypfsnpqjl"]
+[gd_scene load_steps=15 format=3 uid="uid://c87xypfsnpqjl"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_dvrgu"]
 [ext_resource type="PackedScene" uid="uid://h4yvcfcedb78" path="res://Prefab/PuluPuluGuy.tscn" id="2_7jedn"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="8_6ub7s"]
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="9_ivhjv"]
 [ext_resource type="PackedScene" uid="uid://wnepht75yxvj" path="res://Prefab/InGameUI.tscn" id="10_ilqfy"]
+[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="11_40kbr"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
@@ -59,8 +60,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 65794.0
-offset_bottom = 37083.0
+offset_right = 83074.0
+offset_bottom = 46803.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_dvrgu")
@@ -122,3 +123,5 @@ position = Vector2(854, 512)
 scale = Vector2(3, 3)
 
 [node name="InGameUI" parent="." instance=ExtResource("10_ilqfy")]
+
+[node name="Transition" parent="." instance=ExtResource("11_40kbr")]

@@ -1,6 +1,6 @@
 extends Control
 
-@onready var canvas_layer : CanvasLayer = $CanvasLayer
+@onready var transition : CanvasLayer = $Transition
 
 enum pressed {NULL, PLAY, EXIT}
 var state : pressed = pressed.NULL
@@ -10,7 +10,7 @@ func _on_quit_button_up():
 		return
 	state = pressed.EXIT
 	await get_tree().create_timer(0.4).timeout
-	canvas_layer.Exit()
+	transition.Exit()
 
 
 func _on_play_button_up():
@@ -18,7 +18,7 @@ func _on_play_button_up():
 		return
 	state = pressed.PLAY
 	await get_tree().create_timer(0.4).timeout
-	canvas_layer.Exit()
+	transition.Exit()
 
 	pass # Replace with function body.
 

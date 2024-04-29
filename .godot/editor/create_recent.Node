@@ -1,6 +1,9 @@
+AnimationPlayer
+Sprite2D
+Panel
+Node2D
 GPUParticles2D
 Control
-Sprite2D
 Container
 CanvasLayer
 Label
@@ -9,7 +12,4 @@ MeshInstance2D
 ColorRect
 TileMap
 Node
-Panel
-Node2D
 CanvasGroup
-HBoxContainer

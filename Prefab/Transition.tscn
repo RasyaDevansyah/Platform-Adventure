@@ -401,7 +401,7 @@ _data = {
 "Transition": SubResource("Animation_jy8w1")
 }
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Transition" type="CanvasLayer"]
 script = ExtResource("1_5k6s3")
 
 [node name="Node" type="Node2D" parent="."]
