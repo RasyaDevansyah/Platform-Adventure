@@ -698,6 +698,33 @@ corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tso2"]
 
+[sub_resource type="Animation" id="Animation_46ws8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WinPanel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(656, 360)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WinPanel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_wm2oo"]
 resource_name = "Win"
 tracks/0/type = "value"
@@ -737,45 +764,6 @@ tracks/2/keys = {
 "values": [Vector2(248, 144)]
 }
 
-[sub_resource type="Animation" id="Animation_46ws8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WinPanel:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(656, 360)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WinPanel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WinPanel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(248, 144)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oywtk"]
 _data = {
 "RESET": SubResource("Animation_46ws8"),
@@ -792,7 +780,7 @@ script = ExtResource("1_13fao")
 process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
 animation = &"Idle"
-frame = 5
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 1
@@ -880,10 +868,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -328.0
-offset_top = -180.0
-offset_right = 328.0
-offset_bottom = 180.0
+offset_left = 248.0
+offset_top = 144.0
+offset_right = 904.0
+offset_bottom = 504.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -908,6 +896,7 @@ scale = Vector2(1.75, 1.75)
 texture = ExtResource("15_mopak")
 
 [node name="Restart" type="Button" parent="PlayerUI/WinPanel"]
+layout_mode = 0
 offset_left = 232.0
 offset_top = 240.0
 offset_right = 302.0
@@ -920,7 +909,8 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Restart2" type="Button" parent="PlayerUI/WinPanel"]
+[node name="Next" type="Button" parent="PlayerUI/WinPanel"]
+layout_mode = 0
 offset_left = 296.0
 offset_top = 240.0
 offset_right = 366.0
@@ -933,7 +923,8 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Restart3" type="Button" parent="PlayerUI/WinPanel"]
+[node name="Level" type="Button" parent="PlayerUI/WinPanel"]
+layout_mode = 0
 offset_left = 360.0
 offset_top = 240.0
 offset_right = 430.0
@@ -952,3 +943,6 @@ libraries = {
 }
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="button_up" from="PlayerUI/WinPanel/Restart" to="PlayerUI" method="_on_restart_button_up"]
+[connection signal="button_up" from="PlayerUI/WinPanel/Next" to="PlayerUI" method="_on_next_button_up"]
+[connection signal="button_up" from="PlayerUI/WinPanel/Level" to="PlayerUI" method="_on_level_button_up"]

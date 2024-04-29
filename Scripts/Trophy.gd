@@ -12,7 +12,7 @@ func PickUp(body):
 	
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
-		#body.DisablePlayer()
+		body.DisablePlayer()
 		PickUp(body)
 		await get_tree().create_timer(0.8).timeout
 		body.playerUI.winUI()

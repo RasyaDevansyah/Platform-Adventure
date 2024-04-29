@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5ggj2ylj0qbf"]
+[gd_scene load_steps=21 format=3 uid="uid://c5ggj2ylj0qbf"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_ml0hq"]
 [ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="2_olbgm"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b5m2dm0c1t4b2" path="res://Prefab/line_2d.tscn" id="8_1c8w7"]
 [ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="9_j2vj5"]
 [ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="10_0768o"]
-[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="11_pg2ra"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
@@ -132,8 +131,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 69250.0
-offset_bottom = 39027.0
+offset_right = 72706.0
+offset_bottom = 40971.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
@@ -241,5 +240,3 @@ position = Vector2(4.00493, 1.99004)
 [node name="Trophy" parent="." instance=ExtResource("10_0768o")]
 position = Vector2(105, 512)
 scale = Vector2(2.5, 2.5)
-
-[node name="CanvasLayer" parent="." instance=ExtResource("11_pg2ra")]

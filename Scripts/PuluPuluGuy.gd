@@ -18,9 +18,10 @@ var wallSlideGravity : float = 100
 
 var isWallSliding : bool = false
 var canDoubleJump : bool = true
+var disablePlayer : bool = false
 
 func _physics_process(delta):
-	var direction : float = Input.get_axis("left", "right")
+	var direction : float = Input.get_axis("left", "right") if not disablePlayer else 0
 	if direction:
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION)
 	else:
@@ -93,5 +94,4 @@ func Hit(knockBack : Vector2 = global_transform.origin * Vector2.RIGHT):
 	process_mode = Node.PROCESS_MODE_DISABLED
 	
 func DisablePlayer():
-	process_mode = Node.PROCESS_MODE_DISABLED
-	
+	disablePlayer = true

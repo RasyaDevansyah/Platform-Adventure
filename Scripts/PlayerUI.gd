@@ -17,5 +17,16 @@ func ChangeCount(number : int):
 	label.text = " : " + str(number)
 
 func winUI():
-	print("test")
 	win_animation.play("Win")
+
+
+func _on_restart_button_up():
+	pass
+
+
+func _on_next_button_up():
+	pass
+
+
+func _on_level_button_up():
+	pass
