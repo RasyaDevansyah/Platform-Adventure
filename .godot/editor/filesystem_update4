@@ -4,7 +4,8 @@ res://Other/new_theme.tres
 res://Scenes/MainMenu.tscn
 res://Scenes/level_select.tscn
 res://Scenes/level_1.tscn
-res://Prefab/Trophy.tscn
 res://Prefab/InGameUI.tscn
 res://Prefab/PuluPuluGuy.tscn
-res://Scripts/PlayerUI.gd
+res://Scripts/PickableItem.gd
+res://Scripts/PuluPuluGuy.gd
+res://Scripts/InGameUI.gd

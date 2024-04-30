@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal _playerDeath
+
 
 const SPEED : float = 400.0
 const JUMP_VELOCITY : float = -900.0
@@ -21,7 +23,7 @@ var canDoubleJump : bool = true
 var disablePlayer : bool = false
 
 func _physics_process(delta):
-	var direction : float = Input.get_axis("left", "right") if not disablePlayer else 0
+	var direction : float = Input.get_axis("left", "right") if not disablePlayer else 0.0
 	if direction:
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION)
 	else:
@@ -86,8 +88,8 @@ func _physics_process(delta):
 		animationTree.set("parameters/MovementState/blend_position", 0)
 
 func Hit(knockBack : Vector2 = global_transform.origin * Vector2.RIGHT):
+	emit_signal("_playerDeath")
 	velocity = knockBack * 800
-	
 	animationTree.set("parameters/DoubleJump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	animationTree.set("parameters/Transition/transition_request", "Dead")
 	await get_tree().create_timer(0.3).timeout

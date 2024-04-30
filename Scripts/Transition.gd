@@ -1,3 +1,4 @@
+class_name Transition
 extends CanvasLayer
 
 @onready var animation_player :  AnimationPlayer = $AnimationPlayer

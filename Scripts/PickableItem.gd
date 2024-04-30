@@ -10,7 +10,7 @@ func _ready():
 	await get_tree().create_timer(rng.randf_range(0,0.3)).timeout
 	animated_sprite_2d.play("default")
 
-func PickUp(body):
+func PickUp(_body):
 	animated_sprite_2d.play("pickedUp")
 	area_2d.set_deferred("monitoring", false)
 

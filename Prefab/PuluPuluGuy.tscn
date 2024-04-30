@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://h4yvcfcedb78"]
+[gd_scene load_steps=86 format=3 uid="uid://h4yvcfcedb78"]
 
 [ext_resource type="Script" path="res://Scripts/PuluPuluGuy.gd" id="1_13fao"]
 [ext_resource type="Texture2D" uid="uid://cab13mphur2nn" path="res://Assets/Main Characters/Mask Dude/Jump (32x32).png" id="1_y012q"]
@@ -14,10 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://dp5ke5xg07cyf" path="res://Assets/Items/Fruits/Bananas.png" id="11_hn8ye"]
 [ext_resource type="Texture2D" uid="uid://ef1ui6wo302s" path="res://Assets/Items/Fruits/Apple.png" id="12_r74nj"]
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="13_ygmyw"]
-[ext_resource type="Texture2D" uid="uid://cbik8ihcjs87q" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="15_mopak"]
-[ext_resource type="Texture2D" uid="uid://cv1lgxyqvttrc" path="res://Assets/Menu/Buttons/Restart.png" id="16_61glm"]
-[ext_resource type="Texture2D" uid="uid://44aaqx8t6tfn" path="res://Assets/Menu/Buttons/Next.png" id="17_bft03"]
-[ext_resource type="Texture2D" uid="uid://dmjol72tvbjk4" path="res://Assets/Menu/Buttons/Levels.png" id="18_1kmv5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tnsbe"]
 atlas = ExtResource("2_p4mv4")
@@ -684,92 +680,6 @@ node_connections = [&"DoubleJump", 0, &"MovementState", &"DoubleJump", 1, &"Anim
 radius = 8.33333
 height = 24.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajg18"]
-bg_color = Color(0, 0, 0, 0.223529)
-border_color = Color(0, 0, 0, 0.262745)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n88xv"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t01jj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tso2"]
-
-[sub_resource type="Animation" id="Animation_46ws8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WinPanel:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(656, 360)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WinPanel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_wm2oo"]
-resource_name = "Win"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WinPanel:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 1),
-"transitions": PackedFloat32Array(0.148651, 0.148651, 0.148651),
-"update": 0,
-"values": [Vector2(656, 8), Vector2(656, 29.595), Vector2(656, 360)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WinPanel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WinPanel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(248, 144)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oywtk"]
-_data = {
-"RESET": SubResource("Animation_46ws8"),
-"Win": SubResource("Animation_wm2oo")
-}
-
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(3, 3)
 disable_mode = 1
@@ -780,7 +690,7 @@ script = ExtResource("1_13fao")
 process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
 animation = &"Idle"
-frame = 2
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 1
@@ -860,89 +770,4 @@ theme = ExtResource("13_ygmyw")
 theme_override_font_sizes/font_size = 40
 text = " : 0"
 
-[node name="WinPanel" type="Panel" parent="PlayerUI"]
-visible = false
-clip_contents = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = 144.0
-offset_right = 904.0
-offset_bottom = 504.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_ajg18")
-
-[node name="Sprite2D2" type="Sprite2D" parent="PlayerUI/WinPanel"]
-self_modulate = Color(0.117647, 0.117647, 0.117647, 1)
-position = Vector2(328, 120)
-scale = Vector2(1.75, 1.75)
-texture = ExtResource("15_mopak")
-
-[node name="Sprite2D3" type="Sprite2D" parent="PlayerUI/WinPanel"]
-self_modulate = Color(0.117647, 0.117647, 0.117647, 1)
-position = Vector2(448, 80)
-scale = Vector2(1.75, 1.75)
-texture = ExtResource("15_mopak")
-
-[node name="Sprite2D4" type="Sprite2D" parent="PlayerUI/WinPanel"]
-self_modulate = Color(0.117647, 0.117647, 0.117647, 1)
-position = Vector2(208, 80)
-scale = Vector2(1.75, 1.75)
-texture = ExtResource("15_mopak")
-
-[node name="Restart" type="Button" parent="PlayerUI/WinPanel"]
-layout_mode = 0
-offset_left = 232.0
-offset_top = 240.0
-offset_right = 302.0
-offset_bottom = 310.0
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_n88xv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_t01jj")
-icon = ExtResource("16_61glm")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Next" type="Button" parent="PlayerUI/WinPanel"]
-layout_mode = 0
-offset_left = 296.0
-offset_top = 240.0
-offset_right = 366.0
-offset_bottom = 310.0
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_n88xv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3tso2")
-icon = ExtResource("17_bft03")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Level" type="Button" parent="PlayerUI/WinPanel"]
-layout_mode = 0
-offset_left = 360.0
-offset_top = 240.0
-offset_right = 430.0
-offset_bottom = 310.0
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_n88xv")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3tso2")
-icon = ExtResource("18_1kmv5")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="WinAnimation" type="AnimationPlayer" parent="PlayerUI"]
-libraries = {
-"": SubResource("AnimationLibrary_oywtk")
-}
-
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="button_up" from="PlayerUI/WinPanel/Restart" to="PlayerUI" method="_on_restart_button_up"]
-[connection signal="button_up" from="PlayerUI/WinPanel/Next" to="PlayerUI" method="_on_next_button_up"]
-[connection signal="button_up" from="PlayerUI/WinPanel/Level" to="PlayerUI" method="_on_level_button_up"]
