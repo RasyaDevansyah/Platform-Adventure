@@ -19,3 +19,5 @@ res://Scripts/level_select.gd
 res://Resource/SaveFile.tres
 res://Scenes/MainMenu.tscn
 res://Scripts/GlobalScript.gd
+res://Scenes/Test.tscn
+res://Scripts/MainMenu.gd

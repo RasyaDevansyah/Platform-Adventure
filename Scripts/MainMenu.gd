@@ -1,6 +1,8 @@
-extends Control
+extends Node
 
 @onready var transition : CanvasLayer = $Transition
+@onready var credits = $Credits
+@onready var menu = $Menu
 
 enum pressed {NULL, PLAY, EXIT}
 var state : pressed = pressed.NULL
@@ -28,3 +30,12 @@ func _on_canvas_layer__transition_finished():
 		get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 	elif state == pressed.EXIT:
 		get_tree().quit()
+
+
+func _on_credits_button_up():
+	credits.visible = true
+	menu.visible = false
+
+func _on_back_button_up():
+	credits.visible = false
+	menu.visible = true

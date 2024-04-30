@@ -16,6 +16,8 @@ func _ready():
 		# Save file loaded successfully
 		print("Save file loaded successfully.")
 		saveFile = loadedSaveFile
+		
+
 var totalFruit : int = 0
 
 

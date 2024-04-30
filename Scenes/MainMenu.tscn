@@ -1,9 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://ceb081jeav080"]
+[gd_scene load_steps=14 format=3 uid="uid://ceb081jeav080"]
 
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_rwrou"]
 [ext_resource type="Texture2D" uid="uid://d0fmdmnosmq32" path="res://Assets/Background/Pink.png" id="2_22j6f"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="2_d37d5"]
 [ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_xfbr2"]
+[ext_resource type="Texture2D" uid="uid://bbymmbe5suf2i" path="res://Assets/Untitled design (1).png" id="4_a24qx"]
+[ext_resource type="Texture2D" uid="uid://bu8apqs32t8kl" path="res://Godot.png" id="6_jen5a"]
+[ext_resource type="Texture2D" uid="uid://cwsouhtwsnfop" path="res://Assets/Untitled design.png" id="7_jmawg"]
+[ext_resource type="Texture2D" uid="uid://crcqtmyyoaxjr" path="res://Assets/Menu/Buttons/Close.png" id="8_qetd1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yg6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbo37"]
 
 [sub_resource type="Animation" id="Animation_ktebe"]
 length = 0.001
@@ -42,7 +50,26 @@ _data = {
 "TitleBackground": SubResource("Animation_crfdl")
 }
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Node"]
+script = ExtResource("2_d37d5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -659.0
+offset_top = -368.0
+offset_right = 659.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_22j6f")
+stretch_mode = 1
+
+[node name="Credits" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,55 +77,138 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rwrou")
-script = ExtResource("2_d37d5")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="UntitledDesign(1)" type="Sprite2D" parent="Credits"]
+position = Vector2(821.75, 235.25)
+scale = Vector2(0.743, 0.743)
+texture = ExtResource("4_a24qx")
+
+[node name="Label" type="Label" parent="Credits"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = -44.0
-offset_right = 1235.0
-offset_bottom = 692.0
+offset_left = -348.0
+offset_top = -150.0
+offset_right = 2712.0
+offset_bottom = 1134.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_22j6f")
-stretch_mode = 1
+scale = Vector2(0.155, 0.155)
+theme_override_font_sizes/font_size = 211
+text = "Programmer & Level Design: Rasya Devansyah
+2D Assets : Pixel Frog
 
-[node name="Play" type="Button" parent="."]
+"
+
+[node name="Label2" type="Label" parent="Credits"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -22.0
-offset_right = 93.0
-offset_bottom = 22.0
+offset_left = -191.0
+offset_top = 49.0
+offset_right = 2869.0
+offset_bottom = 906.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.155, 0.155)
+theme_override_font_sizes/font_size = 211
+text = "Made proudly with Godot"
+vertical_alignment = 1
+
+[node name="Godot" type="Sprite2D" parent="Credits"]
+position = Vector2(664, 437)
+scale = Vector2(0.0185547, 0.0185547)
+texture = ExtResource("6_jen5a")
+
+[node name="Back" type="Button" parent="Credits"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = 243.0
+offset_right = 52.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.675, 0.675)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2yg6f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbo37")
+icon = ExtResource("8_qetd1")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="UntitledDesign" type="Sprite2D" parent="Credits"]
+position = Vector2(704, 436)
+scale = Vector2(0.0713749, 0.0713749)
+texture = ExtResource("7_jmawg")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_rwrou")
+
+[node name="Play" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 463.0
+offset_top = 282.0
+offset_right = 649.0
+offset_bottom = 326.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "PLAY"
 
-[node name="Quit" type="Button" parent="."]
+[node name="Credits" type="Button" parent="Menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = 39.0
-offset_right = 93.0
-offset_bottom = 83.0
+offset_left = 463.0
+offset_top = 343.0
+offset_right = 649.0
+offset_bottom = 387.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CREDITS"
+
+[node name="Quit" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 463.0
+offset_top = 402.0
+offset_right = 649.0
+offset_bottom = 446.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "QUIT"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Menu"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -106,10 +216,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -183.0
-offset_top = -146.0
-offset_right = 182.0
-offset_bottom = -69.0
+offset_left = 42.5
+offset_top = 134.5
+offset_right = 1068.5
+offset_bottom = 258.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0.129412, 0.121569, 0.188235, 1)
@@ -127,6 +237,8 @@ autoplay = "TitleBackground"
 
 [node name="Transition" parent="." instance=ExtResource("3_xfbr2")]
 
-[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
-[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="Credits/Back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="Menu/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Menu/Credits" to="." method="_on_credits_button_up"]
+[connection signal="button_up" from="Menu/Quit" to="." method="_on_quit_button_up"]
 [connection signal="_TransitionFinished" from="Transition" to="." method="_on_canvas_layer__transition_finished"]
