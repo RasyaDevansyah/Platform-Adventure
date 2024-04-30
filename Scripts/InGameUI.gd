@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var winAnimation : AnimationPlayer = $WinAnimation
 
 var sceneNumber : int = -1
-var trophyAnim : String = "3Trophies"
+var trophyAnim : String = "1Trophy"
 var currentLevel 
 var nextLevel
 
@@ -51,7 +51,7 @@ func CalculateTrophy(fruitCount):
 	if fruitPercentage <= 50.0:
 		GlobalScript.saveFile.levelTrophies[currentLevel] = max(GlobalScript.saveFile.levelTrophies[currentLevel], 1)
 		trophyAnim = "1Trophy"
-	elif fruitPercentage <= 75.0:
+	elif fruitPercentage > 50.0 and fruitPercentage <= 99.0:
 		GlobalScript.saveFile.levelTrophies[currentLevel] = max(GlobalScript.saveFile.levelTrophies[currentLevel], 2)
 		trophyAnim = "2Trophies"
 	else:

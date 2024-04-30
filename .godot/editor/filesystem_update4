@@ -21,3 +21,5 @@ res://Scenes/MainMenu.tscn
 res://Scripts/GlobalScript.gd
 res://Scenes/Test.tscn
 res://Scripts/MainMenu.gd
+res://Scenes/level_2.tscn
+res://Scenes/Testing.tscn

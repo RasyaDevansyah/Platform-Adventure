@@ -1,6 +1,7 @@
+TileMap
+Node
 Label
 Control
-Node
 Panel
 TextureRect
 AnimationPlayer

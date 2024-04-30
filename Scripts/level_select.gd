@@ -20,9 +20,13 @@ func _on_back_button_down():
 	transition.Exit()
 	
 func _on_canvas_layer__transition_finished():
-	match levelChoosen:
-		0:
-			get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
-		1:
-			get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
-			
+	if levelChoosen == -1:
+		return
+	
+	if levelChoosen == 0:
+		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/level_" + str(levelChoosen) + ".tscn")
+		
+	
+
