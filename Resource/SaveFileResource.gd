@@ -3,6 +3,7 @@ class_name SaveFileResource
 
 const SAVE_GAME_PATH := "user://savegame.tres"
 
+@export var maxLevel : int = 1
 @export var levelUnlocked : int = 1
 @export var levelTrophies : Array[int] = []
 

@@ -27,6 +27,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-96, -96), Vector2(-64, -64)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1422, 1196)]
+}
 
 [sub_resource type="Animation" id="Animation_chlc2"]
 length = 0.001
@@ -63,13 +75,6 @@ _data = {
 
 [node name="Level2" type="Node" groups=["Level"]]
 
-[node name="PuluPuluGuy" parent="." instance=ExtResource("1_nmns1")]
-position = Vector2(194, 525)
-
-[node name="InGameUI" parent="." instance=ExtResource("2_wbg3w")]
-
-[node name="Transition" parent="." instance=ExtResource("3_jptve")]
-
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
 texture_filter = 1
@@ -84,42 +89,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_4ddyi")
 stretch_mode = 1
-
-[node name="Background" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_13rkj")
-}
-autoplay = "MovingBackground"
-
-[node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(3, 3)
-tile_set = ExtResource("5_e3glw")
-format = 2
-layer_0/tile_data = PackedInt32Array(655371, 851969, 1, 720907, 851969, 2, 655372, 917505, 1, 720908, 917505, 2, 524299, 851969, 1, 589835, 851969, 2, 524300, 917505, 1, 589836, 917505, 2, 393227, 851969, 1, 458763, 851969, 2, 393228, 917505, 1, 458764, 917505, 2, 327691, 786433, 0, 327692, 917505, 0, 65537, 196609, 0, 131073, 131073, 1, 196609, 131073, 1, 262145, 131073, 1, 327681, 131073, 1, 393217, 131073, 1, 458753, 131073, 1, 524289, 131073, 1, 589825, 131073, 1, 655361, 131073, 1, 720897, 131073, 1, 786433, 196609, 1, 65538, 65537, 2, 786434, 65537, 0, 65539, 65537, 2, 786435, 65537, 0, 65540, 65537, 2, 786436, 65537, 0, 65541, 65537, 2, 786437, 65537, 0, 65542, 65537, 2, 786438, 65537, 0, 65543, 65537, 2, 786439, 65537, 0, 65544, 65537, 2, 786440, 65537, 0, 65545, 65537, 2, 786441, 65537, 0, 65546, 65537, 2, 786442, 65537, 0, 65547, 65537, 2, 786443, 65537, 0, 65548, 65537, 2, 786444, 65537, 0, 65549, 65537, 2, 786445, 65537, 0, 65550, 65537, 2, 786446, 65537, 0, 65551, 65537, 2, 786447, 65537, 0, 65552, 65537, 2, 786448, 65537, 0, 65553, 65537, 2, 786449, 65537, 0, 65554, 65537, 2, 786450, 65537, 0, 65555, 65537, 2, 786451, 65537, 0, 65556, 65537, 2, 786452, 65537, 0, 65557, 65537, 2, 786453, 65537, 0, 65558, 262145, 0, 131094, 1, 1, 196630, 1, 1, 262166, 1, 1, 327702, 1, 1, 393238, 1, 1, 458774, 1, 1, 524310, 1, 1, 589846, 1, 1, 655382, 1, 1, 720918, 1, 1, 786454, 262145, 1)
-layer_1/tile_data = PackedInt32Array(327688, 1114113, 0, 327689, 1179649, 0, 327690, 1245185, 0, 524294, 1114113, 0, 524295, 1179649, 0, 524296, 1245185, 0, 262157, 1114113, 0, 262158, 1179649, 0, 262159, 1245185, 0, 458768, 1114113, 0, 458769, 1179649, 0, 458770, 1245185, 0)
-
-[node name="Trophy" parent="." instance=ExtResource("6_ll360")]
-position = Vector2(929, 512)
-scale = Vector2(3, 3)
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.129412, 0.121569, 0.188235, 1)
-polygon = PackedVector2Array(49, 612, 1099, 607, 1093, 569, 1295, 596, 1223, 751, 1051.43, 753.204, 678, 758, -84, 760, -59, -71, 1335, -68, 1344.68, 400.122, 1351, 706, 1095, 573, 1093, 156, 1104, 110, 1096, 58, 63, 57)
-
-[node name="Melon" parent="." instance=ExtResource("7_stqpm")]
-position = Vector2(196, 359)
-
-[node name="Orange" parent="." instance=ExtResource("8_8m7i8")]
-position = Vector2(373, 359)
-
-[node name="Apple" parent="." instance=ExtResource("9_fp7ih")]
-position = Vector2(459, 211)
-
-[node name="Banana" parent="." instance=ExtResource("10_kfrtr")]
-position = Vector2(687, 168)
-
-[node name="Melon2" parent="." instance=ExtResource("7_stqpm")]
-position = Vector2(822, 303)
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 z_index = -2
@@ -140,7 +110,55 @@ theme_override_font_sizes/font_size = 60
 text = "PRESS SPACE TO JUMP"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[connection signal="_playerDeath" from="PuluPuluGuy" to="InGameUI" method="_on_pulu_pulu_guy__player_death"]
+[node name="Background" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_13rkj")
+}
+autoplay = "MovingBackground"
+
+[node name="PuluPuluGuy" parent="." instance=ExtResource("1_nmns1")]
+position = Vector2(194, 525)
+
+[node name="InGameUI" parent="." instance=ExtResource("2_wbg3w")]
+
+[node name="Transition" parent="." instance=ExtResource("3_jptve")]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = ExtResource("5_e3glw")
+format = 2
+layer_0/tile_data = PackedInt32Array(655371, 851969, 1, 720907, 851969, 2, 655372, 917505, 1, 720908, 917505, 2, 524299, 851969, 1, 589835, 851969, 2, 524300, 917505, 1, 589836, 917505, 2, 393227, 851969, 1, 458763, 851969, 2, 393228, 917505, 1, 458764, 917505, 2, 327691, 786433, 0, 327692, 917505, 0, 65537, 196609, 0, 131073, 131073, 1, 196609, 131073, 1, 262145, 131073, 1, 327681, 131073, 1, 393217, 131073, 1, 458753, 131073, 1, 524289, 131073, 1, 589825, 131073, 1, 655361, 131073, 1, 720897, 131073, 1, 786433, 196609, 1, 65538, 65537, 2, 786434, 65537, 0, 65539, 65537, 2, 786435, 65537, 0, 65540, 65537, 2, 786436, 65537, 0, 65541, 65537, 2, 786437, 65537, 0, 65542, 65537, 2, 786438, 65537, 0, 65543, 65537, 2, 786439, 65537, 0, 65544, 65537, 2, 786440, 65537, 0, 65545, 65537, 2, 786441, 65537, 0, 65546, 65537, 2, 786442, 65537, 0, 65547, 65537, 2, 786443, 65537, 0, 65548, 65537, 2, 786444, 65537, 0, 65549, 65537, 2, 786445, 65537, 0, 65550, 65537, 2, 786446, 65537, 0, 65551, 65537, 2, 786447, 65537, 0, 65552, 65537, 2, 786448, 65537, 0, 65553, 65537, 2, 786449, 65537, 0, 65554, 65537, 2, 786450, 65537, 0, 65555, 65537, 2, 786451, 65537, 0, 65556, 65537, 2, 786452, 65537, 0, 65557, 65537, 2, 786453, 65537, 0, 65558, 262145, 0, 131094, 1, 1, 196630, 1, 1, 262166, 1, 1, 327702, 1, 1, 393238, 1, 1, 458774, 1, 1, 524310, 1, 1, 589846, 1, 1, 655382, 1, 1, 720918, 1, 1, 786454, 262145, 1)
+layer_1/tile_data = PackedInt32Array(327688, 1114113, 0, 327689, 1179649, 0, 327690, 1245185, 0, 524294, 1114113, 0, 524295, 1179649, 0, 524296, 1245185, 0, 262157, 1114113, 0, 262158, 1179649, 0, 262159, 1245185, 0, 458768, 1114113, 0, 458769, 1179649, 0, 458770, 1245185, 0)
+
+[node name="Trophy" parent="." instance=ExtResource("6_ll360")]
+position = Vector2(929, 512)
+scale = Vector2(3, 3)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.129412, 0.121569, 0.188235, 1)
+polygon = PackedVector2Array(49, 612, 1099, 607, 1093, 569, 1295, 596, 1223, 751, 1051.43, 753.204, 678, 758, -84, 760, -59, -71, 1335, -68, 1344.68, 400.122, 1351, 706, 1095, 573, 1093, 156, 1104, 110, 1096, 58, 63, 57)
+
+[node name="Melon" parent="." instance=ExtResource("7_stqpm")]
+position = Vector2(196, 359)
+scale = Vector2(3, 3)
+
+[node name="Orange" parent="." instance=ExtResource("8_8m7i8")]
+position = Vector2(373, 359)
+scale = Vector2(3, 3)
+
+[node name="Apple" parent="." instance=ExtResource("9_fp7ih")]
+position = Vector2(459, 211)
+scale = Vector2(3, 3)
+
+[node name="Banana" parent="." instance=ExtResource("10_kfrtr")]
+position = Vector2(687, 168)
+scale = Vector2(3, 3)
+
+[node name="Melon2" parent="." instance=ExtResource("7_stqpm")]
+position = Vector2(822, 303)
+scale = Vector2(3, 3)
+
 [connection signal="_TransitionFinished" from="Transition" to="InGameUI" method="_on_transition__transition_finished"]
 [connection signal="_levelComplete" from="Trophy" to="InGameUI" method="_on_trophy__level_complete"]

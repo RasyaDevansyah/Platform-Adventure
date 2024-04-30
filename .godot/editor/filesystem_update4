@@ -23,3 +23,8 @@ res://Scenes/Test.tscn
 res://Scripts/MainMenu.gd
 res://Scenes/level_2.tscn
 res://Scenes/Testing.tscn
+res://Prefab/Transition.tscn
+res://Scenes/level_3.tscn
+res://Prefab/cherry.tscn
+res://Prefab/kiwi.tscn
+res://Prefab/strawberry.tscn

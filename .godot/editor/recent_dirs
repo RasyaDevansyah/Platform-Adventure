@@ -1,7 +1,8 @@
+res://Prefab
+res://Assets/Items/Fruits
 res://Scenes
 res://Scripts
 res://Resource
-res://Prefab
 res://Other
 res://Assets/Other
 res://Assets/Items/Checkpoints/End
@@ -9,5 +10,4 @@ res://Assets/Main Characters
 res://Assets/Traps/Saw
 res://Assets/Terrain
 res://
-res://Assets/Items/Fruits
 res://Assets/Main Characters/Mask Dude
