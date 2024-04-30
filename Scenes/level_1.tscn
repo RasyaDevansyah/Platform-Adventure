@@ -61,7 +61,7 @@ _data = {
 "RESET": SubResource("Animation_chlc2")
 }
 
-[node name="Level1" type="Node"]
+[node name="Level1" type="Node" groups=["Level"]]
 metadata/_edit_vertical_guides_ = [-517.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]

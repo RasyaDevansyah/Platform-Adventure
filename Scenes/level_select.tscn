@@ -197,18 +197,21 @@ expand_icon = true
 script = ExtResource("7_s5mik")
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button1"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button1"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button1"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -228,18 +231,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button2"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button2"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button2"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -259,16 +265,19 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button3"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button3"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button3"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -287,16 +296,19 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button4"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button4"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button4"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -315,18 +327,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button5"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button5"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button5"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -346,18 +361,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button6"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button6"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button6"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -377,18 +395,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button7"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button7"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button7"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -408,18 +429,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button8"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button8"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button8"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -439,18 +463,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button9"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button9"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button9"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -470,18 +497,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button10"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button10"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button10"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -501,18 +531,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button11"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button11"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button11"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -532,18 +565,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button12"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button12"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button12"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -563,18 +599,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button13"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button13"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button13"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -594,18 +633,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button14"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button14"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button14"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -625,18 +667,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button15"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button15"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button15"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -656,18 +701,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button16"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button16"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button16"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -687,18 +735,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button17"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button17"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button17"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -718,18 +769,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button18"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button18"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button18"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -749,18 +803,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button19"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button19"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button19"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -780,18 +837,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button20"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button20"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button20"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -811,18 +871,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button21"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button21"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button21"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -842,18 +905,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button22"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button22"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button22"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -873,18 +939,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button23"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button23"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button23"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -904,18 +973,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button24"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button24"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button24"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -935,18 +1007,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button25"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button25"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button25"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -966,18 +1041,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button26"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button26"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button26"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -997,18 +1075,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button27"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button27"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button27"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -1028,18 +1109,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button28"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button28"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button28"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -1059,18 +1143,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button29"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button29"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button29"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
@@ -1090,18 +1177,21 @@ script = ExtResource("7_s5mik")
 metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button30"]
+visible = false
 position = Vector2(17, 58)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button30"]
+visible = false
 position = Vector2(41, 64)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button30"]
+visible = false
 position = Vector2(64, 59)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")

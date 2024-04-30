@@ -14,3 +14,8 @@ res://Scripts/Transition.gd
 res://Scenes/level_select.tscn
 res://Scripts/Button.gd
 res://Scripts/LevelButtonManager.gd
+res://Resource/SaveFileResource.gd
+res://Scripts/level_select.gd
+res://Resource/SaveFile.tres
+res://Scenes/MainMenu.tscn
+res://Scripts/GlobalScript.gd

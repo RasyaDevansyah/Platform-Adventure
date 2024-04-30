@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SaveFileResource" load_steps=2 format=3 uid="uid://bi1p4vu2gopp1"]
+
+[ext_resource type="Script" path="res://Resource/SaveFileResource.gd" id="1_r4lcy"]
+
+[resource]
+script = ExtResource("1_r4lcy")
+levelUnlocked = 1
+levelTrophies = Array[int]([])

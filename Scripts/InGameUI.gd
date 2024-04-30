@@ -5,6 +5,13 @@ extends CanvasLayer
 
 var sceneNumber : int = -1
 var trophyAnim : String = "3Trophies"
+var currentLevel 
+var nextLevel
+
+func _ready():
+	currentLevel = int(str(get_tree().get_first_node_in_group("Level").name)) -1
+	nextLevel = currentLevel + 2
+	print(get_tree().get_first_node_in_group("Level").name)
 
 func _on_restart_button_up():
 	transition.Exit()
@@ -30,7 +37,7 @@ func _on_transition__transition_finished():
 			get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 			pass
 		2:
-			get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
+			get_tree().change_scene_to_file("res://Scenes/level_" + str(nextLevel) + ".tscn")
 			pass
 		
 	pass 
@@ -39,15 +46,20 @@ func _on_trophy__level_complete(fruitCount):
 	CalculateTrophy(fruitCount)
 	
 func CalculateTrophy(fruitCount):
-	var fruitPercentage : float = float(fruitCount) / float(TotalFruitCount.totalFruit) * 100.0
+	var fruitPercentage : float = float(fruitCount) / float(GlobalScript.totalFruit) * 100.0
 	
 	if fruitPercentage <= 50.0:
+		GlobalScript.saveFile.levelTrophies[currentLevel] = max(GlobalScript.saveFile.levelTrophies[currentLevel], 1)
 		trophyAnim = "1Trophy"
 	elif fruitPercentage <= 75.0:
+		GlobalScript.saveFile.levelTrophies[currentLevel] = max(GlobalScript.saveFile.levelTrophies[currentLevel], 2)
 		trophyAnim = "2Trophies"
 	else:
+		GlobalScript.saveFile.levelTrophies[currentLevel] = max(GlobalScript.saveFile.levelTrophies[currentLevel], 3)
 		trophyAnim = "3Trophies"
-
+	
+	GlobalScript.saveFile.levelUnlocked = max(GlobalScript.saveFile.levelUnlocked, nextLevel)
+	GlobalScript.saveFile.WriteSaveGame()
 	winAnimation.play("Win")
 
 

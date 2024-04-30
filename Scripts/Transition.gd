@@ -17,7 +17,7 @@ func Enter():
 	animation_player.play("Transition")
 	
 func Exit():
-	TotalFruitCount.totalFruit = 0
+	GlobalScript.totalFruit = 0
 	animation_player.play_backwards("Transition")
 
 func _on_animation_player_animation_finished(_anim_name):

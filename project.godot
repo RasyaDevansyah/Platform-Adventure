@@ -17,7 +17,7 @@ config/icon="res://Assets/Other/Transition.png"
 
 [autoload]
 
-TotalFruitCount="*res://Scripts/totalFruitCount.gd"
+GlobalScript="*res://Scripts/GlobalScript.gd"
 
 [display]
 
