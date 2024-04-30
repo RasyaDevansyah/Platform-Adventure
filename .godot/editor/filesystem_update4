@@ -11,3 +11,6 @@ res://Scripts/totalFruitCount.gd
 res://Scripts/Fruits.gd
 res://Scenes/Main.tscn
 res://Scripts/Transition.gd
+res://Scenes/level_select.tscn
+res://Scripts/Button.gd
+res://Scripts/LevelButtonManager.gd
