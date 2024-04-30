@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c87xypfsnpqjl"]
+[gd_scene load_steps=15 format=3 uid="uid://c87xypfsnpqjl"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_dvrgu"]
 [ext_resource type="PackedScene" uid="uid://h4yvcfcedb78" path="res://Prefab/PuluPuluGuy.tscn" id="2_7jedn"]
@@ -11,7 +11,6 @@
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="9_ivhjv"]
 [ext_resource type="PackedScene" uid="uid://wnepht75yxvj" path="res://Prefab/InGameUI.tscn" id="10_ilqfy"]
 [ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="11_40kbr"]
-[ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="12_6tbu3"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
@@ -43,6 +42,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-26, -64)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1422, 1196)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_13rkj"]
 _data = {
@@ -61,8 +72,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 89986.0
-offset_bottom = 50691.0
+offset_right = 244.0
+offset_bottom = 484.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_dvrgu")
@@ -91,6 +102,14 @@ autoplay = "MovingBackground"
 [node name="PuluPuluGuy" parent="." instance=ExtResource("2_7jedn")]
 position = Vector2(194, 525)
 
+[node name="InGameUI" parent="." instance=ExtResource("10_ilqfy")]
+
+[node name="Transition" parent="." instance=ExtResource("11_40kbr")]
+
+[node name="Trophy" parent="." instance=ExtResource("8_6ub7s")]
+position = Vector2(854, 512)
+scale = Vector2(3, 3)
+
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(3, 3)
 tile_set = ExtResource("3_8jjrq")
@@ -103,33 +122,24 @@ layer_0/tile_data = PackedInt32Array(786433, 196609, 1, 786434, 65537, 0, 786435
 color = Color(0.129412, 0.121569, 0.188235, 1)
 polygon = PackedVector2Array(49, 612, 1099, 607, 1093, 569, 1295, 596, 1223, 751, 1051.43, 753.204, 678, 758, -84, 760, -59, -71, 1335, -68, 1344.68, 400.122, 1351, 706, 1095, 573, 1093, 156, 1104, 110, 1096, 58, 63, 57)
 
-[node name="Apple" parent="." instance=ExtResource("4_ga4he")]
+[node name="Fruits" type="Node" parent="."]
+
+[node name="Apple" parent="Fruits" instance=ExtResource("4_ga4he")]
 position = Vector2(428, 544)
 scale = Vector2(3, 3)
 
-[node name="Banana" parent="." instance=ExtResource("5_y42dh")]
+[node name="Banana" parent="Fruits" instance=ExtResource("5_y42dh")]
 position = Vector2(493, 544)
 scale = Vector2(3, 3)
 
-[node name="Melon" parent="." instance=ExtResource("6_pt0jy")]
+[node name="Melon" parent="Fruits" instance=ExtResource("6_pt0jy")]
 position = Vector2(567, 544)
 scale = Vector2(3, 3)
 
-[node name="Orange" parent="." instance=ExtResource("7_e7q3x")]
+[node name="Orange" parent="Fruits" instance=ExtResource("7_e7q3x")]
 position = Vector2(639, 544)
 scale = Vector2(3, 3)
 
-[node name="Trophy" parent="." instance=ExtResource("8_6ub7s")]
-position = Vector2(854, 512)
-scale = Vector2(3, 3)
-
-[node name="InGameUI" parent="." instance=ExtResource("10_ilqfy")]
-
-[node name="Transition" parent="." instance=ExtResource("11_40kbr")]
-
-[node name="Saw" parent="." instance=ExtResource("12_6tbu3")]
-position = Vector2(456, 311)
-
 [connection signal="_playerDeath" from="PuluPuluGuy" to="InGameUI" method="_on_pulu_pulu_guy__player_death"]
-[connection signal="_levelComplete" from="Trophy" to="InGameUI" method="_on_trophy__level_complete"]
 [connection signal="_TransitionFinished" from="Transition" to="InGameUI" method="_on_transition__transition_finished"]
+[connection signal="_levelComplete" from="Trophy" to="InGameUI" method="_on_trophy__level_complete"]

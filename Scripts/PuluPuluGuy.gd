@@ -44,7 +44,7 @@ func _physics_process(delta):
 		canDoubleJump = true
 	
 	
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and not disablePlayer:
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 		elif is_on_wall() and direction:
