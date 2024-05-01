@@ -186,6 +186,7 @@ scale = Vector2(2.5, 2.5)
 script = ExtResource("1_au32d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 6
 sprite_frames = SubResource("SpriteFrames_unvvq")
 frame = 14
 frame_progress = 0.134062

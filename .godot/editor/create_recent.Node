@@ -1,5 +1,6 @@
-TileMap
+StaticBody2D
 Node
+TileMap
 Label
 Control
 Panel

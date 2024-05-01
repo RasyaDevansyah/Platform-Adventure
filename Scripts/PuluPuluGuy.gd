@@ -9,7 +9,7 @@ const WALL_JUMP_PUSH_BACK : float = 300.0
 const ACCELERATION = 40
 const FRICTION = 40
 
-
+@onready var tile_map :TileMap = $"../TileMap"
 @onready var animatedSprite2D : AnimatedSprite2D = $AnimatedSprite2D
 @onready var animationTree : AnimationTree = $AnimationTree
 @onready var platformCollidingChecker : ShapeCast2D = $PlatformCollidingChecker
@@ -47,7 +47,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and not disablePlayer:
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
-		elif is_on_wall() and direction:
+		elif  direction and isWallSliding:
 			velocity.y = JUMP_VELOCITY * 80/100
 			velocity.x = WALL_JUMP_PUSH_BACK * -direction
 		elif canDoubleJump:
@@ -55,11 +55,18 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY * 80/100
 			animationTree.set("parameters/DoubleJump/request" ,  AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
+
+
 	if is_on_wall() and not is_on_floor():
 		isWallSliding = direction
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			var tileLayer = tile_map.get_layer_for_body_rid(collision.get_collider_rid())
+			if tileLayer == 2:
+				isWallSliding = false
+				break
 	else:
 		isWallSliding = false
-			
 			
 	if isWallSliding:
 		velocity.y = min(velocity.y , wallSlideGravity)
@@ -83,7 +90,7 @@ func _physics_process(delta):
 			animationTree.set("parameters/MovementState/blend_position", -2)
 
 
-	if is_on_wall() and !is_on_floor() and direction:
+	if isWallSliding and !is_on_floor() and direction:
 		animationTree.set("parameters/DoubleJump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 		animationTree.set("parameters/MovementState/blend_position", 0)
 
