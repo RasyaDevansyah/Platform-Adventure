@@ -97,7 +97,7 @@ func _physics_process(delta):
 
 func Hit(knockBack : Vector2 = global_transform.origin * Vector2.RIGHT):
 	emit_signal("_playerDeath")
-	velocity = knockBack * 800
+	velocity = knockBack * 320 * scale.x
 	animationTree.set("parameters/DoubleJump/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	animationTree.set("parameters/Transition/transition_request", "Dead")
 	await get_tree().create_timer(0.3).timeout

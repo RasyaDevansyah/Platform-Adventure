@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ckkwlx3nv7u2c"]
 
-[ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_plm8o"]
+[ext_resource type="Texture2D" uid="uid://dw2s6ci5or11y" path="res://Assets/Background/Brown.png" id="1_rqira"]
 [ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="2_03i0v"]
 [ext_resource type="PackedScene" uid="uid://h4yvcfcedb78" path="res://Prefab/PuluPuluGuy.tscn" id="3_rbe61"]
 [ext_resource type="PackedScene" uid="uid://wnepht75yxvj" path="res://Prefab/InGameUI.tscn" id="4_x81iy"]
@@ -9,6 +9,7 @@
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
+length = 2.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -17,10 +18,10 @@ tracks/0/path = NodePath("TextureRect:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-96, -96), Vector2(-64, -64)]
+"values": [Vector2(-96, -96), Vector2(-96, -160)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -62,7 +63,7 @@ tracks/1/keys = {
 "values": [Vector2(1422, 1196)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_13rkj"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ebhc"]
 _data = {
 "MovingBackground": SubResource("Animation_2m8nc"),
 "RESET": SubResource("Animation_chlc2")
@@ -83,13 +84,13 @@ offset_right = 1396.0
 offset_bottom = 1132.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_plm8o")
+texture = ExtResource("1_rqira")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_13rkj")
+"": SubResource("AnimationLibrary_1ebhc")
 }
 autoplay = "MovingBackground"
 
@@ -101,7 +102,7 @@ layer_1/tile_data = PackedInt32Array()
 layer_2/tile_data = PackedInt32Array()
 
 [node name="PuluPuluGuy" parent="." instance=ExtResource("3_rbe61")]
-position = Vector2(-123, 519)
+position = Vector2(-113, 603)
 scale = Vector2(2.5, 2.5)
 
 [node name="InGameUI" parent="." instance=ExtResource("4_x81iy")]
@@ -109,7 +110,7 @@ scale = Vector2(2.5, 2.5)
 [node name="Transition" parent="." instance=ExtResource("5_1dh34")]
 
 [node name="Trophy" parent="." instance=ExtResource("6_o5q8m")]
-position = Vector2(-115, 404)
+position = Vector2(-114, 473)
 scale = Vector2(2.5, 2.5)
 
 [connection signal="_playerDeath" from="PuluPuluGuy" to="InGameUI" method="_on_pulu_pulu_guy__player_death"]
