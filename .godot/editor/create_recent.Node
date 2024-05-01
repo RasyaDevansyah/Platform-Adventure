@@ -1,6 +1,7 @@
+Node2D
 Node
-AnimationPlayer
 Camera2D
+AnimationPlayer
 StaticBody2D
 TileMap
 Label
@@ -8,7 +9,6 @@ Control
 Panel
 TextureRect
 Sprite2D
-Node2D
 GPUParticles2D
 Container
 CanvasLayer

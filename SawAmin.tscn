@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbfp5qvkgo6fa"]
+
+[ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="1_u5jq6"]
+
+[sub_resource type="Curve2D" id="Curve2D_etqom"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2230, 1694, 0, 0, 0, 0, 2411, 1694, 0, 0, 0, 0, 2412, 1812, 0, 0, 0, 0, 2054, 1812, 0, 0, 0, 0, 2054, 1694, 0, 0, 0, 0, 2230, 1694)
+}
+point_count = 6
+
+[sub_resource type="Animation" id="Animation_47urr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cy4qx"]
+resource_name = "SawMoving"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37yqw"]
+_data = {
+"RESET": SubResource("Animation_47urr"),
+"SawMoving": SubResource("Animation_cy4qx")
+}
+
+[node name="Saw" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-2194, -1756)
+curve = SubResource("Curve2D_etqom")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(2185.14, 1694)
+progress = 906.141
+
+[node name="Saw" parent="Path2D/PathFollow2D" instance=ExtResource("1_u5jq6")]
+
+[node name="Saw2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_37yqw")
+}
+autoplay = "SawMoving"
+speed_scale = 2.0
