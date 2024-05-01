@@ -1,5 +1,5 @@
-StaticBody2D
 Node
+StaticBody2D
 TileMap
 Label
 Control
@@ -12,4 +12,3 @@ GPUParticles2D
 Container
 CanvasLayer
 Polygon2D
-MeshInstance2D

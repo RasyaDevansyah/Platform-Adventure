@@ -10,3 +10,8 @@ res://Scenes/level_select.tscn
 res://Scripts/PuluPuluGuy.gd
 res://Scenes/Testing.tscn
 res://Scripts/InGameUI.gd
+res://Scenes/level_5.tscn
+res://Scenes/level_6.tscn
+res://Scenes/level_7.tscn
+res://Scenes/level_8.tscn
+res://Scenes/level_10.tscn
