@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="4_4ddyi"]
 [ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="5_e3glw"]
 [ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="6_ll360"]
-[ext_resource type="PackedScene" uid="uid://b0rpt7dkijwvc" path="res://Prefab/melon.tscn" id="7_stqpm"]
-[ext_resource type="PackedScene" uid="uid://bb7jmf2ve7020" path="res://Prefab/orange.tscn" id="8_8m7i8"]
-[ext_resource type="PackedScene" uid="uid://c8aqcupn34e5q" path="res://Prefab/apple.tscn" id="9_fp7ih"]
-[ext_resource type="PackedScene" uid="uid://dcxd1nij3dw6i" path="res://Prefab/banana.tscn" id="10_kfrtr"]
+[ext_resource type="PackedScene" uid="uid://b0rpt7dkijwvc" path="res://Prefab/Fruits/melon.tscn" id="7_stqpm"]
+[ext_resource type="PackedScene" uid="uid://bb7jmf2ve7020" path="res://Prefab/Fruits/orange.tscn" id="8_8m7i8"]
+[ext_resource type="PackedScene" uid="uid://c8aqcupn34e5q" path="res://Prefab/Fruits/apple.tscn" id="9_fp7ih"]
+[ext_resource type="PackedScene" uid="uid://dcxd1nij3dw6i" path="res://Prefab/Fruits/banana.tscn" id="10_kfrtr"]
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="11_otpfk"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
@@ -83,8 +83,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 1396.0
-offset_bottom = 1132.0
+offset_right = 244.0
+offset_bottom = 484.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_4ddyi")
@@ -131,7 +131,7 @@ tile_set = ExtResource("5_e3glw")
 format = 2
 layer_0/tile_data = PackedInt32Array(65537, 196609, 0, 131073, 131073, 1, 196609, 131073, 1, 262145, 131073, 1, 327681, 131073, 1, 393217, 131073, 1, 458753, 131073, 1, 524289, 131073, 1, 589825, 131073, 1, 655361, 131073, 1, 720897, 131073, 1, 786433, 196609, 1, 65538, 65537, 2, 786434, 65537, 0, 65539, 65537, 2, 786435, 65537, 0, 65540, 65537, 2, 786436, 65537, 0, 65541, 65537, 2, 786437, 65537, 0, 65542, 65537, 2, 786438, 65537, 0, 65543, 65537, 2, 786439, 65537, 0, 65544, 65537, 2, 786440, 65537, 0, 65545, 65537, 2, 786441, 65537, 0, 65546, 65537, 2, 786442, 65537, 0, 65547, 65537, 2, 786443, 65537, 0, 65548, 65537, 2, 786444, 65537, 0, 65549, 65537, 2, 786445, 65537, 0, 65550, 65537, 2, 786446, 65537, 0, 65551, 65537, 2, 786447, 65537, 0, 65552, 65537, 2, 786448, 65537, 0, 65553, 65537, 2, 786449, 65537, 0, 65554, 65537, 2, 786450, 65537, 0, 65555, 65537, 2, 786451, 65537, 0, 65556, 65537, 2, 786452, 65537, 0, 65557, 65537, 2, 786453, 65537, 0, 65558, 262145, 0, 131094, 1, 1, 196630, 1, 1, 262166, 1, 1, 327702, 1, 1, 393238, 1, 1, 458774, 1, 1, 524310, 1, 1, 589846, 1, 1, 655382, 1, 1, 720918, 1, 1, 786454, 262145, 1)
 layer_1/tile_data = PackedInt32Array(327688, 1114113, 0, 327689, 1179649, 0, 327690, 1245185, 0, 524294, 1114113, 0, 524295, 1179649, 0, 524296, 1245185, 0, 262157, 1114113, 0, 262158, 1179649, 0, 262159, 1245185, 0, 458768, 1114113, 0, 458769, 1179649, 0, 458770, 1245185, 0)
-layer_2/tile_data = PackedInt32Array(327691, 786433, 0, 393227, 851969, 1, 458763, 851969, 2, 524299, 851969, 1, 589835, 851969, 2, 655371, 851969, 1, 720907, 851969, 2, 327692, 917505, 0, 393228, 917505, 1, 458764, 917505, 2, 524300, 917505, 1, 589836, 917505, 2, 655372, 917505, 1, 720908, 917505, 2)
+layer_2/tile_data = PackedInt32Array(327691, 851969, 2, 393227, 851969, 1, 458763, 851969, 2, 524299, 851969, 1, 589835, 851969, 2, 655371, 851969, 1, 720907, 851969, 2, 327692, 917505, 2, 393228, 917505, 1, 458764, 917505, 2, 524300, 917505, 1, 589836, 917505, 2, 655372, 917505, 1, 720908, 917505, 2, 262155, 851969, 1, 262156, 917505, 1)
 
 [node name="Trophy" parent="." instance=ExtResource("6_ll360")]
 position = Vector2(929, 512)

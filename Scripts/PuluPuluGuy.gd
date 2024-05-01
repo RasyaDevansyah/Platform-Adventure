@@ -3,11 +3,11 @@ extends CharacterBody2D
 signal _playerDeath
 
 
-const SPEED : float = 400.0
-const JUMP_VELOCITY : float = -900.0
-const WALL_JUMP_PUSH_BACK : float = 300.0
-const ACCELERATION = 40
-const FRICTION = 40
+const SPEED : float = 160.0
+const JUMP_VELOCITY : float = -360.0
+const WALL_JUMP_PUSH_BACK : float = 120.0
+const ACCELERATION = 16
+const FRICTION = 16
 
 @onready var tile_map :TileMap = $"../TileMap"
 @onready var animatedSprite2D : AnimatedSprite2D = $AnimatedSprite2D
@@ -22,15 +22,16 @@ var isWallSliding : bool = false
 var canDoubleJump : bool = true
 var disablePlayer : bool = false
 
+
 func _physics_process(delta):
 	var direction : float = Input.get_axis("left", "right") if not disablePlayer else 0.0
 	if direction:
-		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION)
+		velocity.x = move_toward(velocity.x, direction * SPEED * scale.x, ACCELERATION * scale.x)
 	else:
-		velocity.x = move_toward(velocity.x, 0, FRICTION)
+		velocity.x = move_toward(velocity.x, 0, FRICTION * scale.x)
 		
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * delta * scale.x
 		if platformCollidingChecker.is_colliding() == false:
 			set_collision_mask_value(2, true)
 	elif is_on_floor():
@@ -46,13 +47,13 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("jump") and not disablePlayer:
 		if is_on_floor():
-			velocity.y = JUMP_VELOCITY
+			velocity.y = JUMP_VELOCITY * scale.x
 		elif  direction and isWallSliding:
-			velocity.y = JUMP_VELOCITY * 80/100
-			velocity.x = WALL_JUMP_PUSH_BACK * -direction
+			velocity.y = JUMP_VELOCITY * 80/100 * scale.x
+			velocity.x = WALL_JUMP_PUSH_BACK * -direction * scale.x
 		elif canDoubleJump:
 			canDoubleJump = false
-			velocity.y = JUMP_VELOCITY * 80/100
+			velocity.y = JUMP_VELOCITY * 80/100 * scale.x
 			animationTree.set("parameters/DoubleJump/request" ,  AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 

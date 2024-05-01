@@ -691,7 +691,7 @@ script = ExtResource("1_13fao")
 process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
 animation = &"Idle"
-frame = 10
+frame = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 1

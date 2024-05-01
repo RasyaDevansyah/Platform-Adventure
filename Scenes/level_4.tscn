@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://wnepht75yxvj" path="res://Prefab/InGameUI.tscn" id="4_ds8jm"]
 [ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="5_vukid"]
 [ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="6_wldq0"]
-[ext_resource type="PackedScene" uid="uid://c8aqcupn34e5q" path="res://Prefab/apple.tscn" id="7_hujrv"]
-[ext_resource type="PackedScene" uid="uid://b0rpt7dkijwvc" path="res://Prefab/melon.tscn" id="8_d5ruq"]
-[ext_resource type="PackedScene" uid="uid://bb7jmf2ve7020" path="res://Prefab/orange.tscn" id="9_7ocp6"]
-[ext_resource type="PackedScene" uid="uid://d22dtqn2nim8u" path="res://Prefab/pineapple.tscn" id="10_66gkr"]
-[ext_resource type="PackedScene" uid="uid://brk6qbd66e5yt" path="res://Prefab/strawberry.tscn" id="11_cgyhd"]
-[ext_resource type="PackedScene" uid="uid://byjqnlovtw85a" path="res://Prefab/kiwi.tscn" id="12_561y3"]
+[ext_resource type="PackedScene" uid="uid://c8aqcupn34e5q" path="res://Prefab/Fruits/apple.tscn" id="7_hujrv"]
+[ext_resource type="PackedScene" uid="uid://b0rpt7dkijwvc" path="res://Prefab/Fruits/melon.tscn" id="8_d5ruq"]
+[ext_resource type="PackedScene" uid="uid://bb7jmf2ve7020" path="res://Prefab/Fruits/orange.tscn" id="9_7ocp6"]
+[ext_resource type="PackedScene" uid="uid://d22dtqn2nim8u" path="res://Prefab/Fruits/pineapple.tscn" id="10_66gkr"]
+[ext_resource type="PackedScene" uid="uid://brk6qbd66e5yt" path="res://Prefab/Fruits/strawberry.tscn" id="11_cgyhd"]
+[ext_resource type="PackedScene" uid="uid://byjqnlovtw85a" path="res://Prefab/Fruits/kiwi.tscn" id="12_561y3"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
