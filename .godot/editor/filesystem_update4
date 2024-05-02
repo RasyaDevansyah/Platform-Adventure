@@ -4,4 +4,7 @@ res://Other/TileSet.tres
 res://Scenes/level_select.tscn
 res://Scenes/Testing.tscn
 res://Prefab/falling_platform.tscn
-res://Scripts/falling_platform.gd
+res://Prefab/arrow_boost.tscn
+res://Prefab/fireBlock.tscn
+res://Scripts/fireBlock.gd
+res://Scripts/arrow_boost.gd

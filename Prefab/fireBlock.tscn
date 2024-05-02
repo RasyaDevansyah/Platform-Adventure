@@ -279,12 +279,11 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerBox"]
 position = Vector2(0, -0.4)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1xjvv")
 debug_color = Color(0.988235, 0, 0.309804, 0.419608)
 
 [node name="fireDuration" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 3.0
 one_shot = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

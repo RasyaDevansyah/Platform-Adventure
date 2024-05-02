@@ -1,12 +1,12 @@
-Timer
-AnimationPlayer
+Node
 CollisionShape2D
 Area2D
-AnimatableBody2D
 AnimatedSprite2D
+Timer
+AnimationPlayer
+AnimatableBody2D
 AnimationTree
 Node2D
-Node
 Camera2D
 StaticBody2D
 TileMap

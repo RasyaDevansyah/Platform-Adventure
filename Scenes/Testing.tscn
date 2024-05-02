@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://c5ggj2ylj0qbf"]
+[gd_scene load_steps=70 format=3 uid="uid://c5ggj2ylj0qbf"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_ml0hq"]
 [ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="2_olbgm"]
@@ -63,6 +63,9 @@
 [ext_resource type="PackedScene" uid="uid://i8wd6xdw1muy" path="res://Prefab/falling_platform.tscn" id="63_ihrji"]
 [ext_resource type="Texture2D" uid="uid://2u8usj3ptueg" path="res://Assets/Traps/Trampoline/Jump (28x28).png" id="63_jdncm"]
 [ext_resource type="Texture2D" uid="uid://df70s74fx62im" path="res://Assets/Traps/Spikes/Idle.png" id="64_c5p18"]
+[ext_resource type="PackedScene" uid="uid://uapaamo1gbb4" path="res://Prefab/arrow_boost.tscn" id="64_rnen1"]
+[ext_resource type="Texture2D" uid="uid://bg47nfpvkxena" path="res://Assets/Traps/Spiked Ball/Chain.png" id="65_c8lar"]
+[ext_resource type="Texture2D" uid="uid://bfve15fw07p52" path="res://Assets/Traps/Spiked Ball/Spiked Ball.png" id="66_2o25c"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
@@ -111,8 +114,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 36389.0
-offset_bottom = 20584.0
+offset_right = 42149.0
+offset_bottom = 23824.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
@@ -413,34 +416,49 @@ texture = ExtResource("63_jdncm")
 position = Vector2(1260, -760)
 texture = ExtResource("64_c5p18")
 
-[node name="FireBlock" parent="." instance=ExtResource("63_858s2")]
+[node name="Chain" type="Sprite2D" parent="Assets"]
+position = Vector2(1545, -722)
+texture = ExtResource("65_c8lar")
+
+[node name="SpikedBall" type="Sprite2D" parent="Assets"]
+position = Vector2(1517, -740)
+texture = ExtResource("66_2o25c")
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="FireBlock" parent="Traps" instance=ExtResource("63_858s2")]
 position = Vector2(340, 561)
 
-[node name="FireBlock2" parent="." instance=ExtResource("63_858s2")]
+[node name="FireBlock2" parent="Traps" instance=ExtResource("63_858s2")]
 position = Vector2(380, 561)
 
-[node name="FireBlock3" parent="." instance=ExtResource("63_858s2")]
+[node name="FireBlock3" parent="Traps" instance=ExtResource("63_858s2")]
 position = Vector2(420, 561)
 
-[node name="FireBlock4" parent="." instance=ExtResource("63_858s2")]
+[node name="FireBlock4" parent="Traps" instance=ExtResource("63_858s2")]
 position = Vector2(459, 561)
 
-[node name="FallingPlatform" parent="." instance=ExtResource("63_ihrji")]
+[node name="FallingPlatform" parent="Traps" instance=ExtResource("63_ihrji")]
 position = Vector2(643, 200)
 scale = Vector2(2.5, 2.5)
 
-[node name="FallingPlatform2" parent="." instance=ExtResource("63_ihrji")]
+[node name="FallingPlatform2" parent="Traps" instance=ExtResource("63_ihrji")]
 position = Vector2(792, 295)
 scale = Vector2(2.5, 2.5)
 
-[node name="FallingPlatform3" parent="." instance=ExtResource("63_ihrji")]
+[node name="FallingPlatform3" parent="Traps" instance=ExtResource("63_ihrji")]
 position = Vector2(973, 426)
 scale = Vector2(2.5, 2.5)
 
-[node name="FallingPlatform4" parent="." instance=ExtResource("63_ihrji")]
+[node name="FallingPlatform4" parent="Traps" instance=ExtResource("63_ihrji")]
 position = Vector2(989, 179)
 scale = Vector2(2.5, 2.5)
 
-[node name="FallingPlatform5" parent="." instance=ExtResource("63_ihrji")]
+[node name="FallingPlatform5" parent="Traps" instance=ExtResource("63_ihrji")]
 position = Vector2(646, 425)
+scale = Vector2(2.5, 2.5)
+
+[node name="ArrowBoost" parent="Traps" instance=ExtResource("64_rnen1")]
+position = Vector2(540, 356)
+rotation = 0.457276
 scale = Vector2(2.5, 2.5)

@@ -11,7 +11,7 @@ func _on_trigger_box_body_entered(body):
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Triggered":
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(0.5).timeout
 		animationPlayer.play("On")
 		fireDuration.start()
 		

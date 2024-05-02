@@ -1,8 +1,8 @@
 res://Scripts
-res://Assets/Traps/Falling Platforms
-res://Prefab
-res://Assets/Traps/Fire
 res://Assets/Traps/Arrow
+res://Prefab
+res://Assets/Traps/Falling Platforms
+res://Assets/Traps/Fire
 res://
 res://Scenes
 res://Assets/Items/Fruits
