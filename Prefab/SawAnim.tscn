@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="1_u5jq6"]
 
-[sub_resource type="Curve2D" id="Curve2D_etqom"]
+[sub_resource type="Curve2D" id="Curve2D_einw1"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 2230, 1694, 0, 0, 0, 0, 2411, 1694, 0, 0, 0, 0, 2412, 1812, 0, 0, 0, 0, 2054, 1812, 0, 0, 0, 0, 2054, 1694, 0, 0, 0, 0, 2230, 1694)
 }
@@ -51,11 +51,12 @@ metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-2194, -1756)
-curve = SubResource("Curve2D_etqom")
+curve = SubResource("Curve2D_einw1")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(2185.14, 1694)
-progress = 906.141
+position = Vector2(2180.69, 1812)
+rotation = 3.14159
+progress = 530.308
 
 [node name="Saw" parent="Path2D/PathFollow2D" instance=ExtResource("1_u5jq6")]
 

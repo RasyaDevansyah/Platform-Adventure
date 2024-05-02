@@ -1,0 +1,293 @@
+[gd_scene load_steps=23 format=3 uid="uid://bqb3a35e20pot"]
+
+[ext_resource type="Texture2D" uid="uid://cnjycqr7oj7b5" path="res://Assets/Traps/Fire/Off.png" id="1_3f4ik"]
+[ext_resource type="Script" path="res://Scripts/fireBlock.gd" id="1_y1p1m"]
+[ext_resource type="Texture2D" uid="uid://cu6qsx6o834ve" path="res://Assets/Traps/Fire/On (16x32).png" id="2_4mhra"]
+[ext_resource type="Texture2D" uid="uid://ckfghjllq8487" path="res://Assets/Traps/Fire/Hit (16x32).png" id="3_f7igi"]
+[ext_resource type="Script" path="res://Scripts/Saw.gd" id="4_6v8t5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlr7w"]
+atlas = ExtResource("1_3f4ik")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8lny"]
+atlas = ExtResource("2_4mhra")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cuuh"]
+atlas = ExtResource("2_4mhra")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r35ep"]
+atlas = ExtResource("2_4mhra")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07knh"]
+atlas = ExtResource("3_f7igi")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ssh"]
+atlas = ExtResource("3_f7igi")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gioss"]
+atlas = ExtResource("3_f7igi")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3anog"]
+atlas = ExtResource("3_f7igi")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xfv1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlr7w")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8lny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cuuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r35ep")
+}],
+"loop": true,
+"name": &"On",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07knh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ssh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gioss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3anog")
+}],
+"loop": false,
+"name": &"Triggered",
+"speed": 20.0
+}]
+
+[sub_resource type="Animation" id="Animation_1kxec"]
+length = 0.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Off"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fire:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ydckp"]
+length = 0.15
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["On"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fire:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tbf2t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatableBody2D/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fire:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7ut56"]
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Triggered"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatableBody2D/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 9), Vector2(0, 7), Vector2(0, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rldvy"]
+_data = {
+"Off": SubResource("Animation_1kxec"),
+"On": SubResource("Animation_ydckp"),
+"RESET": SubResource("Animation_tbf2t"),
+"Triggered": SubResource("Animation_7ut56")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcq81"]
+size = Vector2(16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38jvm"]
+radius = 7.07107
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xjvv"]
+size = Vector2(16, 0.800001)
+
+[node name="FireBlock" type="Node2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_y1p1m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xfv1j")
+animation = &"Off"
+autoplay = "Off"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rldvy")
+}
+autoplay = "Off"
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_kcq81")
+
+[node name="Fire" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
+script = ExtResource("4_6v8t5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_38jvm")
+
+[node name="TriggerBox" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerBox"]
+position = Vector2(0, -0.4)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1xjvv")
+debug_color = Color(0.988235, 0, 0.309804, 0.419608)
+
+[node name="fireDuration" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="Fire" to="Fire" method="_on_body_entered"]
+[connection signal="body_entered" from="TriggerBox" to="." method="_on_trigger_box_body_entered"]
+[connection signal="timeout" from="fireDuration" to="." method="_on_fire_duration_timeout"]

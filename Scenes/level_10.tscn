@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c8aqcupn34e5q" path="res://Prefab/Fruits/apple.tscn" id="12_xgtbc"]
 [ext_resource type="PackedScene" uid="uid://b0rpt7dkijwvc" path="res://Prefab/Fruits/melon.tscn" id="13_b8q4r"]
 [ext_resource type="PackedScene" uid="uid://dcxd1nij3dw6i" path="res://Prefab/Fruits/banana.tscn" id="14_s1m70"]
-[ext_resource type="PackedScene" uid="uid://bbfp5qvkgo6fa" path="res://SawAmin.tscn" id="15_rbm1c"]
+[ext_resource type="PackedScene" uid="uid://bbfp5qvkgo6fa" path="res://Prefab/SawAnim.tscn" id="15_rbm1c"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
@@ -94,7 +94,6 @@ point_count = 5
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(3503, 1714)
-scale = Vector2(1, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
@@ -224,6 +223,9 @@ position = Vector2(2049, 457)
 [node name="Saw2" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2004, 1912)
 
+[node name="PathFollow2D" parent="Saw2/Path2D" index="0"]
+position = Vector2(2180.69, 1812)
+
 [node name="Saw3" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2004, 1912)
 
@@ -231,15 +233,14 @@ position = Vector2(2004, 1912)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw3/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw4" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2405, 1715)
 
 [node name="PathFollow2D" parent="Saw4/Path2D" index="0"]
-position = Vector2(2230, 1694)
-progress = 0.0
+position = Vector2(2180.69, 1812)
 
 [node name="Saw5" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2405, 1715)
@@ -248,16 +249,14 @@ position = Vector2(2405, 1715)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw5/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
-progress = 0.0
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw6" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2847, 1472)
 
 [node name="PathFollow2D" parent="Saw6/Path2D" index="0"]
-position = Vector2(2230, 1694)
-progress = 0.0
+position = Vector2(2180.69, 1812)
 
 [node name="Saw7" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2847, 1472)
@@ -266,16 +265,14 @@ position = Vector2(2847, 1472)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw7/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
-progress = 0.0
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw8" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2364, 1196)
 
 [node name="PathFollow2D" parent="Saw8/Path2D" index="0"]
-position = Vector2(2230, 1694)
-progress = 0.0
+position = Vector2(2180.69, 1812)
 
 [node name="Saw9" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2364, 1196)
@@ -284,16 +281,14 @@ position = Vector2(2364, 1196)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw9/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
-progress = 0.0
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw10" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(1891, 991)
 
 [node name="PathFollow2D" parent="Saw10/Path2D" index="0"]
-position = Vector2(2230, 1694)
-progress = 0.0
+position = Vector2(2180.69, 1812)
 
 [node name="Saw11" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(1891, 991)
@@ -302,16 +297,14 @@ position = Vector2(1891, 991)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw11/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
-progress = 0.0
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw12" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2364, 793)
 
 [node name="PathFollow2D" parent="Saw12/Path2D" index="0"]
-position = Vector2(2230, 1694)
-progress = 0.0
+position = Vector2(2180.69, 1812)
 
 [node name="Saw13" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2364, 793)
@@ -320,16 +313,14 @@ position = Vector2(2364, 793)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw13/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
-progress = 0.0
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw14" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(1881, 550)
 
 [node name="PathFollow2D" parent="Saw14/Path2D" index="0"]
-position = Vector2(2230, 1694)
-progress = 0.0
+position = Vector2(2180.69, 1812)
 
 [node name="Saw15" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(1881, 550)
@@ -338,9 +329,8 @@ position = Vector2(1881, 550)
 curve = SubResource("Curve2D_08ei0")
 
 [node name="PathFollow2D" parent="Saw15/Path2D" index="0"]
-position = Vector2(2232, 1813)
-rotation = 3.13594
-progress = 0.0
+position = Vector2(2287.3, 1695.3)
+rotation = 0.00558653
 
 [node name="Saw16" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2037, 1514)
@@ -349,9 +339,9 @@ position = Vector2(2037, 1514)
 curve = SubResource("Curve2D_v4lf2")
 
 [node name="PathFollow2D" parent="Saw16/Path2D" index="0"]
-position = Vector2(2143, 1812)
+position = Vector2(2142.52, 1755.7)
 rotation = -1.57927
-progress = 0.0
+progress = 56.2998
 
 [node name="Saw17" parent="." instance=ExtResource("15_rbm1c")]
 position = Vector2(2834, 995)
@@ -360,9 +350,9 @@ position = Vector2(2834, 995)
 curve = SubResource("Curve2D_v4lf2")
 
 [node name="PathFollow2D" parent="Saw17/Path2D" index="0"]
-position = Vector2(2143, 1812)
+position = Vector2(2142.52, 1755.7)
 rotation = -1.57927
-progress = 0.0
+progress = 56.2998
 
 [connection signal="_playerDeath" from="PuluPuluGuy" to="InGameUI" method="_on_pulu_pulu_guy__player_death"]
 [connection signal="_TransitionFinished" from="Transition" to="InGameUI" method="_on_transition__transition_finished"]

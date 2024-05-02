@@ -62,10 +62,11 @@ func _physics_process(delta):
 		isWallSliding = direction
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
-			var tileLayer = tile_map.get_layer_for_body_rid(collision.get_collider_rid())
-			if tileLayer == 2:
-				isWallSliding = false
-				break
+			if collision.get_collider() is TileMap:
+				var tileLayer = tile_map.get_layer_for_body_rid(collision.get_collider_rid())
+				if tileLayer == 2:
+					isWallSliding = false
+					break
 	else:
 		isWallSliding = false
 			

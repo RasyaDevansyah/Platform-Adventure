@@ -1,0 +1,172 @@
+[gd_scene load_steps=16 format=3 uid="uid://i8wd6xdw1muy"]
+
+[ext_resource type="Texture2D" uid="uid://xleqpmlcfcvc" path="res://Assets/Traps/Falling Platforms/Off.png" id="1_jf3wg"]
+[ext_resource type="Script" path="res://Scripts/falling_platform.gd" id="1_myqf2"]
+[ext_resource type="Texture2D" uid="uid://bylwh4uu1pxio" path="res://Assets/Traps/Falling Platforms/On (32x10).png" id="2_41qii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ygf"]
+size = Vector2(32, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7np4j"]
+atlas = ExtResource("1_jf3wg")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5yaa"]
+atlas = ExtResource("2_41qii")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv25f"]
+atlas = ExtResource("2_41qii")
+region = Rect2(32, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqtu2"]
+atlas = ExtResource("2_41qii")
+region = Rect2(64, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni4d3"]
+atlas = ExtResource("2_41qii")
+region = Rect2(96, 0, 32, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nlpf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7np4j")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5yaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv25f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqtu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni4d3")
+}],
+"loop": true,
+"name": &"On",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njv5l"]
+size = Vector2(32, 10)
+
+[sub_resource type="Animation" id="Animation_tw2j3"]
+resource_name = "SteppedOn"
+length = 0.06
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatableBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.04, 0.06),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(0, 3), Vector2(0, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D/TriggerBox/CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.04, 0.06),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 2), Vector2(32, 5), Vector2(32, 5), Vector2(32, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_lcg72"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatableBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D/TriggerBox/CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_r5vh7"]
+resource_name = "Fall"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatableBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2.92817, 2.92817),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 425)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ry1e"]
+_data = {
+"Fall": SubResource("Animation_r5vh7"),
+"RESET": SubResource("Animation_lcg72"),
+"SteppedOn": SubResource("Animation_tw2j3")
+}
+
+[node name="FallingPlatform" type="Node2D"]
+script = ExtResource("1_myqf2")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+collision_layer = 2
+metadata/_edit_group_ = true
+
+[node name="TriggerBox" type="Area2D" parent="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D/TriggerBox"]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_v3ygf")
+debug_color = Color(0.968627, 0.141176, 0.25098, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
+sprite_frames = SubResource("SpriteFrames_nlpf7")
+animation = &"On"
+autoplay = "On"
+frame_progress = 0.115118
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_njv5l")
+one_way_collision = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5ry1e")
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="AnimatableBody2D/TriggerBox" to="." method="_on_trigger_box_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

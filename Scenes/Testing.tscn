@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://c5ggj2ylj0qbf"]
+[gd_scene load_steps=67 format=3 uid="uid://c5ggj2ylj0qbf"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_ml0hq"]
 [ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="2_olbgm"]
@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dcxd1nij3dw6i" path="res://Prefab/Fruits/banana.tscn" id="5_nn8qc"]
 [ext_resource type="PackedScene" uid="uid://b0rpt7dkijwvc" path="res://Prefab/Fruits/melon.tscn" id="6_5cjsd"]
 [ext_resource type="PackedScene" uid="uid://bb7jmf2ve7020" path="res://Prefab/Fruits/orange.tscn" id="7_svh8y"]
-[ext_resource type="PackedScene" uid="uid://b5m2dm0c1t4b2" path="res://Prefab/line_2d.tscn" id="8_1c8w7"]
-[ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="9_j2vj5"]
-[ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="10_0768o"]
 [ext_resource type="Texture2D" uid="uid://xljks0bdrrvk" path="res://Assets/Items/Boxes/Box1/Idle.png" id="11_rcxda"]
 [ext_resource type="Texture2D" uid="uid://dyhkqjspuiqrw" path="res://Assets/Background/Blue.png" id="12_2s51v"]
 [ext_resource type="Texture2D" uid="uid://dw2s6ci5or11y" path="res://Assets/Background/Brown.png" id="13_nqfl6"]
@@ -62,6 +59,8 @@
 [ext_resource type="Texture2D" uid="uid://clviu16y5prps" path="res://Assets/Traps/Spike Head/Right Hit (54x52).png" id="60_3txlp"]
 [ext_resource type="Texture2D" uid="uid://bkjvk4fbwq03j" path="res://Assets/Traps/Spike Head/Top Hit (54x52).png" id="61_fxtn1"]
 [ext_resource type="Texture2D" uid="uid://c1xnc0uliuy0d" path="res://Assets/Traps/Trampoline/Idle.png" id="62_6faoj"]
+[ext_resource type="PackedScene" uid="uid://bqb3a35e20pot" path="res://Prefab/fireBlock.tscn" id="63_858s2"]
+[ext_resource type="PackedScene" uid="uid://i8wd6xdw1muy" path="res://Prefab/falling_platform.tscn" id="63_ihrji"]
 [ext_resource type="Texture2D" uid="uid://2u8usj3ptueg" path="res://Assets/Traps/Trampoline/Jump (28x28).png" id="63_jdncm"]
 [ext_resource type="Texture2D" uid="uid://df70s74fx62im" path="res://Assets/Traps/Spikes/Idle.png" id="64_c5p18"]
 
@@ -78,7 +77,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-96, -96), Vector2(-64, -64)]
+"values": [Vector2(-96, -96), Vector2(-64, -128)]
 }
 
 [sub_resource type="Animation" id="Animation_chlc2"]
@@ -96,84 +95,11 @@ tracks/0/keys = {
 "values": [Vector2(-26, -64)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_13rkj"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t64g4"]
 _data = {
 "MovingBackground": SubResource("Animation_2m8nc"),
 "RESET": SubResource("Animation_chlc2")
 }
-
-[sub_resource type="Animation" id="Animation_47urr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Saw2/Path2D/PathFollow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_s1w63"]
-resource_name = "Saw"
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Saw1/Path2D/PathFollow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 1.0, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ll4ox"]
-_data = {
-"RESET": SubResource("Animation_47urr"),
-"Saw": SubResource("Animation_s1w63")
-}
-
-[sub_resource type="Curve2D" id="Curve2D_jkpg8"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 954, 183, 0, 0, 0, 0, 955, 58)
-}
-point_count = 2
-
-[sub_resource type="Animation" id="Animation_cy4qx"]
-resource_name = "SawMoving"
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Saw2/Path2D/PathFollow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_37yqw"]
-_data = {
-"RESET": SubResource("Animation_47urr"),
-"SawMoving": SubResource("Animation_cy4qx")
-}
-
-[sub_resource type="Curve2D" id="Curve2D_0dswk"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 828, 404, 0, 0, 0, 0, 829, 2, 0, 0, 0, 0, 748, 2, 0, 0, 0, 0, 749, 405, 0, 0, 0, 0, 828, 404)
-}
-point_count = 5
 
 [node name="World" type="Node"]
 
@@ -185,8 +111,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 15653.0
-offset_bottom = 8920.0
+offset_right = 36389.0
+offset_bottom = 20584.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
@@ -197,15 +123,15 @@ scale = Vector2(2.5, 2.5)
 tile_set = ExtResource("2_olbgm")
 format = 2
 layer_0/name = "Layer 0"
-layer_0/tile_data = PackedInt32Array(-65536, 196609, 4, -65535, 65537, 6, -65534, 65537, 6, -65533, 65537, 6, -65532, 65537, 6, -65531, 65537, 6, -65530, 65537, 6, -65529, 65537, 6, -65528, 65537, 6, -65527, 65537, 6, -65526, 65537, 6, -65525, 65537, 6, -65524, 65537, 6, -65523, 65537, 6, -65522, 65537, 6, -65521, 65537, 6, -65520, 65537, 6, -65519, 65537, 6, -65518, 65537, 6, -65517, 65537, 6, -65516, 65537, 6, -65515, 65537, 6, -65514, 65537, 6, -65513, 65537, 6, 1048576, 196609, 5, 1048577, 65537, 4, 1048578, 65537, 4, 1048579, 65537, 4, 1048580, 65537, 4, 1048581, 65537, 4, 1048582, 65537, 4, 1048583, 65537, 4, 1048584, 65537, 4, 1048585, 65537, 4, 1048586, 65537, 4, 1048587, 65537, 4, 1048588, 65537, 4, 1048589, 65537, 4, 1048590, 65537, 4, 1048591, 65537, 4, 1048592, 65537, 4, 1048593, 65537, 4, 1048594, 65537, 4, 1048595, 65537, 4, 1048596, 65537, 4, 1048597, 65537, 4, 1048598, 65537, 4, 1048599, 65537, 4, 917504, 131073, 5, 983040, 131073, 5, 917505, 458753, 0, 983041, 458753, 1, 917506, 458753, 0, 983042, 458753, 1, 917507, 458753, 0, 983043, 458753, 1, 917508, 458753, 0, 983044, 458753, 1, 917509, 458753, 0, 983045, 458753, 1, 917510, 458753, 0, 983046, 458753, 1, 917511, 458753, 0, 983047, 458753, 1, 917512, 458753, 0, 983048, 458753, 1, 917513, 458753, 0, 983049, 458753, 1, 917514, 458753, 0, 983050, 458753, 1, 917515, 458753, 0, 983051, 458753, 1, 917516, 458753, 0, 983052, 458753, 1, 917517, 458753, 0, 983053, 458753, 1, 917518, 458753, 0, 983054, 458753, 1, 917519, 458753, 0, 983055, 458753, 1, 917520, 458753, 0, 983056, 458753, 1, 917521, 458753, 0, 983057, 458753, 1, 917522, 458753, 0, 983058, 458753, 1, 917523, 458753, 0, 983059, 458753, 1, 917524, 458753, 0, 983060, 458753, 1, 917525, 458753, 0, 983061, 458753, 1, 917526, 458753, 0, 983062, 458753, 1, 917527, 458753, 0, 983063, 458753, 1, 1048600, 65537, 4, 1048601, 65537, 4, 1048602, 65537, 4, 1048603, 65537, 4, -65512, 65537, 6, -65511, 65537, 6, -65510, 65537, 6, -65509, 65537, 6, 1048604, 262145, 5, -65508, 262145, 4, 917528, 458753, 0, 983064, 458753, 1, 917529, 458753, 0, 983065, 458753, 1, 917530, 458753, 0, 983066, 458753, 1, 917531, 458753, 0, 983067, 458753, 1, 917532, 1, 5, 983068, 1, 5, 28, 1, 5, 65564, 1, 5, 131100, 1, 5, 196636, 1, 5, 262172, 1, 5, 327708, 1, 5, 393244, 1, 5, 458780, 1, 5, 524316, 1, 5, 589852, 1, 5, 655388, 1, 5, 720924, 1, 5, 786460, 1, 5, 851996, 1, 5, 0, 131073, 5, 65536, 131073, 5, 131072, 131073, 5, 196608, 131073, 5, 262144, 131073, 5, 327680, 131073, 5, 393216, 131073, 5, 458752, 131073, 5, 524288, 131073, 5, 589824, 131073, 5, 655360, 131073, 5, 720896, 131073, 5, 786432, 131073, 5, 851968, 131073, 5)
+layer_0/tile_data = PackedInt32Array(-65536, 196609, 4, -65535, 65537, 6, -65534, 65537, 6, -65533, 65537, 6, -65532, 65537, 6, -65531, 65537, 6, -65530, 65537, 6, -65529, 65537, 6, -65528, 65537, 6, -65527, 65537, 6, -65526, 65537, 6, -65525, 65537, 6, -65524, 65537, 6, -65523, 65537, 6, -65522, 65537, 6, -65521, 65537, 6, -65520, 65537, 6, -65519, 65537, 6, -65518, 65537, 6, -65517, 65537, 6, -65516, 65537, 6, -65515, 65537, 6, -65514, 65537, 6, -65513, 65537, 6, 1048576, 196609, 5, 1048577, 65537, 4, 1048578, 65537, 4, 1048579, 65537, 4, 1048580, 65537, 4, 1048581, 65537, 4, 1048582, 65537, 4, 1048583, 65537, 4, 1048584, 65537, 4, 1048585, 65537, 4, 1048586, 65537, 4, 1048587, 65537, 4, 1048588, 65537, 4, 1048589, 65537, 4, 1048590, 65537, 4, 1048591, 65537, 4, 1048592, 65537, 4, 1048593, 65537, 4, 1048594, 65537, 4, 1048595, 65537, 4, 1048596, 65537, 4, 1048597, 65537, 4, 1048598, 65537, 4, 1048599, 65537, 4, 917504, 131073, 5, 983040, 131073, 5, 917505, 458753, 0, 983041, 458753, 1, 917506, 458753, 0, 983042, 458753, 1, 917507, 458753, 0, 983043, 458753, 1, 917508, 458753, 0, 983044, 458753, 1, 917509, 458753, 0, 983045, 458753, 1, 917510, 458753, 0, 983046, 458753, 1, 917511, 458753, 0, 983047, 458753, 1, 983048, 458753, 1, 983049, 458753, 1, 983050, 458753, 1, 983051, 458753, 1, 917516, 458753, 0, 983052, 458753, 1, 917517, 458753, 0, 983053, 458753, 1, 917518, 458753, 0, 983054, 458753, 1, 917519, 458753, 0, 983055, 458753, 1, 917520, 458753, 0, 983056, 458753, 1, 917521, 458753, 0, 983057, 458753, 1, 917522, 458753, 0, 983058, 458753, 1, 917523, 458753, 0, 983059, 458753, 1, 917524, 458753, 0, 983060, 458753, 1, 917525, 458753, 0, 983061, 458753, 1, 917526, 458753, 0, 983062, 458753, 1, 917527, 458753, 0, 983063, 458753, 1, 1048600, 65537, 4, 1048601, 65537, 4, 1048602, 65537, 4, 1048603, 65537, 4, -65512, 65537, 6, -65511, 65537, 6, -65510, 65537, 6, -65509, 65537, 6, 1048604, 262145, 5, -65508, 262145, 4, 917528, 458753, 0, 983064, 458753, 1, 917529, 458753, 0, 983065, 458753, 1, 917530, 458753, 0, 983066, 458753, 1, 917531, 458753, 0, 983067, 458753, 1, 917532, 1, 5, 983068, 1, 5, 28, 1, 5, 65564, 1, 5, 131100, 1, 5, 196636, 1, 5, 262172, 1, 5, 327708, 1, 5, 393244, 1, 5, 458780, 1, 5, 524316, 1, 5, 589852, 1, 5, 655388, 1, 5, 720924, 1, 5, 786460, 1, 5, 851996, 1, 5, 0, 131073, 5, 65536, 131073, 5, 131072, 131073, 5, 196608, 131073, 5, 262144, 131073, 5, 327680, 131073, 5, 393216, 131073, 5, 458752, 131073, 5, 524288, 131073, 5, 589824, 131073, 5, 655360, 131073, 5, 720896, 131073, 5, 786432, 131073, 5, 851968, 131073, 5)
 layer_1/name = "Layer 1"
 layer_1/z_index = 1
-layer_1/tile_data = PackedInt32Array(524293, 1114113, 0, 524294, 1179649, 0, 786438, 1114113, 0, 524295, 1245185, 0, 786439, 1179649, 0, 524296, 1114113, 0, 786440, 1245185, 0, 524297, 1179649, 0, 524298, 1245185, 0, 720907, 1114113, 0, 720908, 1179649, 0, 720909, 1245185, 0, 589844, 1114113, 0, 589845, 1179649, 0, 589846, 1245185, 0, 786455, 1114113, 0, 786456, 1179649, 0, 786457, 1245185, 0, 393232, 1114113, 0, 393233, 1179649, 0, 393234, 1245185, 0, 720912, 1114113, 0, 720913, 1179649, 0, 720914, 1245185, 0, 327681, 1114113, 0, 327683, 1245185, 0, 327682, 1179649, 0)
+layer_1/tile_data = PackedInt32Array(524293, 1114113, 0, 524294, 1179649, 0, 786438, 1114113, 0, 524295, 1245185, 0, 786439, 1179649, 0, 524296, 1114113, 0, 786440, 1245185, 0, 524297, 1179649, 0, 524298, 1245185, 0, 720907, 1114113, 0, 720908, 1179649, 0, 720909, 1245185, 0, 327681, 1114113, 0, 327683, 1245185, 0, 327682, 1179649, 0)
 layer_2/name = "Layer 2"
-layer_2/tile_data = PackedInt32Array(262158, 851969, 1, 327694, 851969, 2, 393230, 851969, 1, 458766, 851969, 2, 524302, 851969, 1, 589838, 851969, 2, 655374, 851969, 1, 720910, 851969, 2, 786446, 851969, 1, 851982, 851969, 2, 262159, 917505, 1, 327695, 917505, 2, 393231, 917505, 1, 458767, 917505, 2, 524303, 917505, 1, 589839, 917505, 2, 655375, 917505, 1, 720911, 917505, 2, 786447, 917505, 1, 851983, 917505, 2)
+layer_2/tile_data = PackedInt32Array()
 
 [node name="PuluPuluGuy" parent="." instance=ExtResource("3_60bf8")]
-position = Vector2(598, 95)
+position = Vector2(160, 513)
 scale = Vector2(2.5, 2.5)
 
 [node name="Items" type="Node" parent="."]
@@ -248,51 +174,9 @@ position = Vector2(303, 276)
 
 [node name="Background" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_13rkj")
+"": SubResource("AnimationLibrary_t64g4")
 }
 autoplay = "MovingBackground"
-
-[node name="Saw1" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ll4ox")
-}
-autoplay = "Saw"
-
-[node name="Line2D" parent="Saw1" instance=ExtResource("8_1c8w7")]
-position = Vector2(869, 337)
-scale = Vector2(1.56, 1.56)
-points = PackedVector2Array(55, -184, 54.4871, -94.2308)
-
-[node name="Path2D" type="Path2D" parent="Saw1"]
-curve = SubResource("Curve2D_jkpg8")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Saw1/Path2D"]
-position = Vector2(954, 183)
-rotation = -1.5628
-
-[node name="Saw" parent="Saw1/Path2D/PathFollow2D" instance=ExtResource("9_j2vj5")]
-position = Vector2(1, -1.19209e-07)
-
-[node name="Saw2" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_37yqw")
-}
-autoplay = "SawMoving"
-
-[node name="Path2D" type="Path2D" parent="Saw2"]
-position = Vector2(-189, 158)
-curve = SubResource("Curve2D_0dswk")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Saw2/Path2D"]
-position = Vector2(828, 404)
-rotation = -1.56831
-
-[node name="Saw" parent="Saw2/Path2D/PathFollow2D" instance=ExtResource("9_j2vj5")]
-position = Vector2(4.00493, 1.99004)
-
-[node name="Trophy" parent="." instance=ExtResource("10_0768o")]
-position = Vector2(105, 512)
-scale = Vector2(2.5, 2.5)
 
 [node name="Assets" type="Node" parent="."]
 
@@ -528,3 +412,35 @@ texture = ExtResource("63_jdncm")
 [node name="Idle9" type="Sprite2D" parent="Assets"]
 position = Vector2(1260, -760)
 texture = ExtResource("64_c5p18")
+
+[node name="FireBlock" parent="." instance=ExtResource("63_858s2")]
+position = Vector2(340, 561)
+
+[node name="FireBlock2" parent="." instance=ExtResource("63_858s2")]
+position = Vector2(380, 561)
+
+[node name="FireBlock3" parent="." instance=ExtResource("63_858s2")]
+position = Vector2(420, 561)
+
+[node name="FireBlock4" parent="." instance=ExtResource("63_858s2")]
+position = Vector2(459, 561)
+
+[node name="FallingPlatform" parent="." instance=ExtResource("63_ihrji")]
+position = Vector2(643, 200)
+scale = Vector2(2.5, 2.5)
+
+[node name="FallingPlatform2" parent="." instance=ExtResource("63_ihrji")]
+position = Vector2(792, 295)
+scale = Vector2(2.5, 2.5)
+
+[node name="FallingPlatform3" parent="." instance=ExtResource("63_ihrji")]
+position = Vector2(973, 426)
+scale = Vector2(2.5, 2.5)
+
+[node name="FallingPlatform4" parent="." instance=ExtResource("63_ihrji")]
+position = Vector2(989, 179)
+scale = Vector2(2.5, 2.5)
+
+[node name="FallingPlatform5" parent="." instance=ExtResource("63_ihrji")]
+position = Vector2(646, 425)
+scale = Vector2(2.5, 2.5)
