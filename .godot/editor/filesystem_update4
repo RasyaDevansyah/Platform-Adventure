@@ -1,10 +1,12 @@
-res://Prefab/PuluPuluGuy.tscn
+res://Scenes/Testing.tscn
 res://Other/new_theme.tres
 res://Other/TileSet.tres
+res://Prefab/PuluPuluGuy.tscn
 res://Scenes/level_select.tscn
-res://Scenes/Testing.tscn
 res://Prefab/falling_platform.tscn
 res://Prefab/arrow_boost.tscn
 res://Prefab/fireBlock.tscn
-res://Scripts/fireBlock.gd
-res://Scripts/arrow_boost.gd
+res://Prefab/spike_ball.tscn
+res://Scripts/falling_platform.gd
+res://Prefab/chain_ball.tscn
+res://Scripts/Saw.gd

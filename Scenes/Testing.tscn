@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://c5ggj2ylj0qbf"]
+[gd_scene load_steps=71 format=3 uid="uid://c5ggj2ylj0qbf"]
 
 [ext_resource type="Texture2D" uid="uid://lknp2vbl7it8" path="res://Assets/Background/Purple.png" id="1_ml0hq"]
 [ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="2_olbgm"]
@@ -66,6 +66,7 @@
 [ext_resource type="PackedScene" uid="uid://uapaamo1gbb4" path="res://Prefab/arrow_boost.tscn" id="64_rnen1"]
 [ext_resource type="Texture2D" uid="uid://bg47nfpvkxena" path="res://Assets/Traps/Spiked Ball/Chain.png" id="65_c8lar"]
 [ext_resource type="Texture2D" uid="uid://bfve15fw07p52" path="res://Assets/Traps/Spiked Ball/Spiked Ball.png" id="66_2o25c"]
+[ext_resource type="PackedScene" uid="uid://bi8h3q761o4a6" path="res://Prefab/chain_ball.tscn" id="67_yjhhe"]
 
 [sub_resource type="Animation" id="Animation_2m8nc"]
 resource_name = "MovingBackground"
@@ -114,12 +115,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 42149.0
-offset_bottom = 23824.0
+offset_right = 62885.0
+offset_bottom = 35488.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
 stretch_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(2.5, 2.5)
@@ -462,3 +464,6 @@ scale = Vector2(2.5, 2.5)
 position = Vector2(540, 356)
 rotation = 0.457276
 scale = Vector2(2.5, 2.5)
+
+[node name="ChainBall" parent="." instance=ExtResource("67_yjhhe")]
+position = Vector2(908, 46)
