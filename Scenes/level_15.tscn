@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0itog8oatufo"]
+
+[ext_resource type="Texture2D" uid="uid://d0fmdmnosmq32" path="res://Assets/Background/Pink.png" id="1_2soan"]
+[ext_resource type="TileSet" uid="uid://db1mp02erje3o" path="res://Other/TileSet.tres" id="2_1uyp6"]
+[ext_resource type="PackedScene" uid="uid://h4yvcfcedb78" path="res://Prefab/PuluPuluGuy.tscn" id="3_ai88r"]
+[ext_resource type="PackedScene" uid="uid://wnepht75yxvj" path="res://Prefab/InGameUI.tscn" id="4_newqj"]
+[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="5_jw2nu"]
+[ext_resource type="PackedScene" uid="uid://c3fsgw1exnavj" path="res://Prefab/Trophy.tscn" id="6_jn5y3"]
+
+[sub_resource type="Animation" id="Animation_xlakd"]
+resource_name = "MovingBackground"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-96, -96), Vector2(-32, -32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11376, 9568)]
+}
+
+[sub_resource type="Animation" id="Animation_52muu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-26, -64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1422, 1196)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0oqxm"]
+_data = {
+"MovingBackground": SubResource("Animation_xlakd"),
+"RESET": SubResource("Animation_52muu")
+}
+
+[node name="Level15" type="Node" groups=["Level"]]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+z_index = -2
+texture_filter = 1
+anchors_preset = -1
+anchor_left = -0.0225694
+anchor_top = -0.0987654
+anchor_right = 2.71528
+anchor_bottom = 2.59259
+offset_right = -1732.0
+offset_bottom = -548.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2soan")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0oqxm")
+}
+autoplay = "MovingBackground"
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2.5, 2.5)
+tile_set = ExtResource("2_1uyp6")
+format = 2
+layer_1/tile_data = PackedInt32Array()
+layer_2/tile_data = PackedInt32Array(131057, 393217, 4, 196593, 393217, 5, 262129, 393217, 6, 131058, 458753, 4, 196594, 458753, 5, 262130, 458753, 6, 131059, 524289, 4, 196595, 524289, 5, 262131, 524289, 6, 131052, 1, 4, 196588, 1, 5, 131053, 65537, 4, 131054, 131073, 4, 262124, 1, 6, 196589, 65537, 5, 262125, 65537, 6, 196590, 131073, 5, 262126, 131073, 6, 131055, 196609, 4, 196591, 196609, 5, 131056, 262145, 4, 196592, 262145, 5, 131060, 786433, 8, 196596, 786433, 9, 131061, 851969, 8, 196597, 851969, 9, 262133, 851969, 10, 131062, 917505, 8, 196598, 917505, 9, 262134, 917505, 10, 131063, 983041, 8, 196599, 983041, 9, 262135, 983041, 10, 393205, 1114113, 1, 393206, 1179649, 1, 393207, 1245185, 1, 458741, 1114113, 1, 458742, 1179649, 1, 458743, 1245185, 1, 524277, 1114113, 1, 524278, 1179649, 1, 524279, 1245185, 1, 589813, 1114113, 1, 589814, 1179649, 1, 589815, 1245185, 1)
+
+[node name="PuluPuluGuy" parent="." instance=ExtResource("3_ai88r")]
+position = Vector2(-458, 655)
+scale = Vector2(2.5, 2.5)
+
+[node name="InGameUI" parent="." instance=ExtResource("4_newqj")]
+
+[node name="Transition" parent="." instance=ExtResource("5_jw2nu")]
+
+[node name="Trophy" parent="." instance=ExtResource("6_jn5y3")]
+position = Vector2(-492, 548)
+scale = Vector2(2.5, 2.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-557, 1145)
+
+[connection signal="_playerDeath" from="PuluPuluGuy" to="InGameUI" method="_on_pulu_pulu_guy__player_death"]
+[connection signal="_TransitionFinished" from="Transition" to="InGameUI" method="_on_transition__transition_finished"]
+[connection signal="_levelComplete" from="Trophy" to="InGameUI" method="_on_trophy__level_complete"]

@@ -115,8 +115,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -26.0
 offset_top = -64.0
-offset_right = 62885.0
-offset_bottom = 35488.0
+offset_right = 69797.0
+offset_bottom = 39376.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ml0hq")
@@ -466,4 +466,4 @@ rotation = 0.457276
 scale = Vector2(2.5, 2.5)
 
 [node name="ChainBall" parent="." instance=ExtResource("67_yjhhe")]
-position = Vector2(908, 46)
+position = Vector2(890, 46)

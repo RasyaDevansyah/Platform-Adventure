@@ -1,16 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://bi8h3q761o4a6"]
 
+[ext_resource type="Script" path="res://Scripts/chain_ball.gd" id="1_5bicv"]
 [ext_resource type="Texture2D" uid="uid://bfve15fw07p52" path="res://Assets/Traps/Spiked Ball/Spiked Ball.png" id="1_8hd2j"]
 [ext_resource type="Script" path="res://Scripts/Saw.gd" id="1_x4jtp"]
 [ext_resource type="Texture2D" uid="uid://bg47nfpvkxena" path="res://Assets/Traps/Spiked Ball/Chain.png" id="3_0hqnu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lg1da"]
-size = Vector2(7.61871, 236.425)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ix1ma"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oxn8l"]
 radius = 13.2061
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ix1ma"]
 
 [sub_resource type="Animation" id="Animation_7gne2"]
 resource_name = "BallRotate"
@@ -52,6 +50,7 @@ _data = {
 
 [node name="ChainBall" type="Node2D"]
 position = Vector2(0, 0.999992)
+script = ExtResource("1_5bicv")
 
 [node name="Joint" type="AnimatableBody2D" parent="."]
 position = Vector2(-1, 0)
@@ -59,50 +58,36 @@ collision_layer = 0
 collision_mask = 0
 sync_to_physics = false
 
-[node name="Chain" type="AnimatableBody2D" parent="Joint"]
-position = Vector2(0, 9.00001)
-scale = Vector2(1, 1)
-collision_layer = 0
-collision_mask = 0
-sync_to_physics = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Joint"]
+scale = Vector2(1.25, 1.25)
+shape = SubResource("CircleShape2D_ix1ma")
+debug_color = Color(0, 0.647059, 0.239216, 0.419608)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Joint/Chain"]
-visible = false
-position = Vector2(-3.05176e-05, 108.213)
-shape = SubResource("RectangleShape2D_lg1da")
-debug_color = Color(0, 0.631373, 0.470588, 0.419608)
-
-[node name="Line2D" type="Line2D" parent="Joint"]
-points = PackedVector2Array(1, 7.62939e-06, 1, 227)
+[node name="Chain" type="Line2D" parent="Joint"]
+z_index = -1
+points = PackedVector2Array(2, 7.62939e-06, 0, 223)
 closed = true
 width = 14.99
 texture = ExtResource("3_0hqnu")
 texture_mode = 1
 
 [node name="SpikeBall" type="Area2D" parent="Joint"]
-position = Vector2(0.999998, 226)
+position = Vector2(0, 226)
 scale = Vector2(2.5, 2.5)
 monitorable = false
 script = ExtResource("1_x4jtp")
+metadata/_edit_group_ = true
 
 [node name="SpikedBall" type="Sprite2D" parent="Joint/SpikeBall"]
-position = Vector2(4.76837e-08, 1.52588e-05)
-scale = Vector2(1, 1)
 texture = ExtResource("1_8hd2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Joint/SpikeBall"]
 shape = SubResource("CircleShape2D_oxn8l")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Joint"]
-scale = Vector2(1.25, 1.25)
-shape = SubResource("CircleShape2D_ix1ma")
-debug_color = Color(0, 0.647059, 0.239216, 0.419608)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_6kcff")
 }
-autoplay = "BallRotate"
 
 [connection signal="body_entered" from="Joint/SpikeBall" to="Joint/SpikeBall" method="_on_body_entered"]
