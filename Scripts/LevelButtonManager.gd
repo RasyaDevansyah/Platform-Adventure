@@ -3,15 +3,14 @@ extends HFlowContainer
 
 func _ready():
 	
-	GlobalScript.saveFile.maxLevel = get_child_count() + 1
-	
+	GlobalScript.saveFile.maxLevel = get_child_count()
 	while GlobalScript.saveFile.levelTrophies.size() != get_child_count():
 		if GlobalScript.saveFile.levelTrophies.size() < get_child_count():
 			GlobalScript.saveFile.levelTrophies.push_back(-1)
 		else:
 			GlobalScript.saveFile.levelTrophies.pop_back()
 			
-		GlobalScript.saveFile.WriteSaveGame()
+	GlobalScript.saveFile.WriteSaveGame()
 
 	var children = get_children()
 	for i in range(GlobalScript.saveFile.levelUnlocked ,get_child_count()):

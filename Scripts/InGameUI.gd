@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var transition = $"../Transition" as Transition
 @onready var winAnimation : AnimationPlayer = $WinAnimation
+@onready var next : Button = $WinPanel/Next
 
 var sceneNumber : int = -1
 var trophyAnim : String = "1Trophy"
@@ -46,6 +47,9 @@ func _on_trophy__level_complete(fruitCount):
 	CalculateTrophy(fruitCount)
 	
 func CalculateTrophy(fruitCount):
+	if GlobalScript.saveFile.maxLevel < nextLevel:
+		next.disabled = true
+		
 	var fruitPercentage : float = float(fruitCount) / float(GlobalScript.totalFruit) * 100.0
 	
 	if fruitPercentage <= 50.0:

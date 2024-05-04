@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbfp5qvkgo6fa"]
+[gd_scene load_steps=7 format=3 uid="uid://bbfp5qvkgo6fa"]
 
+[ext_resource type="Script" path="res://Scripts/SawAnim.gd" id="1_q2net"]
 [ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="1_u5jq6"]
 
 [sub_resource type="Curve2D" id="Curve2D_einw1"]
@@ -47,6 +48,7 @@ _data = {
 }
 
 [node name="Saw" type="Node2D"]
+script = ExtResource("1_q2net")
 metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -54,9 +56,8 @@ position = Vector2(-2194, -1756)
 curve = SubResource("Curve2D_einw1")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(2180.69, 1812)
-rotation = 3.14159
-progress = 530.308
+position = Vector2(2230, 1694)
+progress = 951.004
 
 [node name="Saw" parent="Path2D/PathFollow2D" instance=ExtResource("1_u5jq6")]
 
@@ -64,5 +65,4 @@ progress = 530.308
 libraries = {
 "": SubResource("AnimationLibrary_37yqw")
 }
-autoplay = "SawMoving"
 speed_scale = 2.0

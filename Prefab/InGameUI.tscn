@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://wnepht75yxvj"]
+[gd_scene load_steps=48 format=3 uid="uid://wnepht75yxvj"]
 
 [ext_resource type="Script" path="res://Scripts/InGameUI.gd" id="1_jq3le"]
 [ext_resource type="Texture2D" uid="uid://cv1lgxyqvttrc" path="res://Assets/Menu/Buttons/Restart.png" id="1_y3wex"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cbik8ihcjs87q" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="3_6bsq5"]
 [ext_resource type="Texture2D" uid="uid://44aaqx8t6tfn" path="res://Assets/Menu/Buttons/Next.png" id="4_kvikf"]
 [ext_resource type="Texture2D" uid="uid://dmjol72tvbjk4" path="res://Assets/Menu/Buttons/Levels.png" id="5_ky3sl"]
+[ext_resource type="Texture2D" uid="uid://bowptucla180l" path="res://Assets/Menu/Buttons/Achievements.png" id="7_coyak"]
+[ext_resource type="Texture2D" uid="uid://cr77b81xcns8g" path="res://Assets/Main Characters/Ninja Frog/Idle (32x32).png" id="7_kf6td"]
+[ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="9_alkv3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6kd1"]
 
@@ -784,6 +787,99 @@ _data = {
 "Win": SubResource("Animation_wm2oo")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04fki"]
+bg_color = Color(0, 0, 0, 0.223529)
+border_color = Color(0, 0, 0, 0.262745)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86gqv"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wj0u"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ibe6"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2fl8"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ea4g"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dxc7"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig3j6"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivdrt"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ocpb"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlo2q"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u25im"]
+atlas = ExtResource("7_kf6td")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wt8bj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86gqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wj0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ibe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2fl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ea4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dxc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig3j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivdrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ocpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlo2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u25im")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
 [node name="InGameUI" type="CanvasLayer"]
 script = ExtResource("1_jq3le")
 
@@ -999,10 +1095,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 11192.0
-offset_top = 6300.0
-offset_right = 11848.0
-offset_bottom = 6660.0
+offset_left = -328.0
+offset_top = -180.0
+offset_right = 328.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -1094,6 +1190,50 @@ expand_icon = true
 libraries = {
 "": SubResource("AnimationLibrary_oywtk")
 }
+
+[node name="Achievements" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 196.0
+offset_top = 186.0
+offset_right = 620.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_04fki")
+
+[node name="Achievements2" type="Sprite2D" parent="Achievements"]
+position = Vector2(357, 23)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_coyak")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Achievements"]
+position = Vector2(49.0001, 50)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_wt8bj")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="Achievements"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -41.5
+offset_right = 141.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_alkv3")
+text = "UNLOCKED: Ninja Frog
+[get all throphies in level 1-5]"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="button_up" from="Restart" to="." method="_on_restart_button_up"]
 [connection signal="button_up" from="LevelSelect" to="." method="_on_level_select_button_up"]

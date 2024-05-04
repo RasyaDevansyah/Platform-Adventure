@@ -1,0 +1,709 @@
+[gd_scene load_steps=63 format=3 uid="uid://wwtw2455370p"]
+
+[ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_joa3o"]
+[ext_resource type="Script" path="res://Scripts/achievements.gd" id="2_dqxni"]
+[ext_resource type="Texture2D" uid="uid://buqwky2sanamn" path="res://Assets/Background/Gray.png" id="2_qobyj"]
+[ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_nxy0o"]
+[ext_resource type="Texture2D" uid="uid://cfqwfwo1e37vt" path="res://Assets/Main Characters/Mask Dude/Idle (32x32).png" id="4_ukci2"]
+[ext_resource type="Texture2D" uid="uid://cr77b81xcns8g" path="res://Assets/Main Characters/Ninja Frog/Idle (32x32).png" id="5_bbgbv"]
+[ext_resource type="Texture2D" uid="uid://cd6cvggrysttq" path="res://Assets/Main Characters/Pink Man/Idle (32x32).png" id="6_6juls"]
+[ext_resource type="Texture2D" uid="uid://lpxvkafe13jf" path="res://Assets/Main Characters/Virtual Guy/Idle (32x32).png" id="7_i423b"]
+[ext_resource type="Texture2D" uid="uid://bod8m3jhob3ce" path="res://Assets/Menu/Buttons/Back.png" id="8_04moc"]
+
+[sub_resource type="Animation" id="Animation_ktebe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-83, -44)]
+}
+
+[sub_resource type="Animation" id="Animation_crfdl"]
+resource_name = "TitleBackground"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-83, -44), Vector2(-51, -12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pt8gf"]
+_data = {
+"RESET": SubResource("Animation_ktebe"),
+"TitleBackground": SubResource("Animation_crfdl")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3niy2"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc05m"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0qcb"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsyb7"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nna7"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5txue"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51c81"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0la8h"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s8hf"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1ano"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26bwt"]
+atlas = ExtResource("4_ukci2")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8870l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3niy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gc05m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0qcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsyb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nna7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5txue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51c81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0la8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s8hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1ano")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26bwt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86gqv"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wj0u"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ibe6"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2fl8"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ea4g"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dxc7"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig3j6"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivdrt"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ocpb"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlo2q"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u25im"]
+atlas = ExtResource("5_bbgbv")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpunp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86gqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wj0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ibe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2fl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ea4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dxc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig3j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivdrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ocpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlo2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u25im")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnjr0"]
+atlas = ExtResource("6_6juls")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yohvg"]
+atlas = ExtResource("6_6juls")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfggc"]
+atlas = ExtResource("6_6juls")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rih6"]
+atlas = ExtResource("6_6juls")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oqpd"]
+atlas = ExtResource("6_6juls")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwqyy"]
+atlas = ExtResource("6_6juls")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgint"]
+atlas = ExtResource("6_6juls")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rtei"]
+atlas = ExtResource("6_6juls")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycc8n"]
+atlas = ExtResource("6_6juls")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fccvb"]
+atlas = ExtResource("6_6juls")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epvhs"]
+atlas = ExtResource("6_6juls")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8rb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnjr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yohvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfggc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rih6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oqpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwqyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgint")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rtei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycc8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fccvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epvhs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q57ar"]
+atlas = ExtResource("7_i423b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljdko"]
+atlas = ExtResource("7_i423b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5b36"]
+atlas = ExtResource("7_i423b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnn33"]
+atlas = ExtResource("7_i423b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptrjf"]
+atlas = ExtResource("7_i423b")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_201o3"]
+atlas = ExtResource("7_i423b")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7t8v"]
+atlas = ExtResource("7_i423b")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jyme"]
+atlas = ExtResource("7_i423b")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc8xt"]
+atlas = ExtResource("7_i423b")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqmo3"]
+atlas = ExtResource("7_i423b")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3sq6"]
+atlas = ExtResource("7_i423b")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o7plq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q57ar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljdko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5b36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnn33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptrjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_201o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7t8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jyme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc8xt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqmo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3sq6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0kmwb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5pg8c"]
+
+[node name="Achievements" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_joa3o")
+script = ExtResource("2_dqxni")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -44.0
+offset_right = 1235.0
+offset_bottom = 692.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qobyj")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.0
+offset_top = -272.0
+offset_right = 182.0
+offset_bottom = -181.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.129412, 0.121569, 0.188235, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 90
+text = "Achievements
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pt8gf")
+}
+autoplay = "TitleBackground"
+
+[node name="Transition" parent="." instance=ExtResource("3_nxy0o")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -166.0
+offset_right = 175.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.255, 1.255)
+
+[node name="PuluPuluGuy" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/PuluPuluGuy"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(74, 86)
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/PuluPuluGuy/Panel"]
+position = Vector2(32, 40)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_8870l")
+autoplay = "default"
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/PuluPuluGuy"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(400, 86)
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="VBoxContainer/PuluPuluGuy/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -37.0
+offset_right = 69.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pulu Pulu guy"
+
+[node name="Equipped" type="Label" parent="VBoxContainer/PuluPuluGuy/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 82.3773
+offset_top = -37.9686
+offset_right = 194.377
+offset_bottom = 37.0314
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.737255, 0.215686, 1)
+theme_override_font_sizes/font_size = 40
+text = "EQUIPPED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinjaFrog" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/NinjaFrog"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(74, 86)
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/NinjaFrog/Panel"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32, 40)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_qpunp")
+autoplay = "default"
+frame_progress = 0.0519013
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/NinjaFrog"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(400, 86)
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="VBoxContainer/NinjaFrog/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -37.0
+offset_right = 69.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "??????
+[get all thropies in level 1-5]
+"
+
+[node name="Equipped" type="Label" parent="VBoxContainer/NinjaFrog/Panel2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 82.3773
+offset_top = -37.9686
+offset_right = 194.377
+offset_bottom = 37.0314
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.737255, 0.215686, 1)
+theme_override_font_sizes/font_size = 40
+text = "EQUIPPED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinWanabe" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/FinWanabe"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(74, 86)
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/FinWanabe/Panel"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32, 40)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_i8rb1")
+autoplay = "default"
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/FinWanabe"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(400, 86)
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="VBoxContainer/FinWanabe/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -37.0
+offset_right = 69.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "??????
+[get all thropies in level 6-10]
+"
+
+[node name="Equipped" type="Label" parent="VBoxContainer/FinWanabe/Panel2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 82.3773
+offset_top = -37.9686
+offset_right = 194.377
+offset_bottom = 37.0314
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.737255, 0.215686, 1)
+theme_override_font_sizes/font_size = 40
+text = "EQUIPPED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Amogus" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Amogus"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(74, 86)
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Amogus/Panel"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(32, 40)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_o7plq")
+autoplay = "default"
+
+[node name="Panel2" type="Panel" parent="VBoxContainer/Amogus"]
+self_modulate = Color(0, 0, 0, 0.403922)
+custom_minimum_size = Vector2(400, 86)
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="VBoxContainer/Amogus/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -37.0
+offset_right = 69.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "??????
+[get all thropies in level 10-15]"
+
+[node name="Equipped" type="Label" parent="VBoxContainer/Amogus/Panel2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 82.3773
+offset_top = -37.9686
+offset_right = 194.377
+offset_bottom = 37.0314
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.737255, 0.215686, 1)
+theme_override_font_sizes/font_size = 40
+text = "EQUIPPED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 80)
+offset_left = 1041.0
+offset_top = 548.0
+offset_right = 1121.0
+offset_bottom = 628.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kmwb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5pg8c")
+icon = ExtResource("8_04moc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="_TransitionFinished" from="Transition" to="." method="_on_transition__transition_finished"]
+[connection signal="button_up" from="Back" to="." method="_on_back_button_up"]

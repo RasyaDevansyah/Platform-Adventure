@@ -79,6 +79,7 @@ script = ExtResource("1_x4jtp")
 metadata/_edit_group_ = true
 
 [node name="SpikedBall" type="Sprite2D" parent="Joint/SpikeBall"]
+z_index = -1
 texture = ExtResource("1_8hd2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Joint/SpikeBall"]

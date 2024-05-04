@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://p27b3attllql"]
+[gd_scene load_steps=31 format=3 uid="uid://p27b3attllql"]
 
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_i1jpa"]
 [ext_resource type="Script" path="res://Scripts/level_select.gd" id="2_6l0xw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_e3qt4"]
 [ext_resource type="Texture2D" uid="uid://bod8m3jhob3ce" path="res://Assets/Menu/Buttons/Back.png" id="4_efpkw"]
 [ext_resource type="Texture2D" uid="uid://ddrsr2oe05eg1" path="res://Assets/Menu/Levels/01.png" id="5_vkyck"]
+[ext_resource type="Texture2D" uid="uid://bowptucla180l" path="res://Assets/Menu/Buttons/Achievements.png" id="6_0v2y1"]
 [ext_resource type="Script" path="res://Scripts/LevelButtonManager.gd" id="6_3hocj"]
 [ext_resource type="Texture2D" uid="uid://nmalpwj8bcw6" path="res://Assets/Menu/Levels/02.png" id="6_njjkh"]
 [ext_resource type="Texture2D" uid="uid://cbik8ihcjs87q" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="7_6yg1a"]
@@ -22,21 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://c8gpream2eshb" path="res://Assets/Menu/Levels/12.png" id="16_jyffp"]
 [ext_resource type="Texture2D" uid="uid://djx3a0hxpk7q7" path="res://Assets/Menu/Levels/13.png" id="17_pwfj5"]
 [ext_resource type="Texture2D" uid="uid://dm1pnw3qixccf" path="res://Assets/Menu/Levels/14.png" id="18_55l8y"]
-[ext_resource type="Texture2D" uid="uid://rsa4wfnglqgv" path="res://Assets/Menu/Levels/15.png" id="19_vt7d1"]
-[ext_resource type="Texture2D" uid="uid://3csepiosslc0" path="res://Assets/Menu/Levels/16.png" id="20_5lfyb"]
-[ext_resource type="Texture2D" uid="uid://cgwoa484wr7hx" path="res://Assets/Menu/Levels/17.png" id="21_lwvy0"]
-[ext_resource type="Texture2D" uid="uid://dt5cki4776gfg" path="res://Assets/Menu/Levels/18.png" id="22_5o8tq"]
-[ext_resource type="Texture2D" uid="uid://bi6i006fjw5b5" path="res://Assets/Menu/Levels/19.png" id="23_gg3uv"]
-[ext_resource type="Texture2D" uid="uid://sl4xl18d2crf" path="res://Assets/Menu/Levels/20.png" id="24_ryg6f"]
-[ext_resource type="Texture2D" uid="uid://cunwjccvxlwtq" path="res://Assets/Menu/Levels/21.png" id="25_ylq23"]
-[ext_resource type="Texture2D" uid="uid://c2cg0l0p4krle" path="res://Assets/Menu/Levels/22.png" id="26_46tlp"]
-[ext_resource type="Texture2D" uid="uid://d3nubjdi4e1au" path="res://Assets/Menu/Levels/23.png" id="27_8t80b"]
-[ext_resource type="Texture2D" uid="uid://58k8njxkyp56" path="res://Assets/Menu/Levels/24.png" id="28_xrjmy"]
-[ext_resource type="Texture2D" uid="uid://ckva6vj1esee8" path="res://Assets/Menu/Levels/25.png" id="29_8s182"]
-[ext_resource type="Texture2D" uid="uid://dwt4v6abgc8ux" path="res://Assets/Menu/Levels/26.png" id="30_t30kg"]
-[ext_resource type="Texture2D" uid="uid://cab6c2m14c20w" path="res://Assets/Menu/Levels/27.png" id="31_4wps8"]
-[ext_resource type="Texture2D" uid="uid://dvvq137iw4drh" path="res://Assets/Menu/Levels/28.png" id="32_x5wav"]
-[ext_resource type="Texture2D" uid="uid://c4j5cu5qcgw5b" path="res://Assets/Menu/Levels/29.png" id="33_v8wry"]
 [ext_resource type="Texture2D" uid="uid://m85syppe3ut0" path="res://Assets/Menu/Levels/50.png" id="34_gxhky"]
 
 [sub_resource type="Animation" id="Animation_ktebe"]
@@ -91,6 +77,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_i1jpa")
 script = ExtResource("2_6l0xw")
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -156,14 +143,29 @@ metadata/_edit_lock_ = true
 [node name="Back" type="Button" parent="Panel"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-offset_left = 876.0
-offset_top = 370.0
-offset_right = 956.0
-offset_bottom = 450.0
+offset_left = 929.0
+offset_top = 399.0
+offset_right = 1009.0
+offset_bottom = 479.0
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_m4pij")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
 icon = ExtResource("4_efpkw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Achievements" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+offset_left = 926.0
+offset_top = -124.0
+offset_right = 1006.0
+offset_bottom = -44.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m4pij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
+icon = ExtResource("6_0v2y1")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -185,7 +187,7 @@ script = ExtResource("6_3hocj")
 metadata/_edit_lock_ = true
 
 [node name="Button1" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -198,27 +200,24 @@ script = ExtResource("7_s5mik")
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button1"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button1"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button1"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button2" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -228,31 +227,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button2"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button2"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button2"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button3" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -262,28 +257,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button3"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button3"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button3"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Button4" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -293,28 +287,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button4"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button4"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button4"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
 
 [node name="Button5" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -324,31 +317,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button5"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button5"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button5"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button6" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -358,31 +347,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button6"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button6"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button6"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button7" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -392,31 +377,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button7"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button7"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button7"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button8" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -426,31 +407,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button8"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button8"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button8"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button9" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -460,31 +437,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button9"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button9"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button9"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button10" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -494,31 +467,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button10"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button10"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button10"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button11" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -528,31 +497,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button11"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button11"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button11"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button12" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -562,31 +527,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button12"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button12"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button12"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button13" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -596,31 +557,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button13"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button13"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button13"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button14" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -630,541 +587,27 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
 [node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button14"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button14"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button14"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [node name="Button15" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("19_vt7d1")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button15"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button15"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button15"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button16" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("20_5lfyb")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button16"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button16"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button16"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button17" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("21_lwvy0")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button17"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button17"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button17"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button18" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("22_5o8tq")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button18"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button18"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button18"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button19" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("23_gg3uv")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button19"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button19"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button19"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button20" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("24_ryg6f")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button20"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button20"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button20"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button21" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("25_ylq23")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button21"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button21"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button21"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button22" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("26_46tlp")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button22"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button22"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button22"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button23" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("27_8t80b")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button23"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button23"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button23"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button24" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("28_xrjmy")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button24"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button24"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button24"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button25" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("29_8s182")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button25"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button25"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button25"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button26" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("30_t30kg")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button26"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button26"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button26"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button27" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("31_4wps8")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button27"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button27"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button27"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button28" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("32_x5wav")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button28"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button28"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button28"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button29" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_solkh")
-icon = ExtResource("33_v8wry")
-flat = true
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
-
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button29"]
-visible = false
-position = Vector2(17, 58)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button29"]
-visible = false
-position = Vector2(41, 64)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button29"]
-visible = false
-position = Vector2(64, 59)
-scale = Vector2(0.4375, 0.4375)
-texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
-
-[node name="Button30" type="Button" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i6wsp")
@@ -1174,31 +617,28 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("7_s5mik")
-metadata/_edit_lock_ = true
 
-[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button30"]
+[node name="Trophy2" type="Sprite2D" parent="Panel/GridContainer/Button15"]
 visible = false
-position = Vector2(17, 58)
+position = Vector2(27, 78)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
-[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button30"]
+[node name="Trophy1" type="Sprite2D" parent="Panel/GridContainer/Button15"]
 visible = false
-position = Vector2(41, 64)
+position = Vector2(51, 84)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
-[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button30"]
+[node name="Trophy3" type="Sprite2D" parent="Panel/GridContainer/Button15"]
 visible = false
-position = Vector2(64, 59)
+position = Vector2(74, 79)
 scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("7_6yg1a")
-metadata/_edit_lock_ = true
 
 [connection signal="_TransitionFinished" from="Transition" to="." method="_on_canvas_layer__transition_finished"]
 [connection signal="button_down" from="Panel/Back" to="." method="_on_back_button_down"]
+[connection signal="button_up" from="Panel/Achievements" to="." method="_on_achievements_button_up"]
 [connection signal="button_up" from="Panel/GridContainer/Button1" to="." method="_on_button_1_button_up"]
 [connection signal="button_up" from="Panel/GridContainer/Button2" to="." method="_on_button_2_button_up"]
 [connection signal="button_up" from="Panel/GridContainer/Button3" to="." method="_on_button_3_button_up"]
@@ -1214,18 +654,3 @@ metadata/_edit_lock_ = true
 [connection signal="button_up" from="Panel/GridContainer/Button13" to="." method="_on_button_13_button_up"]
 [connection signal="button_up" from="Panel/GridContainer/Button14" to="." method="_on_button_14_button_up"]
 [connection signal="button_up" from="Panel/GridContainer/Button15" to="." method="_on_button_15_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button16" to="." method="_on_button_16_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button17" to="." method="_on_button_17_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button18" to="." method="_on_button_18_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button19" to="." method="_on_button_19_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button20" to="." method="_on_button_20_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button21" to="." method="_on_button_21_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button22" to="." method="_on_button_22_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button23" to="." method="_on_button_23_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button24" to="." method="_on_button_24_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button25" to="." method="_on_button_25_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button26" to="." method="_on_button_26_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button27" to="." method="_on_button_27_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button28" to="." method="_on_button_28_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button29" to="." method="_on_button_29_button_up"]
-[connection signal="button_up" from="Panel/GridContainer/Button30" to="." method="_on_button_30_button_up"]

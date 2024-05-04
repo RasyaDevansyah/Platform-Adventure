@@ -6,6 +6,7 @@ const SAVE_GAME_PATH := "user://savegame.tres"
 @export var maxLevel : int = 1
 @export var levelUnlocked : int = 1
 @export var levelTrophies : Array[int] = []
+@export var unlockedCharacters : Array[bool] = [false, false, false]
 
 func WriteSaveGame():
 	ResourceSaver.save(self, SAVE_GAME_PATH)

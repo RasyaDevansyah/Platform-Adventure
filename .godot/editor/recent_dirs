@@ -1,5 +1,9 @@
-res://Scenes
 res://Scripts
+res://Assets/Main Characters/Virtual Guy
+res://Assets/Main Characters/Pink Man
+res://Assets/Main Characters/Ninja Frog
+res://Assets/Main Characters/Mask Dude
+res://Scenes
 res://Prefab
 res://Assets/Traps/Arrow
 res://Assets/Traps/Falling Platforms
@@ -13,4 +17,3 @@ res://Assets/Items/Checkpoints/End
 res://Assets/Main Characters
 res://Assets/Traps/Saw
 res://Assets/Terrain
-res://Assets/Main Characters/Mask Dude
