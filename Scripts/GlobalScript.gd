@@ -11,7 +11,10 @@ func _ready():
 		print("Creating new save file...")
 		saveFile.levelUnlocked = 1
 		saveFile.levelTrophies = []
+		saveFile.maxLevel = 0
+		saveFile.unlockedCharacters = [false, false, false]
 		saveFile.WriteSaveGame()
+		
 	else:
 		# Save file loaded successfully
 		print("Save file loaded successfully.")

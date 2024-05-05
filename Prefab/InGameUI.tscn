@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://wnepht75yxvj"]
+[gd_scene load_steps=76 format=3 uid="uid://wnepht75yxvj"]
 
 [ext_resource type="Script" path="res://Scripts/InGameUI.gd" id="1_jq3le"]
 [ext_resource type="Texture2D" uid="uid://cv1lgxyqvttrc" path="res://Assets/Menu/Buttons/Restart.png" id="1_y3wex"]
@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://44aaqx8t6tfn" path="res://Assets/Menu/Buttons/Next.png" id="4_kvikf"]
 [ext_resource type="Texture2D" uid="uid://dmjol72tvbjk4" path="res://Assets/Menu/Buttons/Levels.png" id="5_ky3sl"]
 [ext_resource type="Texture2D" uid="uid://bowptucla180l" path="res://Assets/Menu/Buttons/Achievements.png" id="7_coyak"]
+[ext_resource type="Script" path="res://Scripts/AchievementsNotification.gd" id="7_dq5ga"]
 [ext_resource type="Texture2D" uid="uid://cr77b81xcns8g" path="res://Assets/Main Characters/Ninja Frog/Idle (32x32).png" id="7_kf6td"]
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="9_alkv3"]
+[ext_resource type="Texture2D" uid="uid://lpxvkafe13jf" path="res://Assets/Main Characters/Virtual Guy/Idle (32x32).png" id="9_idbid"]
+[ext_resource type="Texture2D" uid="uid://cd6cvggrysttq" path="res://Assets/Main Characters/Pink Man/Idle (32x32).png" id="9_v1vxo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6kd1"]
 
@@ -795,6 +798,130 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
+[sub_resource type="Animation" id="Animation_mvoas"]
+resource_name = "AchievementTriggered"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Achievements:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.241484, 1),
+"update": 0,
+"values": [Vector2(1152, 510), Vector2(772, 510)]
+}
+
+[sub_resource type="Animation" id="Animation_qee8p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Achievements:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 510)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlds2"]
+_data = {
+"AchievementTriggered": SubResource("Animation_mvoas"),
+"RESET": SubResource("Animation_qee8p")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odgr2"]
+atlas = ExtResource("9_idbid")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8gfq"]
+atlas = ExtResource("9_idbid")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pukst"]
+atlas = ExtResource("9_idbid")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w6es"]
+atlas = ExtResource("9_idbid")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7sm4"]
+atlas = ExtResource("9_idbid")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6ux5"]
+atlas = ExtResource("9_idbid")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c44ba"]
+atlas = ExtResource("9_idbid")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_salki"]
+atlas = ExtResource("9_idbid")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4i78"]
+atlas = ExtResource("9_idbid")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0us07"]
+atlas = ExtResource("9_idbid")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6265"]
+atlas = ExtResource("9_idbid")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg1ry"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6g85"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rktnk"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iwl4"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56dnm"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3n7qw"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hcdq"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny6ff"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70sos"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd8pr"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0s3m"]
+atlas = ExtResource("9_v1vxo")
+region = Rect2(320, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_86gqv"]
 atlas = ExtResource("7_kf6td")
 region = Rect2(0, 0, 32, 32)
@@ -843,6 +970,82 @@ region = Rect2(320, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_odgr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8gfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pukst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w6es")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7sm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6ux5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c44ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_salki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4i78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0us07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6265")
+}],
+"loop": true,
+"name": &"Amogus",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg1ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6g85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rktnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iwl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56dnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3n7qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hcdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny6ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70sos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd8pr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0s3m")
+}],
+"loop": true,
+"name": &"FinWannabe",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_86gqv")
 }, {
 "duration": 1.0,
@@ -876,45 +1079,9 @@ animations = [{
 "texture": SubResource("AtlasTexture_u25im")
 }],
 "loop": true,
-"name": &"default",
+"name": &"NinjaFrog",
 "speed": 20.0
 }]
-
-[sub_resource type="Animation" id="Animation_mvoas"]
-resource_name = "AchievementTriggered"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Achievements:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.241484, 1),
-"update": 0,
-"values": [Vector2(1152, 510), Vector2(772, 510)]
-}
-
-[sub_resource type="Animation" id="Animation_qee8p"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Achievements:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1152, 510)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlds2"]
-_data = {
-"AchievementTriggered": SubResource("Animation_mvoas"),
-"RESET": SubResource("Animation_qee8p")
-}
 
 [node name="InGameUI" type="CanvasLayer"]
 script = ExtResource("1_jq3le")
@@ -1131,10 +1298,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -328.0
-offset_top = -180.0
-offset_right = 328.0
-offset_bottom = 180.0
+offset_left = 1400.0
+offset_top = 792.0
+offset_right = 2056.0
+offset_bottom = 1152.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -1234,14 +1401,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 576.0
-offset_top = 186.0
-offset_right = 1000.0
-offset_bottom = 312.0
+offset_left = 1152.0
+offset_top = 510.0
+offset_right = 1576.0
+offset_bottom = 636.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_04fki")
+script = ExtResource("7_dq5ga")
+
+[node name="AchievementsAnim" type="AnimationPlayer" parent="Achievements"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_nlds2")
+}
 
 [node name="Achievement Logo" type="Sprite2D" parent="Achievements"]
 position = Vector2(357, 23)
@@ -1252,7 +1426,8 @@ texture = ExtResource("7_coyak")
 position = Vector2(49.0001, 50)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_wt8bj")
-autoplay = "default"
+animation = &"FinWannabe"
+frame_progress = 0.0383647
 
 [node name="Label" type="Label" parent="Achievements"]
 layout_mode = 1
@@ -1267,11 +1442,6 @@ theme = ExtResource("9_alkv3")
 text = "UNLOCKED: Ninja Frog
 [get all throphies in level 1-5]"
 metadata/_edit_use_anchors_ = true
-
-[node name="AchievementsAnim" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_nlds2")
-}
 
 [connection signal="button_up" from="Restart" to="." method="_on_restart_button_up"]
 [connection signal="button_up" from="LevelSelect" to="." method="_on_level_select_button_up"]

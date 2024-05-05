@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var transition = $"../Transition" as Transition
 @onready var winAnimation : AnimationPlayer = $WinAnimation
 @onready var next : Button = $WinPanel/Next
+@onready var achievements : Panel = $Achievements
 
 var sceneNumber : int = -1
 var trophyAnim : String = "1Trophy"
@@ -65,7 +66,8 @@ func CalculateTrophy(fruitCount):
 	GlobalScript.saveFile.levelUnlocked = max(GlobalScript.saveFile.levelUnlocked, nextLevel)
 	GlobalScript.saveFile.WriteSaveGame()
 	winAnimation.play("Win")
-
+	await get_tree().create_timer(0.2).timeout
+	achievements.CheckThrophies()
 
 
 func _on_pulu_pulu_guy__player_death():

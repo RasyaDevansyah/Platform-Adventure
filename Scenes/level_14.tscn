@@ -782,9 +782,6 @@ position = Vector2(2775, 3913)
 [node name="Cherry" parent="." instance=ExtResource("15_eqple")]
 position = Vector2(2816, 3913)
 
-[node name="Kiwi4" parent="." instance=ExtResource("15_qr28r")]
-position = Vector2(1.00024, 0.000244141)
-
 [node name="Melon3" parent="." instance=ExtResource("11_d30y3")]
 position = Vector2(3079, 3913)
 
@@ -796,6 +793,12 @@ position = Vector2(2994, 3913)
 
 [node name="Strawberry3" parent="." instance=ExtResource("12_r4psc")]
 position = Vector2(2805, 3769)
+
+[node name="Strawberry6" parent="." instance=ExtResource("12_r4psc")]
+position = Vector2(3125, 3682)
+
+[node name="Strawberry7" parent="." instance=ExtResource("12_r4psc")]
+position = Vector2(3028, 3759)
 
 [node name="Apple4" parent="." instance=ExtResource("9_7disx")]
 position = Vector2(3038, 3853)
@@ -825,7 +828,7 @@ position = Vector2(2927, 3743)
 position = Vector2(3243, 3843)
 
 [node name="Banana6" parent="." instance=ExtResource("10_t2xdy")]
-position = Vector2(3050, 3697)
+position = Vector2(2670, 3793)
 
 [node name="Cherry3" parent="." instance=ExtResource("15_eqple")]
 position = Vector2(3041, 3795)
@@ -835,6 +838,9 @@ position = Vector2(3153, 3916)
 
 [node name="Melon5" parent="." instance=ExtResource("11_d30y3")]
 position = Vector2(3142, 3807)
+
+[node name="Melon6" parent="." instance=ExtResource("11_d30y3")]
+position = Vector2(2882, 3685)
 
 [node name="Orange5" parent="." instance=ExtResource("14_5lrhf")]
 position = Vector2(2657, 3916)

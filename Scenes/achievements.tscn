@@ -470,6 +470,7 @@ layout_mode = 2
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(74, 86)
 layout_mode = 2
+mouse_filter = 2
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/PuluPuluGuy/Panel"]
@@ -478,10 +479,20 @@ scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_8870l")
 autoplay = "default"
 
+[node name="Button" type="Button" parent="VBoxContainer/PuluPuluGuy/Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel2" type="Panel" parent="VBoxContainer/PuluPuluGuy"]
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(400, 86)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Desc" type="Label" parent="VBoxContainer/PuluPuluGuy/Panel2"]
 layout_mode = 1
@@ -517,6 +528,15 @@ text = "EQUIPPED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="VBoxContainer/PuluPuluGuy/Panel2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="NinjaFrog" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -524,6 +544,7 @@ layout_mode = 2
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(74, 86)
 layout_mode = 2
+mouse_filter = 2
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/NinjaFrog/Panel"]
@@ -534,10 +555,20 @@ sprite_frames = SubResource("SpriteFrames_qpunp")
 autoplay = "default"
 frame_progress = 0.196263
 
+[node name="Button" type="Button" parent="VBoxContainer/NinjaFrog/Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel2" type="Panel" parent="VBoxContainer/NinjaFrog"]
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(400, 86)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Desc" type="Label" parent="VBoxContainer/NinjaFrog/Panel2"]
 layout_mode = 1
@@ -556,7 +587,7 @@ text = "??????
 [get all thropies in level 1-5]
 "
 
-[node name="Equipped" type="Label" parent="VBoxContainer/NinjaFrog/Panel2"]
+[node name="Equipped" type="Label" parent="VBoxContainer/NinjaFrog/Panel2" groups=["Equipped"]]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -576,6 +607,15 @@ text = "EQUIPPED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="VBoxContainer/NinjaFrog/Panel2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="FinWanabe" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -583,6 +623,7 @@ layout_mode = 2
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(74, 86)
 layout_mode = 2
+mouse_filter = 2
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/FinWanabe/Panel"]
@@ -592,10 +633,20 @@ scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_i8rb1")
 autoplay = "default"
 
+[node name="Button" type="Button" parent="VBoxContainer/FinWanabe/Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel2" type="Panel" parent="VBoxContainer/FinWanabe"]
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(400, 86)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Desc" type="Label" parent="VBoxContainer/FinWanabe/Panel2"]
 layout_mode = 1
@@ -614,7 +665,7 @@ text = "??????
 [get all thropies in level 6-10]
 "
 
-[node name="Equipped" type="Label" parent="VBoxContainer/FinWanabe/Panel2"]
+[node name="Equipped" type="Label" parent="VBoxContainer/FinWanabe/Panel2" groups=["Equipped"]]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -634,6 +685,15 @@ text = "EQUIPPED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="VBoxContainer/FinWanabe/Panel2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Amogus" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -641,6 +701,7 @@ layout_mode = 2
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(74, 86)
 layout_mode = 2
+mouse_filter = 2
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Amogus/Panel"]
@@ -650,10 +711,20 @@ scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_o7plq")
 autoplay = "default"
 
+[node name="Button" type="Button" parent="VBoxContainer/Amogus/Panel"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel2" type="Panel" parent="VBoxContainer/Amogus"]
 self_modulate = Color(0, 0, 0, 0.403922)
 custom_minimum_size = Vector2(400, 86)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Desc" type="Label" parent="VBoxContainer/Amogus/Panel2"]
 layout_mode = 1
@@ -671,7 +742,7 @@ grow_vertical = 2
 text = "??????
 [get all thropies in level 11-15]"
 
-[node name="Equipped" type="Label" parent="VBoxContainer/Amogus/Panel2"]
+[node name="Equipped" type="Label" parent="VBoxContainer/Amogus/Panel2" groups=["Equipped"]]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -691,8 +762,18 @@ text = "EQUIPPED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="VBoxContainer/Amogus/Panel2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Back" type="Button" parent="."]
 custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
 offset_left = 1041.0
 offset_top = 548.0
 offset_right = 1121.0
@@ -706,4 +787,12 @@ icon_alignment = 1
 expand_icon = true
 
 [connection signal="_TransitionFinished" from="Transition" to="." method="_on_transition__transition_finished"]
+[connection signal="button_up" from="VBoxContainer/PuluPuluGuy/Panel/Button" to="." method="_on_pulupulu_button_up"]
+[connection signal="button_up" from="VBoxContainer/PuluPuluGuy/Panel2/Button" to="." method="_on_pulupulu_button_up"]
+[connection signal="button_up" from="VBoxContainer/NinjaFrog/Panel/Button" to="." method="_on_ninjafrog_button_up"]
+[connection signal="button_up" from="VBoxContainer/NinjaFrog/Panel2/Button" to="." method="_on_ninjafrog_button_up"]
+[connection signal="button_up" from="VBoxContainer/FinWanabe/Panel/Button" to="." method="_on_finwannabe_button_up"]
+[connection signal="button_up" from="VBoxContainer/FinWanabe/Panel2/Button" to="." method="_on_finwannabe_button_up"]
+[connection signal="button_up" from="VBoxContainer/Amogus/Panel/Button" to="." method="_on_amogus_button_up"]
+[connection signal="button_up" from="VBoxContainer/Amogus/Panel2/Button" to="." method="_on_amogus_button_up"]
 [connection signal="button_up" from="Back" to="." method="_on_back_button_up"]
