@@ -10,6 +10,12 @@ var levelChoosen : int = -1
 @onready var finDesc : Label = $VBoxContainer/FinWanabe/Panel2/Desc
 @onready var amogusDesc : Label = $VBoxContainer/Amogus/Panel2/Desc
 
+@onready var puluPuluEquipped = $VBoxContainer/PuluPuluGuy/Panel2/Equipped
+@onready var ninjaEquipped = $VBoxContainer/NinjaFrog/Panel2/Equipped
+@onready var finEquipped = $VBoxContainer/FinWanabe/Panel2/Equipped
+@onready var amogusEquipped = $VBoxContainer/Amogus/Panel2/Equipped
+
+
 
 func _ready():
 	if GlobalScript.saveFile.unlockedCharacters[0] == true:
@@ -46,20 +52,44 @@ func _on_transition__transition_finished():
 
 
 func _on_pulupulu_button_up():
-	print("pulupulu")
-	pass # Replace with function body.
-
+	GlobalScript.saveFile.currentCharacter = 0
+	puluPuluEquipped.visible = true
+	ninjaEquipped.visible = false
+	finEquipped.visible = false
+	amogusEquipped.visible = false
+	
+	GlobalScript.saveFile.WriteSaveGame()
+	pass
 
 func _on_ninjafrog_button_up():
-	print("Ninja")
-	pass # Replace with function body.
+	if GlobalScript.saveFile.unlockedCharacters[0] == true:
+		GlobalScript.saveFile.currentCharacter = 1
+		puluPuluEquipped.visible = false
+		ninjaEquipped.visible = true
+		finEquipped.visible = false
+		amogusEquipped.visible = false
+	
+	GlobalScript.saveFile.WriteSaveGame()
+
+
 
 
 func _on_finwannabe_button_up():
-	print("Fin")
-	pass # Replace with function body.
-
+	if GlobalScript.saveFile.unlockedCharacters[1] == true:
+		GlobalScript.saveFile.currentCharacter = 2
+		puluPuluEquipped.visible = false
+		ninjaEquipped.visible = false
+		finEquipped.visible = true
+		amogusEquipped.visible = false
+	
+	GlobalScript.saveFile.WriteSaveGame()
 
 func _on_amogus_button_up():
-	print("amogus")
-	pass # Replace with function body.
+	if GlobalScript.saveFile.unlockedCharacters[2] == true:
+		GlobalScript.saveFile.currentCharacter = 3
+		puluPuluEquipped.visible = false
+		ninjaEquipped.visible = false
+		finEquipped.visible = false
+		amogusEquipped.visible = true
+	
+	GlobalScript.saveFile.WriteSaveGame()

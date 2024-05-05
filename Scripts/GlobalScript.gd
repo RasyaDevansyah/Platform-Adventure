@@ -13,6 +13,7 @@ func _ready():
 		saveFile.levelTrophies = []
 		saveFile.maxLevel = 0
 		saveFile.unlockedCharacters = [false, false, false]
+		saveFile.currentCharacter = 0
 		saveFile.WriteSaveGame()
 		
 	else:

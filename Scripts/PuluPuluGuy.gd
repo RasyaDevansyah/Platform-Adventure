@@ -22,6 +22,45 @@ var isWallSliding : bool = false
 var canDoubleJump : bool = true
 var disablePlayer : bool = false
 
+func _ready():
+	
+	print(animationTree.get_tree_root().get_node("hit").animation)
+	print(animationTree.get_tree_root().get_node("doubleJump").animation)
+	print(animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(0).animation)
+	print(animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(1).animation)
+	print(animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(2).animation)
+	print(animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(3).animation)
+	print(animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(4).animation)
+	match GlobalScript.saveFile.currentCharacter:
+		0:
+			
+			pass
+			
+		1:
+			#animationTree.get_tree_root().get_node("hit").animation = 
+			#animationTree.get_tree_root().get_node("doubleJump").animation = 
+			#animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(0).animation = 
+			#animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(1).animation = 
+			#animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(2).animation = 
+			#animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(3).animation = 
+			#animationTree.get_tree_root().get_node("MovementState").get_blend_point_node(4).animation = 
+			pass
+			
+		2:
+			
+			pass
+		
+		3:
+			
+			pass
+			
+			
+
+
+
+
+
+
 
 func _physics_process(delta):
 	var direction : float = Input.get_axis("left", "right") if not disablePlayer else 0.0

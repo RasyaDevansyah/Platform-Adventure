@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="CrashCourse2DPlatformer"
+config/name="Platform Adventure"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Assets/Other/Transition.png"
+config/icon="res://Logo-export.png"
 
 [autoload]
 
