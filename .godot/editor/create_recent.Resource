@@ -1,3 +1,0 @@
-SaveFileResource
-Resource
-Theme
