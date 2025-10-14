@@ -23,5 +23,3 @@ func _ready():
 		
 
 var totalFruit : int = 0
-
-

@@ -2,16 +2,16 @@
 
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_rwrou"]
 [ext_resource type="Texture2D" uid="uid://d0fmdmnosmq32" path="res://Assets/Background/Pink.png" id="2_22j6f"]
-[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="2_d37d5"]
+[ext_resource type="Script" uid="uid://xfryuhmhugb4" path="res://Scripts/MainMenu.gd" id="2_d37d5"]
 [ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_xfbr2"]
 [ext_resource type="Texture2D" uid="uid://bbymmbe5suf2i" path="res://Assets/Untitled design (1).png" id="4_a24qx"]
 [ext_resource type="Texture2D" uid="uid://bu8apqs32t8kl" path="res://Godot.png" id="6_jen5a"]
 [ext_resource type="Texture2D" uid="uid://cwsouhtwsnfop" path="res://Assets/Untitled design.png" id="7_jmawg"]
 [ext_resource type="Texture2D" uid="uid://crcqtmyyoaxjr" path="res://Assets/Menu/Buttons/Close.png" id="8_qetd1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yg6f"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbo37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yg6f"]
 
 [sub_resource type="Animation" id="Animation_ktebe"]
 length = 0.001
@@ -46,8 +46,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pt8gf"]
 _data = {
-"RESET": SubResource("Animation_ktebe"),
-"TitleBackground": SubResource("Animation_crfdl")
+&"RESET": SubResource("Animation_ktebe"),
+&"TitleBackground": SubResource("Animation_crfdl")
 }
 
 [node name="MainMenu" type="Node"]
@@ -144,8 +144,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.675, 0.675)
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_2yg6f")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbo37")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2yg6f")
 icon = ExtResource("8_qetd1")
 flat = true
 icon_alignment = 1
@@ -231,7 +231,7 @@ vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_pt8gf")
+&"": SubResource("AnimationLibrary_pt8gf")
 }
 autoplay = "TitleBackground"
 

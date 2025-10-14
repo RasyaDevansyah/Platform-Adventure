@@ -1,10 +1,10 @@
 [gd_scene load_steps=23 format=3 uid="uid://bqb3a35e20pot"]
 
 [ext_resource type="Texture2D" uid="uid://cnjycqr7oj7b5" path="res://Assets/Traps/Fire/Off.png" id="1_3f4ik"]
-[ext_resource type="Script" path="res://Scripts/fireBlock.gd" id="1_y1p1m"]
+[ext_resource type="Script" uid="uid://ddsw5yhfgu27a" path="res://Scripts/fireBlock.gd" id="1_y1p1m"]
 [ext_resource type="Texture2D" uid="uid://cu6qsx6o834ve" path="res://Assets/Traps/Fire/On (16x32).png" id="2_4mhra"]
 [ext_resource type="Texture2D" uid="uid://ckfghjllq8487" path="res://Assets/Traps/Fire/Hit (16x32).png" id="3_f7igi"]
-[ext_resource type="Script" path="res://Scripts/Saw.gd" id="4_6v8t5"]
+[ext_resource type="Script" uid="uid://dgqkf814mdjdo" path="res://Scripts/Saw.gd" id="4_6v8t5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlr7w"]
 atlas = ExtResource("1_3f4ik")
@@ -229,10 +229,10 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rldvy"]
 _data = {
-"Off": SubResource("Animation_1kxec"),
-"On": SubResource("Animation_ydckp"),
-"RESET": SubResource("Animation_tbf2t"),
-"Triggered": SubResource("Animation_7ut56")
+&"Off": SubResource("Animation_1kxec"),
+&"On": SubResource("Animation_ydckp"),
+&"RESET": SubResource("Animation_tbf2t"),
+&"Triggered": SubResource("Animation_7ut56")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcq81"]

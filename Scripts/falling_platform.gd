@@ -14,4 +14,3 @@ func _on_trigger_box_body_entered(body):
 func _on_timer_timeout():
 	animatedSprite2D.play("Off")
 	animationPlayer.play("Fall")
-

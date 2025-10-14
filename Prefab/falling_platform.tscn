@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://i8wd6xdw1muy"]
 
 [ext_resource type="Texture2D" uid="uid://xleqpmlcfcvc" path="res://Assets/Traps/Falling Platforms/Off.png" id="1_jf3wg"]
-[ext_resource type="Script" path="res://Scripts/falling_platform.gd" id="1_myqf2"]
+[ext_resource type="Script" uid="uid://cmtgc70hhyx87" path="res://Scripts/falling_platform.gd" id="1_myqf2"]
 [ext_resource type="Texture2D" uid="uid://bylwh4uu1pxio" path="res://Assets/Traps/Falling Platforms/On (32x10).png" id="2_41qii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3ygf"]
@@ -131,9 +131,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5ry1e"]
 _data = {
-"Fall": SubResource("Animation_r5vh7"),
-"RESET": SubResource("Animation_lcg72"),
-"SteppedOn": SubResource("Animation_tw2j3")
+&"Fall": SubResource("Animation_r5vh7"),
+&"RESET": SubResource("Animation_lcg72"),
+&"SteppedOn": SubResource("Animation_tw2j3")
 }
 
 [node name="FallingPlatform" type="Node2D"]
@@ -162,7 +162,7 @@ one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_5ry1e")
+&"": SubResource("AnimationLibrary_5ry1e")
 }
 
 [node name="Timer" type="Timer" parent="."]

@@ -62,7 +62,6 @@ func CalculateTrophy(fruitCount):
 	else:
 		GlobalScript.saveFile.levelTrophies[currentLevel] = max(GlobalScript.saveFile.levelTrophies[currentLevel], 3)
 		trophyAnim = "3Trophies"
-	
 	GlobalScript.saveFile.levelUnlocked = max(GlobalScript.saveFile.levelUnlocked, nextLevel)
 	GlobalScript.saveFile.WriteSaveGame()
 	winAnimation.play("Win")

@@ -1,21 +1,21 @@
 [gd_scene load_steps=76 format=3 uid="uid://wnepht75yxvj"]
 
-[ext_resource type="Script" path="res://Scripts/InGameUI.gd" id="1_jq3le"]
+[ext_resource type="Script" uid="uid://bjv4onwvtxjk1" path="res://Scripts/InGameUI.gd" id="1_jq3le"]
 [ext_resource type="Texture2D" uid="uid://cv1lgxyqvttrc" path="res://Assets/Menu/Buttons/Restart.png" id="1_y3wex"]
 [ext_resource type="Texture2D" uid="uid://oatdhyg0amf0" path="res://Assets/Menu/Buttons/Previous.png" id="2_jnbiy"]
 [ext_resource type="Texture2D" uid="uid://cbik8ihcjs87q" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="3_6bsq5"]
 [ext_resource type="Texture2D" uid="uid://44aaqx8t6tfn" path="res://Assets/Menu/Buttons/Next.png" id="4_kvikf"]
 [ext_resource type="Texture2D" uid="uid://dmjol72tvbjk4" path="res://Assets/Menu/Buttons/Levels.png" id="5_ky3sl"]
 [ext_resource type="Texture2D" uid="uid://bowptucla180l" path="res://Assets/Menu/Buttons/Achievements.png" id="7_coyak"]
-[ext_resource type="Script" path="res://Scripts/AchievementsNotification.gd" id="7_dq5ga"]
+[ext_resource type="Script" uid="uid://b5x67dfhbv42b" path="res://Scripts/AchievementsNotification.gd" id="7_dq5ga"]
 [ext_resource type="Texture2D" uid="uid://cr77b81xcns8g" path="res://Assets/Main Characters/Ninja Frog/Idle (32x32).png" id="7_kf6td"]
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="9_alkv3"]
 [ext_resource type="Texture2D" uid="uid://lpxvkafe13jf" path="res://Assets/Main Characters/Virtual Guy/Idle (32x32).png" id="9_idbid"]
 [ext_resource type="Texture2D" uid="uid://cd6cvggrysttq" path="res://Assets/Main Characters/Pink Man/Idle (32x32).png" id="9_v1vxo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6kd1"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_koadg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6kd1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pousn"]
 
@@ -146,9 +146,9 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3f3w"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kh28a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3f3w"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jryp0"]
 
@@ -783,11 +783,11 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oywtk"]
 _data = {
-"1Trophy": SubResource("Animation_n8dtd"),
-"2Trophies": SubResource("Animation_4cwxv"),
-"3Trophies": SubResource("Animation_mhryl"),
-"RESET": SubResource("Animation_46ws8"),
-"Win": SubResource("Animation_wm2oo")
+&"1Trophy": SubResource("Animation_n8dtd"),
+&"2Trophies": SubResource("Animation_4cwxv"),
+&"3Trophies": SubResource("Animation_mhryl"),
+&"RESET": SubResource("Animation_46ws8"),
+&"Win": SubResource("Animation_wm2oo")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04fki"]
@@ -830,8 +830,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nlds2"]
 _data = {
-"AchievementTriggered": SubResource("Animation_mvoas"),
-"RESET": SubResource("Animation_qee8p")
+&"AchievementTriggered": SubResource("Animation_mvoas"),
+&"RESET": SubResource("Animation_qee8p")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odgr2"]
@@ -1092,8 +1092,8 @@ offset_top = 9.0
 offset_right = 1068.0
 offset_bottom = 79.0
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_a6kd1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_koadg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_a6kd1")
 icon = ExtResource("1_y3wex")
 flat = true
 icon_alignment = 1
@@ -1105,8 +1105,8 @@ offset_top = 9.0
 offset_right = 1131.0
 offset_bottom = 79.0
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_a6kd1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pousn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_a6kd1")
 icon = ExtResource("2_jnbiy")
 flat = true
 icon_alignment = 1
@@ -1121,7 +1121,6 @@ metadata/_edit_group_ = true
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_03sr1")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1130,12 +1129,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_03sr1")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="Confetti"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_ell8b")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1144,12 +1143,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_ell8b")
 
 [node name="GPUParticles2D3" type="GPUParticles2D" parent="Confetti"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_85wba")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1158,12 +1157,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_85wba")
 
 [node name="GPUParticles2D4" type="GPUParticles2D" parent="Confetti"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_q5xww")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1172,12 +1171,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_q5xww")
 
 [node name="GPUParticles2D5" type="GPUParticles2D" parent="Confetti"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_so3na")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1186,12 +1185,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_so3na")
 
 [node name="GPUParticles2D6" type="GPUParticles2D" parent="Confetti"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_nljir")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1200,6 +1199,7 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_nljir")
 
 [node name="Confetti2" type="Node2D" parent="."]
 position = Vector2(887, 165)
@@ -1210,7 +1210,6 @@ metadata/_edit_group_ = true
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_03sr1")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1219,12 +1218,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_03sr1")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="Confetti2"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_ell8b")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1233,12 +1232,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_ell8b")
 
 [node name="GPUParticles2D3" type="GPUParticles2D" parent="Confetti2"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_85wba")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1247,12 +1246,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_85wba")
 
 [node name="GPUParticles2D4" type="GPUParticles2D" parent="Confetti2"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_q5xww")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1261,12 +1260,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_q5xww")
 
 [node name="GPUParticles2D5" type="GPUParticles2D" parent="Confetti2"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_so3na")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1275,12 +1274,12 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_so3na")
 
 [node name="GPUParticles2D6" type="GPUParticles2D" parent="Confetti2"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-process_material = SubResource("ParticleProcessMaterial_nljir")
 lifetime = 8.0
 one_shot = true
 speed_scale = 2.2
@@ -1289,6 +1288,7 @@ randomness = 0.15
 local_coords = true
 trail_enabled = true
 trail_lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_nljir")
 
 [node name="WinPanel" type="Panel" parent="."]
 visible = false
@@ -1298,15 +1298,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 1976.0
-offset_top = 1116.0
-offset_right = 2632.0
-offset_bottom = 1476.0
+offset_left = -328.0
+offset_top = -180.0
+offset_right = 328.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_8b5bw")
-metadata/_edit_lock_ = true
 
 [node name="TrophyShadow3" type="Sprite2D" parent="WinPanel"]
 self_modulate = Color(0.117647, 0.117647, 0.117647, 1)
@@ -1354,8 +1353,8 @@ offset_top = 240.0
 offset_right = 302.0
 offset_bottom = 310.0
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kh28a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
 icon = ExtResource("1_y3wex")
 flat = true
 icon_alignment = 1
@@ -1368,8 +1367,8 @@ offset_top = 240.0
 offset_right = 366.0
 offset_bottom = 310.0
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jryp0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
 icon = ExtResource("4_kvikf")
 flat = true
 icon_alignment = 1
@@ -1382,8 +1381,8 @@ offset_top = 240.0
 offset_right = 430.0
 offset_bottom = 310.0
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jryp0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
 icon = ExtResource("5_ky3sl")
 flat = true
 icon_alignment = 1
@@ -1391,7 +1390,7 @@ expand_icon = true
 
 [node name="WinAnimation" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_oywtk")
+&"": SubResource("AnimationLibrary_oywtk")
 }
 
 [node name="Achievements" type="Panel" parent="."]
@@ -1414,7 +1413,7 @@ script = ExtResource("7_dq5ga")
 [node name="AchievementsAnim" type="AnimationPlayer" parent="Achievements"]
 root_node = NodePath("../..")
 libraries = {
-"": SubResource("AnimationLibrary_nlds2")
+&"": SubResource("AnimationLibrary_nlds2")
 }
 
 [node name="Achievement Logo" type="Sprite2D" parent="Achievements"]

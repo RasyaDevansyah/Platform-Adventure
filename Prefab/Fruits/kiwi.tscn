@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://byjqnlovtw85a"]
 
-[ext_resource type="Script" path="res://Scripts/Fruits.gd" id="1_gddyb"]
+[ext_resource type="Script" uid="uid://rhee0is8n7uo" path="res://Scripts/Fruits.gd" id="1_gddyb"]
 [ext_resource type="Texture2D" uid="uid://lr07fjw4das8" path="res://Assets/Items/Fruits/Kiwi.png" id="2_jbcxa"]
 [ext_resource type="Texture2D" uid="uid://clrrljjyruiun" path="res://Assets/Items/Fruits/Collected.png" id="3_ohtpp"]
 

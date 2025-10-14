@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bi8h3q761o4a6"]
 
-[ext_resource type="Script" path="res://Scripts/chain_ball.gd" id="1_5bicv"]
+[ext_resource type="Script" uid="uid://dr4h6f484owsa" path="res://Scripts/chain_ball.gd" id="1_5bicv"]
 [ext_resource type="Texture2D" uid="uid://bfve15fw07p52" path="res://Assets/Traps/Spiked Ball/Spiked Ball.png" id="1_8hd2j"]
-[ext_resource type="Script" path="res://Scripts/Saw.gd" id="1_x4jtp"]
+[ext_resource type="Script" uid="uid://dgqkf814mdjdo" path="res://Scripts/Saw.gd" id="1_x4jtp"]
 [ext_resource type="Texture2D" uid="uid://bg47nfpvkxena" path="res://Assets/Traps/Spiked Ball/Chain.png" id="3_0hqnu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ix1ma"]
@@ -44,8 +44,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6kcff"]
 _data = {
-"BallRotate": SubResource("Animation_7gne2"),
-"RESET": SubResource("Animation_tkr2x")
+&"BallRotate": SubResource("Animation_7gne2"),
+&"RESET": SubResource("Animation_tkr2x")
 }
 
 [node name="ChainBall" type="Node2D"]
@@ -88,7 +88,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6kcff")
+&"": SubResource("AnimationLibrary_6kcff")
 }
 
 [connection signal="body_entered" from="Joint/SpikeBall" to="Joint/SpikeBall" method="_on_body_entered"]

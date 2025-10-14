@@ -1,6 +1,6 @@
 [gd_scene load_steps=257 format=3 uid="uid://h4yvcfcedb78"]
 
-[ext_resource type="Script" path="res://Scripts/PuluPuluGuy.gd" id="1_13fao"]
+[ext_resource type="Script" uid="uid://vx43djc2pjrx" path="res://Scripts/PuluPuluGuy.gd" id="1_13fao"]
 [ext_resource type="Texture2D" uid="uid://cab13mphur2nn" path="res://Assets/Main Characters/Mask Dude/Jump (32x32).png" id="1_y012q"]
 [ext_resource type="Texture2D" uid="uid://cfqwfwo1e37vt" path="res://Assets/Main Characters/Mask Dude/Idle (32x32).png" id="2_0q70s"]
 [ext_resource type="Texture2D" uid="uid://cdyj42m1yjnwd" path="res://Assets/Main Characters/Mask Dude/Double Jump (32x32).png" id="2_p4mv4"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ciorswcylfh8e" path="res://Assets/Main Characters/Virtual Guy/Run (32x32).png" id="8_viih5"]
 [ext_resource type="Texture2D" uid="uid://bdgqwwsxfvw12" path="res://Assets/Main Characters/Virtual Guy/Wall Jump (32x32).png" id="9_adx00"]
 [ext_resource type="Texture2D" uid="uid://beawvav7a46ce" path="res://Assets/Items/Fruits/Cherries.png" id="10_34a3h"]
-[ext_resource type="Script" path="res://Scripts/PlayerUI.gd" id="10_e1tuy"]
+[ext_resource type="Script" uid="uid://nawr1mv86nso" path="res://Scripts/PlayerUI.gd" id="10_e1tuy"]
 [ext_resource type="Texture2D" uid="uid://dp5ke5xg07cyf" path="res://Assets/Items/Fruits/Bananas.png" id="11_hn8ye"]
 [ext_resource type="Texture2D" uid="uid://ef1ui6wo302s" path="res://Assets/Items/Fruits/Apple.png" id="12_r74nj"]
 [ext_resource type="Texture2D" uid="uid://07ujfy436jc6" path="res://Assets/Main Characters/Pink Man/Double Jump (32x32).png" id="13_kv3ct"]
@@ -1781,13 +1781,13 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rkn0k"]
 _data = {
-"DoubleJump": SubResource("Animation_v3h5c"),
-"Fall": SubResource("Animation_b1i7o"),
-"Hit": SubResource("Animation_bklkk"),
-"Idle": SubResource("Animation_bjy5m"),
-"Jump": SubResource("Animation_01okb"),
-"Run": SubResource("Animation_fg05s"),
-"WallSlide": SubResource("Animation_o833k")
+&"DoubleJump": SubResource("Animation_v3h5c"),
+&"Fall": SubResource("Animation_b1i7o"),
+&"Hit": SubResource("Animation_bklkk"),
+&"Idle": SubResource("Animation_bjy5m"),
+&"Jump": SubResource("Animation_01okb"),
+&"Run": SubResource("Animation_fg05s"),
+&"WallSlide": SubResource("Animation_o833k")
 }
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_skt8m"]
@@ -1826,9 +1826,11 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_4lrqc"]
 input_0/name = "Alive"
 input_0/auto_advance = false
+input_0/break_loop_at_end = false
 input_0/reset = true
 input_1/name = "Dead"
 input_1/auto_advance = false
+input_1/break_loop_at_end = false
 input_1/reset = true
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tkqkv"]
@@ -1838,7 +1840,7 @@ animation = &"DoubleJump"
 animation = &"Hit"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_deup5"]
-graph_offset = Vector2(-323.871, 492.225)
+graph_offset = Vector2(-225.522, 654.085)
 nodes/DoubleJump/node = SubResource("AnimationNodeOneShot_skt8m")
 nodes/DoubleJump/position = Vector2(240, 820)
 nodes/MovementState/node = SubResource("AnimationNodeBlendSpace1D_yydn6")
@@ -1867,27 +1869,24 @@ script = ExtResource("1_13fao")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
 process_mode = 1
 sprite_frames = SubResource("SpriteFrames_klpxg")
-animation = &"NinjaFall"
+animation = &"Idle"
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 1
 active = false
 libraries = {
-"": SubResource("AnimationLibrary_rkn0k")
+&"": SubResource("AnimationLibrary_rkn0k")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 process_mode = 1
-active = false
-libraries = {
-"": SubResource("AnimationLibrary_rkn0k")
-}
 tree_root = SubResource("AnimationNodeBlendTree_deup5")
 anim_player = NodePath("../AnimationPlayer")
 parameters/DoubleJump/active = false
 parameters/DoubleJump/internal_active = false
 parameters/DoubleJump/request = 0
-parameters/MovementState/blend_position = -0.357672
+parameters/MovementState/blend_position = 0.992759
 parameters/Transition/current_state = "Alive"
 parameters/Transition/transition_request = ""
 parameters/Transition/current_index = 0
@@ -1907,6 +1906,7 @@ shape = SubResource("CapsuleShape2D_mb8o0")
 debug_color = Color(0.894118, 0.278431, 0.411765, 0.419608)
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("10_e1tuy")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI"]

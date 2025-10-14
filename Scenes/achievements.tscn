@@ -1,7 +1,7 @@
 [gd_scene load_steps=63 format=3 uid="uid://wwtw2455370p"]
 
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_joa3o"]
-[ext_resource type="Script" path="res://Scripts/achievements.gd" id="2_dqxni"]
+[ext_resource type="Script" uid="uid://d3i1ev2jk0oi8" path="res://Scripts/achievements.gd" id="2_dqxni"]
 [ext_resource type="Texture2D" uid="uid://buqwky2sanamn" path="res://Assets/Background/Gray.png" id="2_qobyj"]
 [ext_resource type="PackedScene" uid="uid://ur8gu6gbgjed" path="res://Prefab/Transition.tscn" id="3_nxy0o"]
 [ext_resource type="Texture2D" uid="uid://cfqwfwo1e37vt" path="res://Assets/Main Characters/Mask Dude/Idle (32x32).png" id="4_ukci2"]
@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pt8gf"]
 _data = {
-"RESET": SubResource("Animation_ktebe"),
-"TitleBackground": SubResource("Animation_crfdl")
+&"RESET": SubResource("Animation_ktebe"),
+&"TitleBackground": SubResource("Animation_crfdl")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3niy2"]
@@ -387,9 +387,9 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0kmwb"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5pg8c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0kmwb"]
 
 [node name="Achievements" type="Control"]
 layout_mode = 3
@@ -442,7 +442,7 @@ vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_pt8gf")
+&"": SubResource("AnimationLibrary_pt8gf")
 }
 autoplay = "TitleBackground"
 
@@ -779,8 +779,8 @@ offset_top = 548.0
 offset_right = 1121.0
 offset_bottom = 628.0
 focus_mode = 0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_0kmwb")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5pg8c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kmwb")
 icon = ExtResource("8_04moc")
 flat = true
 icon_alignment = 1

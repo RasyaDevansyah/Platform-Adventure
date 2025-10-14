@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqhgc0yffqlax"]
 
-[ext_resource type="Script" path="res://Scripts/Saw.gd" id="1_7kat4"]
+[ext_resource type="Script" uid="uid://dgqkf814mdjdo" path="res://Scripts/Saw.gd" id="1_7kat4"]
 [ext_resource type="Texture2D" uid="uid://df70s74fx62im" path="res://Assets/Traps/Spikes/Idle.png" id="1_f05m8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lj1y"]

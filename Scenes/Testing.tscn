@@ -101,8 +101,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t64g4"]
 _data = {
-"MovingBackground": SubResource("Animation_2m8nc"),
-"RESET": SubResource("Animation_chlc2")
+&"MovingBackground": SubResource("Animation_2m8nc"),
+&"RESET": SubResource("Animation_chlc2")
 }
 
 [node name="World" type="Node"]
@@ -133,7 +133,6 @@ layer_1/name = "Layer 1"
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(524293, 1114113, 0, 524294, 1179649, 0, 786438, 1114113, 0, 524295, 1245185, 0, 786439, 1179649, 0, 524296, 1114113, 0, 786440, 1245185, 0, 524297, 1179649, 0, 524298, 1245185, 0, 720907, 1114113, 0, 720908, 1179649, 0, 720909, 1245185, 0, 327681, 1114113, 0, 327683, 1245185, 0, 327682, 1179649, 0)
 layer_2/name = "Layer 2"
-layer_2/tile_data = PackedInt32Array()
 
 [node name="PuluPuluGuy" parent="." instance=ExtResource("3_60bf8")]
 position = Vector2(160, 513)
@@ -179,7 +178,7 @@ position = Vector2(303, 276)
 
 [node name="Background" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_t64g4")
+&"": SubResource("AnimationLibrary_t64g4")
 }
 autoplay = "MovingBackground"
 

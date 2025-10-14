@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bbfp5qvkgo6fa"]
 
-[ext_resource type="Script" path="res://Scripts/SawAnim.gd" id="1_q2net"]
+[ext_resource type="Script" uid="uid://b0w5fu2jlfp21" path="res://Scripts/SawAnim.gd" id="1_q2net"]
 [ext_resource type="PackedScene" uid="uid://dng0q4ac0k33r" path="res://Prefab/Saw.tscn" id="1_u5jq6"]
 
 [sub_resource type="Curve2D" id="Curve2D_einw1"]
@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37yqw"]
 _data = {
-"RESET": SubResource("Animation_47urr"),
-"SawMoving": SubResource("Animation_cy4qx")
+&"RESET": SubResource("Animation_47urr"),
+&"SawMoving": SubResource("Animation_cy4qx")
 }
 
 [node name="Saw" type="Node2D"]

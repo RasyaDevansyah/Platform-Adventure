@@ -97,5 +97,3 @@ func _on_button_29_button_up():
 	StartChangeScene(29)
 func _on_button_30_button_up():
 	StartChangeScene(30)
-
-

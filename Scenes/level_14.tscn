@@ -75,8 +75,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0oqxm"]
 _data = {
-"MovingBackground": SubResource("Animation_xlakd"),
-"RESET": SubResource("Animation_52muu")
+&"MovingBackground": SubResource("Animation_xlakd"),
+&"RESET": SubResource("Animation_52muu")
 }
 
 [sub_resource type="Curve2D" id="Curve2D_nbfup"]
@@ -119,14 +119,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yefbb"]
 _data = {
-"BallRotate": SubResource("Animation_dsvvf"),
-"RESET": SubResource("Animation_hkrvj")
+&"BallRotate": SubResource("Animation_dsvvf"),
+&"RESET": SubResource("Animation_hkrvj")
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1l0t8"]
 _data = {
-"BallRotate": SubResource("Animation_dsvvf"),
-"RESET": SubResource("Animation_hkrvj")
+&"BallRotate": SubResource("Animation_dsvvf"),
+&"RESET": SubResource("Animation_hkrvj")
 }
 
 [sub_resource type="Curve2D" id="Curve2D_kmp2o"]
@@ -169,8 +169,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t0qex"]
 _data = {
-"RESET": SubResource("Animation_weg2p"),
-"SawMoving": SubResource("Animation_fhb7y")
+&"RESET": SubResource("Animation_weg2p"),
+&"SawMoving": SubResource("Animation_fhb7y")
 }
 
 [node name="Level14" type="Node" groups=["Level"]]

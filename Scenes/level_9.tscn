@@ -74,8 +74,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_skelk"]
 _data = {
-"MovingBackground": SubResource("Animation_2m8nc"),
-"RESET": SubResource("Animation_chlc2")
+&"MovingBackground": SubResource("Animation_2m8nc"),
+&"RESET": SubResource("Animation_chlc2")
 }
 
 [sub_resource type="Animation" id="Animation_in66p"]
@@ -208,8 +208,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_40xsx"]
 _data = {
-"RESET": SubResource("Animation_in66p"),
-"Saww": SubResource("Animation_d8lt1")
+&"RESET": SubResource("Animation_in66p"),
+&"Saww": SubResource("Animation_d8lt1")
 }
 
 [node name="Level9" type="Node" groups=["Level"]]

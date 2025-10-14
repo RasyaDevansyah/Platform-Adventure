@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ur8gu6gbgjed"]
 
 [ext_resource type="Texture2D" uid="uid://c0m7dpux3ayb" path="res://Assets/Other/Transition.png" id="1_2nbih"]
-[ext_resource type="Script" path="res://Scripts/Transition.gd" id="1_5k6s3"]
+[ext_resource type="Script" uid="uid://bme61cu6k8m4u" path="res://Scripts/Transition.gd" id="1_5k6s3"]
 
 [sub_resource type="Animation" id="Animation_0rlv5"]
 length = 0.001
@@ -397,8 +397,8 @@ tracks/15/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fgm74"]
 _data = {
-"RESET": SubResource("Animation_0rlv5"),
-"Transition": SubResource("Animation_jy8w1")
+&"RESET": SubResource("Animation_0rlv5"),
+&"Transition": SubResource("Animation_jy8w1")
 }
 
 [node name="Transition" type="CanvasLayer"]

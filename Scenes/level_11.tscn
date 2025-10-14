@@ -69,8 +69,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0oqxm"]
 _data = {
-"MovingBackground": SubResource("Animation_xlakd"),
-"RESET": SubResource("Animation_52muu")
+&"MovingBackground": SubResource("Animation_xlakd"),
+&"RESET": SubResource("Animation_52muu")
 }
 
 [node name="Level11" type="Node" groups=["Level"]]
