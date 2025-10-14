@@ -17,4 +17,3 @@ func _on_area_2d_body_entered(body):
 		await get_tree().create_timer(0.8).timeout
 		
 		emit_signal("_levelComplete", body.playerUI.currentNumber)
-

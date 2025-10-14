@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://wnepht75yxvj"]
+[gd_scene load_steps=81 format=3 uid="uid://wnepht75yxvj"]
 
 [ext_resource type="Script" uid="uid://bjv4onwvtxjk1" path="res://Scripts/InGameUI.gd" id="1_jq3le"]
 [ext_resource type="Texture2D" uid="uid://cv1lgxyqvttrc" path="res://Assets/Menu/Buttons/Restart.png" id="1_y3wex"]
@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://lpxvkafe13jf" path="res://Assets/Main Characters/Virtual Guy/Idle (32x32).png" id="9_idbid"]
 [ext_resource type="Texture2D" uid="uid://cd6cvggrysttq" path="res://Assets/Main Characters/Pink Man/Idle (32x32).png" id="9_v1vxo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_koadg"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6kd1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_koadg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pousn"]
 
@@ -23,7 +23,7 @@
 _data = [Vector2(0, 0.601184), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_c0ixa"]
+[sub_resource type="CurveTexture" id="CurveTexture_23k4e"]
 curve = SubResource("Curve_vgapt")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_03sr1"]
@@ -39,9 +39,16 @@ gravity = Vector3(0, 100, 0)
 linear_accel_min = 12.65
 linear_accel_max = 15.3
 scale_min = 2.0
-scale_max = 2.5
-scale_curve = SubResource("CurveTexture_c0ixa")
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_23k4e")
 color = Color(0.423529, 0.85098, 0.945098, 1)
+
+[sub_resource type="Curve" id="Curve_23k4e"]
+_data = [Vector2(0, 0.601184), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jxjq5"]
+curve = SubResource("Curve_23k4e")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ell8b"]
 particle_flag_disable_z = true
@@ -55,15 +62,16 @@ orbit_velocity_max = 0.02
 gravity = Vector3(0, 100, 0)
 linear_accel_min = 12.65
 linear_accel_max = 15.3
-scale_max = 2.35
-scale_curve = SubResource("CurveTexture_c0ixa")
+scale_min = 2.0
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_jxjq5")
 color = Color(0.643137, 0.8, 0.258824, 1)
 
 [sub_resource type="Curve" id="Curve_mwugm"]
 _data = [Vector2(0, 0.475242), 0.0, 0.0, 0, 0, Vector2(1, 0.741119), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_ifct1"]
+[sub_resource type="CurveTexture" id="CurveTexture_x16dn"]
 curve = SubResource("Curve_mwugm")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_85wba"]
@@ -78,15 +86,16 @@ orbit_velocity_max = 0.02
 gravity = Vector3(0, 100, 0)
 linear_accel_min = 12.65
 linear_accel_max = 15.3
-scale_max = 2.35
-scale_curve = SubResource("CurveTexture_ifct1")
+scale_min = 2.0
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_x16dn")
 color = Color(0.968627, 0.92549, 0.541176, 1)
 
 [sub_resource type="Curve" id="Curve_tj20w"]
 _data = [Vector2(0.00831025, 0.342304), 0.0, 0.0, 0, 0, Vector2(0.99169, 0.811087), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_opvp8"]
+[sub_resource type="CurveTexture" id="CurveTexture_1j1jd"]
 curve = SubResource("Curve_tj20w")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q5xww"]
@@ -101,8 +110,9 @@ orbit_velocity_max = 0.02
 gravity = Vector3(0, 100, 0)
 linear_accel_min = 12.65
 linear_accel_max = 15.3
-scale_max = 2.35
-scale_curve = SubResource("CurveTexture_opvp8")
+scale_min = 2.0
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_1j1jd")
 color = Color(0.945098, 0.545098, 0.447059, 1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_so3na"]
@@ -117,8 +127,9 @@ orbit_velocity_max = 0.02
 gravity = Vector3(0, 100, 0)
 linear_accel_min = 12.65
 linear_accel_max = 15.3
-scale_max = 2.35
-scale_curve = SubResource("CurveTexture_opvp8")
+scale_min = 2.0
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_1j1jd")
 color = Color(0.972549, 0.611765, 0.752941, 1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nljir"]
@@ -133,10 +144,34 @@ orbit_velocity_max = 0.02
 gravity = Vector3(0, 100, 0)
 linear_accel_min = 12.65
 linear_accel_max = 15.3
-scale_min = 1.3
-scale_max = 3.4
-scale_curve = SubResource("CurveTexture_opvp8")
+scale_min = 2.0
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_1j1jd")
 color = Color(0.94902, 0.737255, 0.494118, 1)
+
+[sub_resource type="Curve" id="Curve_mcq4y"]
+_data = [Vector2(0, 0.601184), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_eipwq"]
+curve = SubResource("Curve_mcq4y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxjq5"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 82.36
+initial_velocity_max = 163.64
+angular_velocity_min = 76.22
+angular_velocity_max = 313.75
+orbit_velocity_min = -0.04
+orbit_velocity_max = 0.02
+gravity = Vector3(0, 100, 0)
+linear_accel_min = 12.65
+linear_accel_max = 15.3
+scale_min = 3.8999999
+scale_max = 3.8999999
+scale_curve = SubResource("CurveTexture_eipwq")
+color = Color(0.423529, 0.85098, 0.945098, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8b5bw"]
 bg_color = Color(0, 0, 0, 0.223529)
@@ -146,9 +181,9 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kh28a"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3f3w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kh28a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jryp0"]
 
@@ -1092,8 +1127,8 @@ offset_top = 9.0
 offset_right = 1068.0
 offset_bottom = 79.0
 focus_mode = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_koadg")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_a6kd1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_koadg")
 icon = ExtResource("1_y3wex")
 flat = true
 icon_alignment = 1
@@ -1105,8 +1140,8 @@ offset_top = 9.0
 offset_right = 1131.0
 offset_bottom = 79.0
 focus_mode = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_pousn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_a6kd1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pousn")
 icon = ExtResource("2_jnbiy")
 flat = true
 icon_alignment = 1
@@ -1121,13 +1156,12 @@ metadata/_edit_group_ = true
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_03sr1")
 
@@ -1135,13 +1169,12 @@ process_material = SubResource("ParticleProcessMaterial_03sr1")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_ell8b")
 
@@ -1149,13 +1182,12 @@ process_material = SubResource("ParticleProcessMaterial_ell8b")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_85wba")
 
@@ -1163,13 +1195,12 @@ process_material = SubResource("ParticleProcessMaterial_85wba")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_q5xww")
 
@@ -1177,13 +1208,12 @@ process_material = SubResource("ParticleProcessMaterial_q5xww")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_so3na")
 
@@ -1191,13 +1221,12 @@ process_material = SubResource("ParticleProcessMaterial_so3na")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_nljir")
 
@@ -1210,27 +1239,25 @@ metadata/_edit_group_ = true
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
-process_material = SubResource("ParticleProcessMaterial_03sr1")
+process_material = SubResource("ParticleProcessMaterial_jxjq5")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="Confetti2"]
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_ell8b")
 
@@ -1238,13 +1265,12 @@ process_material = SubResource("ParticleProcessMaterial_ell8b")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_85wba")
 
@@ -1252,13 +1278,12 @@ process_material = SubResource("ParticleProcessMaterial_85wba")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_q5xww")
 
@@ -1266,13 +1291,12 @@ process_material = SubResource("ParticleProcessMaterial_q5xww")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_so3na")
 
@@ -1280,13 +1304,12 @@ process_material = SubResource("ParticleProcessMaterial_so3na")
 z_index = 3
 position = Vector2(0, -4)
 emitting = false
-lifetime = 8.0
+lifetime = 4.2
 one_shot = true
 speed_scale = 2.2
 explosiveness = 1.0
 randomness = 0.15
 local_coords = true
-trail_enabled = true
 trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_nljir")
 
@@ -1353,8 +1376,8 @@ offset_top = 240.0
 offset_right = 302.0
 offset_bottom = 310.0
 focus_mode = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kh28a")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kh28a")
 icon = ExtResource("1_y3wex")
 flat = true
 icon_alignment = 1
@@ -1367,8 +1390,8 @@ offset_top = 240.0
 offset_right = 366.0
 offset_bottom = 310.0
 focus_mode = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jryp0")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jryp0")
 icon = ExtResource("4_kvikf")
 flat = true
 icon_alignment = 1
@@ -1381,8 +1404,8 @@ offset_top = 240.0
 offset_right = 430.0
 offset_bottom = 310.0
 focus_mode = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jryp0")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p3f3w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jryp0")
 icon = ExtResource("5_ky3sl")
 flat = true
 icon_alignment = 1
