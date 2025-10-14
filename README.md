@@ -4,4 +4,4 @@
 
 
 I was bored so for practice I wanted to make a simple platforming game for fun! 
-For assets, all credit goes to (Pixel Frogs Pixel Adventure)[https://pixelfrog-assets.itch.io/pixel-adventure-1] .
+For assets, all credit goes to [Pixel Frogs Pixel Adventure](https://pixelfrog-assets.itch.io/pixel-adventure-1).
