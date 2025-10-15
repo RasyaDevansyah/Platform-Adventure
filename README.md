@@ -1,7 +1,8 @@
 # Platform Adventure
 
-A fun and challenging 2D platformer game developed as a solo project. This game was created for practice and has been published on itch.io.
+![2025-10-15 17-02-14](https://github.com/user-attachments/assets/33922770-3d15-40cb-9963-a1712162dde3)
 
+A fun and challenging 2D platformer game developed as a solo project. This game was created for practice and has been published on itch.io.
 
 ## Overview
 
