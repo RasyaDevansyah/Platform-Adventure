@@ -1,6 +1,6 @@
 # Platform Adventure
 
-[adventure.webm](https://github.com/user-attachments/assets/dbafaec2-9c4b-48e3-a4e0-d5a805c91995)
+<video src="https://github.com/user-attachments/assets/dbafaec2-9c4b-48e3-a4e0-d5a805c91995" autoplay loop muted playsinline style="max-width: 100%;"></video>
 
 
 A fun and challenging 2D platformer game developed as a solo project. This game was created for practice and has been published on itch.io.
