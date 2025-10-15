@@ -12,8 +12,11 @@ Platform Adventure is a classic 2D platformer featuring engaging gameplay, diver
 ### Core Systems:
 
 *   **Player Mechanics**: Features responsive player controls with abilities such as jumping, dashing (implied by `arrow_boost`), and interaction with various environmental elements. Includes different enemy types and hazards like saws (`Saw.gd`), fire blocks (`fireBlock.gd`), and falling platforms (`falling_platform.gd`).
+
 *   **Items and Collectibles**: Players can collect various items such as fruits (`Fruits.gd`), trophies (`Trophy.gd`), and other pickable objects (`PickableItem.gd`) that contribute to scoring or progression.
+
 *   **User Interface (UI)**: A comprehensive UI system includes a main menu (`MainMenu.gd`), level selection screen (`level_select.gd`), in-game HUD (`InGameUI.gd`, `PlayerUI.gd`), and an achievements system (`achievements.gd`).
+
 *   **Game Flow Management**: Global scripts (`GlobalScript.gd`) manage game state, while transition scripts (`Transition.gd`) handle scene changes smoothly.
 
 ## Features
