@@ -2,6 +2,13 @@
 
 ![2025-10-15 17-02-14](https://github.com/user-attachments/assets/33922770-3d15-40cb-9963-a1712162dde3)
 
+
+
+https://github.com/user-attachments/assets/3520aa74-60fb-4da9-b6b5-f94d7f1ec583
+
+
+
+
 A fun and challenging 2D platformer game developed as a solo project. This game was created for practice and has been published on itch.io.
 
 ## Overview
