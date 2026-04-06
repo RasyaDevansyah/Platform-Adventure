@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ur8gu6gbgjed"]
+[gd_scene format=3 uid="uid://ur8gu6gbgjed"]
 
 [ext_resource type="Texture2D" uid="uid://c0m7dpux3ayb" path="res://Assets/Other/Transition.png" id="1_2nbih"]
 [ext_resource type="Script" uid="uid://bme61cu6k8m4u" path="res://Scripts/Transition.gd" id="1_5k6s3"]
@@ -401,91 +401,90 @@ _data = {
 &"Transition": SubResource("Animation_jy8w1")
 }
 
-[node name="Transition" type="CanvasLayer"]
+[node name="Transition" type="CanvasLayer" unique_id=893488918]
 script = ExtResource("1_5k6s3")
 
-[node name="Node" type="Node2D" parent="."]
+[node name="Node" type="Node2D" parent="." unique_id=536561655]
+visible = false
 z_index = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="Node"]
+[node name="Sprite2D" type="Sprite2D" parent="Node" unique_id=1403919019]
 position = Vector2(147, 143)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Node"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node" unique_id=1722439487]
 position = Vector2(376, 143)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Node"]
+[node name="Sprite2D3" type="Sprite2D" parent="Node" unique_id=13095981]
 position = Vector2(601, 143)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Node"]
+[node name="Sprite2D4" type="Sprite2D" parent="Node" unique_id=1343114340]
 position = Vector2(843, 143)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Node"]
+[node name="Sprite2D5" type="Sprite2D" parent="Node" unique_id=304074533]
 position = Vector2(1063, 143)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Node"]
+[node name="Sprite2D6" type="Sprite2D" parent="Node" unique_id=650221577]
 position = Vector2(147, 324.02)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Node"]
+[node name="Sprite2D7" type="Sprite2D" parent="Node" unique_id=1091869933]
 position = Vector2(376, 324.02)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D8" type="Sprite2D" parent="Node"]
+[node name="Sprite2D8" type="Sprite2D" parent="Node" unique_id=246815752]
 position = Vector2(601, 324.02)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D9" type="Sprite2D" parent="Node"]
+[node name="Sprite2D9" type="Sprite2D" parent="Node" unique_id=1456179626]
 position = Vector2(843, 324.02)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D10" type="Sprite2D" parent="Node"]
+[node name="Sprite2D10" type="Sprite2D" parent="Node" unique_id=141448919]
 position = Vector2(1063, 324.02)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D11" type="Sprite2D" parent="Node"]
+[node name="Sprite2D11" type="Sprite2D" parent="Node" unique_id=1250002496]
 position = Vector2(147, 476.465)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D12" type="Sprite2D" parent="Node"]
+[node name="Sprite2D12" type="Sprite2D" parent="Node" unique_id=155008015]
 position = Vector2(376, 476.465)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D13" type="Sprite2D" parent="Node"]
+[node name="Sprite2D13" type="Sprite2D" parent="Node" unique_id=553165184]
 position = Vector2(601, 476.465)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D14" type="Sprite2D" parent="Node"]
+[node name="Sprite2D14" type="Sprite2D" parent="Node" unique_id=1441115926]
 position = Vector2(843, 476.465)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="Sprite2D15" type="Sprite2D" parent="Node"]
+[node name="Sprite2D15" type="Sprite2D" parent="Node" unique_id=982972316]
 position = Vector2(1063, 476.465)
 scale = Vector2(15.41, 15.41)
 texture = ExtResource("1_2nbih")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_fgm74")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1476634613]
+libraries/ = SubResource("AnimationLibrary_fgm74")
 speed_scale = 2.5
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

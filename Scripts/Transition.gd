@@ -5,8 +5,10 @@ extends CanvasLayer
 @export var autoEnter : bool = true
 const DELAY = 0.4
 signal _TransitionFinished
+@onready var node: Node2D = $Node
 
 func _ready():
+	node.visible = true
 	if autoEnter:
 		await get_tree().create_timer(DELAY).timeout
 		Enter()
