@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ceb081jeav080"]
+[gd_scene format=3 uid="uid://ceb081jeav080"]
 
 [ext_resource type="Theme" uid="uid://cxav2eygb1aru" path="res://Other/new_theme.tres" id="1_rwrou"]
 [ext_resource type="Texture2D" uid="uid://d0fmdmnosmq32" path="res://Assets/Background/Pink.png" id="2_22j6f"]
@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cwsouhtwsnfop" path="res://Assets/Untitled design.png" id="7_jmawg"]
 [ext_resource type="Texture2D" uid="uid://crcqtmyyoaxjr" path="res://Assets/Menu/Buttons/Close.png" id="8_qetd1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbo37"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yg6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbo37"]
 
 [sub_resource type="Animation" id="Animation_ktebe"]
 length = 0.001
@@ -50,10 +50,10 @@ _data = {
 &"TitleBackground": SubResource("Animation_crfdl")
 }
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" unique_id=459344412]
 script = ExtResource("2_d37d5")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1837604294]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -68,7 +68,7 @@ grow_vertical = 2
 texture = ExtResource("2_22j6f")
 stretch_mode = 1
 
-[node name="Credits" type="Control" parent="."]
+[node name="Credits" type="Control" parent="." unique_id=159250765]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -78,12 +78,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rwrou")
 
-[node name="UntitledDesign(1)" type="Sprite2D" parent="Credits"]
+[node name="UntitledDesign(1)" type="Sprite2D" parent="Credits" unique_id=158970373]
 position = Vector2(821.75, 235.25)
 scale = Vector2(0.743, 0.743)
 texture = ExtResource("4_a24qx")
 
-[node name="Label" type="Label" parent="Credits"]
+[node name="Label" type="Label" parent="Credits" unique_id=1032068522]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
@@ -104,7 +104,7 @@ text = "Programmer & Level Design: Rasya Devansyah
 
 "
 
-[node name="Label2" type="Label" parent="Credits"]
+[node name="Label2" type="Label" parent="Credits" unique_id=1209849234]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
@@ -123,12 +123,12 @@ theme_override_font_sizes/font_size = 211
 text = "Made proudly with Godot"
 vertical_alignment = 1
 
-[node name="Godot" type="Sprite2D" parent="Credits"]
+[node name="Godot" type="Sprite2D" parent="Credits" unique_id=1963502608]
 position = Vector2(664, 437)
 scale = Vector2(0.0185547, 0.0185547)
 texture = ExtResource("6_jen5a")
 
-[node name="Back" type="Button" parent="Credits"]
+[node name="Back" type="Button" parent="Credits" unique_id=1965446085]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 8
@@ -144,26 +144,26 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.675, 0.675)
 focus_mode = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_nbo37")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_2yg6f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbo37")
 icon = ExtResource("8_qetd1")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="UntitledDesign" type="Sprite2D" parent="Credits"]
+[node name="UntitledDesign" type="Sprite2D" parent="Credits" unique_id=492358964]
 position = Vector2(704, 436)
 scale = Vector2(0.0713749, 0.0713749)
 texture = ExtResource("7_jmawg")
 
-[node name="Menu" type="Control" parent="."]
+[node name="Menu" type="Control" parent="." unique_id=552298245]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("1_rwrou")
 
-[node name="Play" type="Button" parent="Menu"]
+[node name="Play" type="Button" parent="Menu" unique_id=1915986532]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -178,7 +178,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "PLAY"
 
-[node name="Credits" type="Button" parent="Menu"]
+[node name="Credits" type="Button" parent="Menu" unique_id=1129114471]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -193,7 +193,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "CREDITS"
 
-[node name="Quit" type="Button" parent="Menu"]
+[node name="Quit" type="Button" parent="Menu" unique_id=2046275500]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -208,7 +208,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "QUIT"
 
-[node name="Label" type="Label" parent="Menu"]
+[node name="Label" type="Label" parent="Menu" unique_id=354829772]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -229,13 +229,11 @@ text = "PLATFORM ADVENTURE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_pt8gf")
-}
-autoplay = "TitleBackground"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1550017156]
+libraries/ = SubResource("AnimationLibrary_pt8gf")
+autoplay = &"TitleBackground"
 
-[node name="Transition" parent="." instance=ExtResource("3_xfbr2")]
+[node name="Transition" parent="." unique_id=762103687 instance=ExtResource("3_xfbr2")]
 
 [connection signal="button_up" from="Credits/Back" to="." method="_on_back_button_up"]
 [connection signal="button_up" from="Menu/Play" to="." method="_on_play_button_up"]
